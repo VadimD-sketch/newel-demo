@@ -1,5 +1,10 @@
 /* Responsive overrides (loaded after each page's own styles) */
 html{-webkit-text-size-adjust:100%}
+.lang-switch{display:inline-flex;margin:6px 0;border:1px solid #ffffff;border-radius:4px;overflow:hidden}
+.lang-switch a{display:inline-flex;align-items:center;justify-content:center;min-width:40px;min-height:32px;padding:0 10px;color:#ffffff;font-size:14px;font-weight:700;line-height:20px;text-decoration:none}
+.lang-switch a:hover{background:#676867;text-decoration:none !important}
+.lang-switch a[aria-current="true"]{background:#ffffff;color:#262625;cursor:default}
+.lang-switch a:focus-visible{outline:2px solid #f15b28;outline-offset:-2px}
 img{max-width:100%}
 .nav-toggle{display:none;min-width:48px;min-height:48px;padding:0;border:2px solid #676867;border-radius:4px;background:transparent;color:#262625;cursor:pointer;align-items:center;justify-content:center}
 .nav-toggle:hover{background:#262625;color:#ffffff}
@@ -15,6 +20,12 @@ img{max-width:100%}
   .site-nav.open{display:flex !important}
   .site-nav a{display:flex;align-items:center;min-height:48px;padding:12px 0 !important;border-bottom:1px solid #eeeeee !important}
   .site-nav a[aria-current="page"]{border-bottom:3px solid #f15b28 !important}
+}
+@media (max-width:480px){
+  header>div:first-child>div>div{gap:0 14px !important}
+  .site-bar{padding:12px 16px !important;gap:8px !important}
+  .site-logo img{height:28px !important}
+  .site-cta{padding:0 12px !important;font-size:14px !important}
 }
 @media (max-width:640px){
   .util-tag,.util-hide{display:none !important}

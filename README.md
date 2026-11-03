@@ -4,6 +4,7 @@ Statisk demo (ren HTML, inga byggsteg) av nya newel.se. Sidor: startsida, BRF oc
 fastighetsägare, företag, laddbox, IMD, supportavtal, offertförfrågan, intresseanmälan,
 serviceanmälan, kontakt, referenser och nyheter.
 
+- Engelsk version ligger i `en/` (samma filnamn som de svenska sidorna). Språkbyte via länken *English* / *Svenska* i sidhuvudet. Bildplatshållare och sidtitlar är översatta; sidnamn som Serviceanmälan och Intresseanmälan har engelska motsvarigheter.
 - Platshållare i hakparentes, t.ex. `[KUNDCITAT]`, ska ersättas med riktigt innehåll och riktiga bilder.
 - Formulären skickar inget i demon (`assets/demo.js` visar bara ett tack-meddelande).
 - Medlems- och partnerloggor hämtas direkt från newel.se. Kopiera dem till `assets/` före lansering.

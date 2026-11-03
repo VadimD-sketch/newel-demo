@@ -11,7 +11,7 @@ document.querySelectorAll('form').forEach(function (f) {
       n.style.cssText = 'margin:16px 0 0;font-weight:700';
       btn.parentNode.appendChild(n);
     }
-    n.textContent = 'Tack! Det här är en demo – inget har skickats.';
+    n.textContent = document.documentElement.lang === 'en' ? 'Thank you! This is a demo – nothing has been sent.' : 'Tack! Det här är en demo – inget har skickats.';
   });
 });
 document.querySelectorAll('.chip').forEach(function (c) {
