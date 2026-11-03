@@ -1,5 +1,6 @@
 /* Responsive overrides (loaded after each page's own styles) */
 html{-webkit-text-size-adjust:100%}
+select.field{-webkit-appearance:none;appearance:none;padding-right:48px;cursor:pointer;background-color:#ffffff;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='10' viewBox='0 0 16 10' fill='none' stroke='%23262625' stroke-width='2' stroke-linecap='square'%3E%3Cpath d='M2 2l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:16px 10px}
 .lang-switch{display:inline-flex;margin:6px 0;border:1px solid #ffffff;border-radius:4px;overflow:hidden}
 .lang-switch a{display:inline-flex;align-items:center;justify-content:center;min-width:40px;min-height:32px;padding:0 10px;color:#ffffff;font-size:14px;font-weight:700;line-height:20px;text-decoration:none}
 .lang-switch a:hover{background:#676867;text-decoration:none !important}
