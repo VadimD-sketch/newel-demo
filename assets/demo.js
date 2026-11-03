@@ -1,7 +1,7 @@
 // Demo only: forms do not send anything.
 document.querySelectorAll('form').forEach(function (f) {
   var btn = f.querySelector('button[type="button"]');
-  if (!btn) return;
+  if (!btn || btn.hasAttribute('data-next')) return;
   btn.addEventListener('click', function () {
     var n = f.querySelector('[data-demo-msg]');
     if (!n) {
@@ -21,6 +21,27 @@ document.querySelectorAll('.chip').forEach(function (c) {
     });
   });
 });
+
+// Variant B: hand the short start-page form over to the quote page, and prefill from the query string
+document.querySelectorAll('button[data-next]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var q = [];
+    b.closest('form').querySelectorAll('input,select,textarea').forEach(function (i) {
+      if (i.name && i.value && i.type !== 'checkbox') q.push(encodeURIComponent(i.name) + '=' + encodeURIComponent(i.value));
+    });
+    location.href = b.getAttribute('data-next') + (q.length ? '?' + q.join('&') : '');
+  });
+});
+(function () {
+  var p = new URLSearchParams(location.search);
+  p.forEach(function (v, k) {
+    var els = document.querySelectorAll('[name="' + k + '"]');
+    els.forEach(function (el) {
+      if (el.type === 'checkbox' || el.type === 'radio') { if (el.value === v) el.checked = true; }
+      else if (el.tagName === 'SELECT' || el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.value = v;
+    });
+  });
+})();
 
 // Mobile menu
 (function () {

@@ -5,6 +5,7 @@ fastighetsägare, företag, laddbox, IMD, supportavtal, offertförfrågan, intre
 serviceanmälan, kontakt, referenser och nyheter.
 
 - Engelsk version ligger i `en/` (samma filnamn som de svenska sidorna). Språkbyte via länken *English* / *Svenska* i sidhuvudet. Bildplatshållare och sidtitlar är översatta; sidnamn som Serviceanmälan och Intresseanmälan har engelska motsvarigheter.
+- **Variant B (förenklad struktur)** ligger i `v2/` (svenska) och `v2/en/` (engelska): 5 menyval, 3 formulär, kortare startsida. Jämför med originalet i rotmappen.
 - Platshållare i hakparentes, t.ex. `[KUNDCITAT]`, ska ersättas med riktigt innehåll och riktiga bilder.
 - Formulären skickar inget i demon (`assets/demo.js` visar bara ett tack-meddelande).
 - Medlems- och partnerloggor hämtas direkt från newel.se. Kopiera dem till `assets/` före lansering.
