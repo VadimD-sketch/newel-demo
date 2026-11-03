@@ -21,3 +21,14 @@ document.querySelectorAll('.chip').forEach(function (c) {
     });
   });
 });
+
+// Mobile menu
+(function () {
+  var t = document.querySelector('.nav-toggle');
+  var n = document.getElementById('site-nav');
+  if (!t || !n) return;
+  t.addEventListener('click', function () {
+    var open = n.classList.toggle('open');
+    t.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+})();

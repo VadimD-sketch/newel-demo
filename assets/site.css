@@ -1,0 +1,28 @@
+/* Responsive overrides (loaded after each page's own styles) */
+html{-webkit-text-size-adjust:100%}
+img{max-width:100%}
+.nav-toggle{display:none;min-width:48px;min-height:48px;padding:0;border:2px solid #676867;border-radius:4px;background:transparent;color:#262625;cursor:pointer;align-items:center;justify-content:center}
+.nav-toggle:hover{background:#262625;color:#ffffff}
+.nav-toggle .nt-close{display:none}
+.nav-toggle[aria-expanded="true"] .nt-close{display:inline}
+.nav-toggle[aria-expanded="true"] .nt-open{display:none}
+@media (max-width:1120px){
+  .site-bar{flex-wrap:wrap !important;gap:12px !important}
+  .site-logo img{height:32px !important}
+  .nav-toggle{display:inline-flex}
+  .site-cta{margin-left:auto;padding:0 16px !important}
+  .site-nav{display:none !important;order:10;width:100%;flex-direction:column;align-items:stretch !important;gap:0 !important}
+  .site-nav.open{display:flex !important}
+  .site-nav a{display:flex;align-items:center;min-height:48px;padding:12px 0 !important;border-bottom:1px solid #eeeeee !important}
+  .site-nav a[aria-current="page"]{border-bottom:3px solid #f15b28 !important}
+}
+@media (max-width:640px){
+  .util-tag,.util-hide{display:none !important}
+  .site-bar{padding:12px 24px !important}
+  .sub{font-size:22px !important;line-height:30px !important}
+  .h2,.h2p{font-size:24px !important;line-height:32px !important}
+  form.card{padding:24px !important}
+  div[style*="padding:40px"]{padding:24px !important}
+  article[style*="padding:32px"]{padding:24px !important}
+  .btn{max-width:100%}
+}

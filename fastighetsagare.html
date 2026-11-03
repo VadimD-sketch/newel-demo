@@ -39,25 +39,26 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .sec{padding:48px 0}
 }
 </style>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <header style="background:#ffffff;color:#262625;font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px">
 <div style="background:#262625">
 <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;gap:0 24px;justify-content:space-between;align-items:center">
-<span style="font-size:14px;line-height:20px;color:#ffffff;padding:12px 0">Laddning för BRF, samfälligheter, fastighetsägare och företag</span>
+<span class="util-tag" style="font-size:14px;line-height:20px;color:#ffffff;padding:12px 0">Laddning för BRF, samfälligheter, fastighetsägare och företag</span>
 <div style="display:flex;flex-wrap:wrap;gap:0 24px;align-items:center">
-<a href="kontakt.html" style="color:#ffffff;font-size:14px;line-height:20px;text-decoration:none;padding:12px 0">Kontakt</a>
+<a class="util-hide" href="kontakt.html" style="color:#ffffff;font-size:14px;line-height:20px;text-decoration:none;padding:12px 0">Kontakt</a>
 <a href="serviceanmalan.html" style="color:#ffffff;font-size:14px;line-height:20px;text-decoration:none;padding:12px 0">Serviceanmälan</a>
-<a href="intresseanmalan.html" style="color:#ffffff;font-size:14px;line-height:20px;text-decoration:none;padding:12px 0">Intresseanmälan</a>
+<a class="util-hide" href="intresseanmalan.html" style="color:#ffffff;font-size:14px;line-height:20px;text-decoration:none;padding:12px 0">Intresseanmälan</a>
 <a href="tel:+468181412" style="color:#ffffff;font-size:14px;line-height:20px;font-weight:700;text-decoration:none;padding:12px 0">Tel 08-18 14 12</a>
 </div>
 </div>
 </div>
-<div style="max-width:1200px;margin:0 auto;padding:16px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px">
-<a href="index.html" aria-label="NEWEL – startsida" style="display:inline-flex;padding:4px 0">
+<div class="site-bar" style="max-width:1200px;margin:0 auto;padding:16px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px">
+<a class="site-logo" href="index.html" aria-label="NEWEL – startsida" style="display:inline-flex;padding:4px 0">
 <img src="assets/logo-color.svg" alt="NEWEL" style="height:40px;width:auto;display:block">
 </a>
-<nav aria-label="Huvudmeny" style="display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center">
+<nav id="site-nav" class="site-nav" aria-label="Huvudmeny" style="display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center">
 <a href="brf.html" style="color:#262625;text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">BRF &amp; samfälligheter</a>
 <a href="fastighetsagare.html" aria-current="page" style="color:#262625;text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid #f15b28;font-weight:700">Fastighetsägare</a>
 <a href="foretag.html" style="color:#262625;text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">Företag</a>
@@ -66,7 +67,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <a href="referenser.html" style="color:#262625;text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">Referenser</a>
 <a href="nyheter.html" style="color:#262625;text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">Nyheter</a>
 </nav>
-<a class="btn btn-primary" href="offert.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:#f15b28;color:#262625;font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">Begär offert</a>
+<a class="btn btn-primary site-cta" href="offert.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:#f15b28;color:#262625;font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">Begär offert</a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Meny"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path class="nt-open" d="M3 6h18M3 12h18M3 18h18"/><path class="nt-close" d="M5 5l14 14M19 5L5 19"/></svg></button>
 </div>
 <div style="height:1px;background:#eeeeee"></div>
 </header>
