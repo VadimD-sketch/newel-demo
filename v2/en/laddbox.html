@@ -143,36 +143,55 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <section id="steg" style="background:#ffffff;color:#262625;font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px;padding:64px 0;overflow:hidden">
 <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:32px">
 <h2 style="margin:0 0 0 calc(50% - 50vw);align-self:flex-start;display:inline-block;padding:8px 24px 8px calc(50vw - 50%);background:#eeeeee;font-size:28px;line-height:36px;font-weight:700;color:#262625">From quote request to installation in five steps</h2>
-<p style="margin:0;max-width:720px">This is how it works when you install wallboxes or charging posts with NEWEL.</p>
-<ol style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:32px">
-<li style="flex:1 1 200px;border-top:4px solid #eeeeee;padding-top:16px;display:flex;flex-direction:column;gap:8px">
-<span aria-hidden="true" style="font-size:48px;line-height:56px;font-weight:700;color:#f15b28">1</span>
-<h3 style="margin:0;font-size:20px;line-height:28px;font-weight:700">Quote request</h3>
-<p style="margin:0">You tell us about the site and how many charge points you want.</p>
+<style>
+.stp-wrap{display:flex;flex-direction:column;gap:32px}
+.stp-intro{margin:0;max-width:720px}
+.stp{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.stp li{position:relative;display:flex;flex-direction:column;gap:16px}
+.stp li:not(:last-child)::before{content:"";position:absolute;top:21px;left:56px;right:-20px;height:2px;background:#cfcfcf}
+.stp-n{flex:none;width:44px;height:44px;border-radius:50%;background:#262625;color:#ffffff;font-size:22px;line-height:44px;font-weight:700;text-align:center}
+.stp li:first-child .stp-n{background:#f15b28}
+.stp-tx{display:flex;flex-direction:column;gap:8px}
+.stp h3{margin:0;font-size:20px;line-height:28px;font-weight:700}
+.stp p{margin:0}
+@media (max-width:860px){
+.stp{grid-template-columns:minmax(0,1fr);gap:0}
+.stp li{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px;padding-bottom:28px}
+.stp li:last-child{padding-bottom:0}
+.stp li:not(:last-child)::before{top:52px;bottom:8px;left:21px;right:auto;width:2px;height:auto}
+.stp-tx{gap:4px;padding-top:8px}
+}
+</style>
+<div class="stp-wrap">
+<p class="stp-intro">This is how it works when you install wallboxes or charging posts with NEWEL.</p>
+<ol class="stp">
+<li>
+<span aria-hidden="true" class="stp-n">1</span>
+<div class="stp-tx"><h3>Quote request</h3>
+<p>You tell us about the site and how many charge points you want.</p>
+<a class="btn btn-primary stp-btn" href="offert.html?tjanst=laddbox" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:#f15b28;color:#262625;font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none;align-self:flex-start;margin-top:8px">Request a quote</a></div>
 </li>
-<li style="flex:1 1 200px;border-top:4px solid #eeeeee;padding-top:16px;display:flex;flex-direction:column;gap:8px">
-<span aria-hidden="true" style="font-size:48px;line-height:56px;font-weight:700;color:#f15b28">2</span>
-<h3 style="margin:0;font-size:20px;line-height:28px;font-weight:700">Review</h3>
-<p style="margin:0">We go through the electrical installation, the parking and your wishes.</p>
+<li>
+<span aria-hidden="true" class="stp-n">2</span>
+<div class="stp-tx"><h3>Review</h3>
+<p>We go through the electrical installation, the parking and your wishes.</p></div>
 </li>
-<li style="flex:1 1 200px;border-top:4px solid #eeeeee;padding-top:16px;display:flex;flex-direction:column;gap:8px">
-<span aria-hidden="true" style="font-size:48px;line-height:56px;font-weight:700;color:#f15b28">3</span>
-<h3 style="margin:0;font-size:20px;line-height:28px;font-weight:700">Quote</h3>
-<p style="margin:0">You get a clear quote to take to the board or management.</p>
+<li>
+<span aria-hidden="true" class="stp-n">3</span>
+<div class="stp-tx"><h3>Quote</h3>
+<p>You get a clear quote to take to the board or management.</p></div>
 </li>
-<li style="flex:1 1 200px;border-top:4px solid #eeeeee;padding-top:16px;display:flex;flex-direction:column;gap:8px">
-<span aria-hidden="true" style="font-size:48px;line-height:56px;font-weight:700;color:#f15b28">4</span>
-<h3 style="margin:0;font-size:20px;line-height:28px;font-weight:700">Installation</h3>
-<p style="margin:0">Our installers mount the wallboxes or charging posts at your site.</p>
+<li>
+<span aria-hidden="true" class="stp-n">4</span>
+<div class="stp-tx"><h3>Installation</h3>
+<p>Our installers mount the wallboxes or charging posts at your site.</p></div>
 </li>
-<li style="flex:1 1 200px;border-top:4px solid #eeeeee;padding-top:16px;display:flex;flex-direction:column;gap:8px">
-<span aria-hidden="true" style="font-size:48px;line-height:56px;font-weight:700;color:#f15b28">5</span>
-<h3 style="margin:0;font-size:20px;line-height:28px;font-weight:700">Start-up and support</h3>
-<p style="margin:0">Charging goes live, IMD is connected where needed, and you have support to turn to.</p>
+<li>
+<span aria-hidden="true" class="stp-n">5</span>
+<div class="stp-tx"><h3>Start-up and support</h3>
+<p>Charging goes live, IMD is connected where needed, and you have support to turn to.</p></div>
 </li>
 </ol>
-<div>
-<a class="btn btn-primary" href="offert.html?tjanst=laddbox" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:#f15b28;color:#262625;font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">Start with a quote request</a>
 </div>
 </div>
 </section>
