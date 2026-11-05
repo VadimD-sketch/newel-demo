@@ -30,9 +30,23 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .h1{font-size:36px;line-height:44px}
 .sec{padding:48px 0}
 }
-header nav a:hover{font-weight:700 !important;text-decoration:none !important}
-header nav a::after{content:attr(data-text);display:block;height:0;overflow:hidden;visibility:hidden;font-weight:700;pointer-events:none}
-header nav a[aria-current="page"],header nav a[aria-current="page"]:hover,header nav a[aria-current="page"]:focus{border-bottom:3px solid var(--newel-orange) !important}
+/*dd*/
+header nav .dd{position:relative}
+header nav .dd-btn{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:10px 8px 7px;margin:0;border:0;border-bottom:3px solid transparent;border-radius:0;background:transparent;color:var(--newel-black);font-family:inherit;font-size:16px;line-height:24px;font-weight:400;cursor:pointer}
+header nav .dd-btn:hover{font-weight:700}
+header nav .dd-btn[data-current="page"]{border-bottom:3px solid var(--newel-orange) !important;font-weight:700}
+header nav .dd.open>.dd-btn[data-current="page"],html:not(.dd-js) header nav .dd:hover>.dd-btn[data-current="page"],html:not(.dd-js) header nav .dd:focus-within>.dd-btn[data-current="page"]{border-bottom-color:transparent !important}
+header nav .dd-btn svg{flex:none;transition:transform .15s}
+header nav .dd-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+header nav .dd-lbl{display:inline-flex;flex-direction:column;align-items:center}
+header nav .dd-lbl::after,header nav .dd-panel a::after{content:attr(data-text);display:block;height:0;overflow:hidden;visibility:hidden;font-weight:700;pointer-events:none}
+header nav .dd-panel{display:none;position:absolute;left:0;top:100%;z-index:60;min-width:260px;margin:0;padding:8px 0;list-style:none;background:var(--white);border:1px solid var(--newel-grey);border-radius:4px}
+header nav .dd:last-child>.dd-panel{left:auto;right:0}
+header nav .dd.open>.dd-panel,html:not(.dd-js) header nav .dd:hover>.dd-panel,html:not(.dd-js) header nav .dd:focus-within>.dd-panel{display:block !important}
+header nav .dd-panel a{display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;font-weight:400;text-decoration:none !important;border:0 !important}
+header nav .dd-panel a:hover{font-weight:700 !important}
+header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--light-grey)}
+/*end-dd*/
 </style>
 <link rel="stylesheet" href="../assets/site.css?v=3">
 <style>:root{--white:#ffffff;--light-grey:#eeeeee;--newel-grey:#676867;--newel-black:#262625;--ink-strong:#1a1a1a;--accent-fill:#f15b22;--newel-orange:#f15b28;--orange-50:#fff4ee;--orange-100:#ffe7db;--orange-200:#ffcfb8;--orange-300:#ffb08e;--orange-400:#ff8557;--orange-600:#d0481f;--orange-700:#ab381b;--orange-800:#862b18;--orange-900:#662215;--orange-950:#411008}</style>
@@ -42,7 +56,7 @@ header nav a[aria-current="page"],header nav a[aria-current="page"]:hover,header
 <div style="background:var(--newel-black)">
 <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;gap:0 24px;justify-content:flex-end;align-items:center">
 <div style="display:flex;flex-wrap:wrap;gap:0 24px;align-items:center">
-<a href="serviceanmalan.html" style="color:var(--white);font-size:14px;line-height:20px;text-decoration:none;padding:12px 0">Serviceanmälan</a>
+<a href="serviceanmalan.html" style="color:var(--white);font-size:14px;line-height:20px;text-decoration:none;padding:12px 0">Felanmälan</a>
 <span class="lang-switch" role="group" aria-label="Språk"><span aria-current="true" lang="sv">SV</span><a href="en/tjanster.html" hreflang="en" lang="en" aria-label="EN, English">EN</a></span>
 <a href="tel:+468181412" style="color:var(--white);font-size:14px;line-height:20px;font-weight:700;text-decoration:none;padding:12px 0">Tel 08-18 14 12</a>
 </div>
@@ -52,12 +66,39 @@ header nav a[aria-current="page"],header nav a[aria-current="page"]:hover,header
 <a class="site-logo" href="index.html" aria-label="NEWEL – startsida" style="display:inline-flex;padding:4px 0">
 <img src="../assets/logo-color.svg" alt="NEWEL" style="height:40px;width:auto;display:block">
 </a>
-<nav id="site-nav" class="site-nav" aria-label="Huvudmeny" style="display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center">
-<a href="brf.html" data-text="BRF &amp; samfälligheter" style="color:var(--newel-black);text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">BRF &amp; samfälligheter</a>
-<a href="fastighetsagare.html" data-text="Fastighetsägare" style="color:var(--newel-black);text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">Fastighetsägare</a>
-<a href="foretag.html" data-text="Företag" style="color:var(--newel-black);text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">Företag</a>
-<a href="tjanster.html" aria-current="page" data-text="Tjänster" style="color:var(--newel-black);text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid var(--newel-orange);font-weight:700">Tjänster</a>
-<a href="referenser.html" data-text="Referenser" style="color:var(--newel-black);text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">Referenser</a>
+<nav id="site-nav" class="site-nav" aria-label="Huvudmeny" style="display:flex;align-items:center;gap:8px">
+<div class="dd" style="position:relative">
+<button class="dd-btn" type="button" aria-expanded="false" aria-controls="dd-ind" style="display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:10px 8px 7px;margin:0;border:0;border-bottom:3px solid transparent;background:transparent;color:var(--newel-black);font-family:inherit;font-size:16px;line-height:24px;font-weight:400;cursor:pointer"><span class="dd-lbl" data-text="Branschlösningar">Branschlösningar</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M3 6l5 5 5-5"/></svg></button>
+<ul class="dd-panel" id="dd-ind" style="display:none;position:absolute;left:0;top:100%;z-index:60;min-width:260px;margin:0;padding:8px 0;list-style:none;background:var(--white);border:1px solid var(--newel-grey);border-radius:4px">
+<li><a href="brf.html" data-text="BRF &amp; samfälligheter" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">BRF &amp; samfälligheter</a></li>
+<li><a href="fastighetsagare.html" data-text="Fastighetsbolag" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">Fastighetsbolag</a></li>
+<li><a href="foretag.html" data-text="Företag" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">Företag</a></li>
+</ul>
+</div>
+<div class="dd" style="position:relative">
+<button class="dd-btn" type="button" aria-expanded="false" aria-controls="dd-prod" style="display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:10px 8px 7px;margin:0;border:0;border-bottom:3px solid transparent;background:transparent;color:var(--newel-black);font-family:inherit;font-size:16px;line-height:24px;font-weight:400;cursor:pointer"><span class="dd-lbl" data-text="Produkter &amp; tjänster">Produkter &amp; tjänster</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M3 6l5 5 5-5"/></svg></button>
+<ul class="dd-panel" id="dd-prod" style="display:none;position:absolute;left:0;top:100%;z-index:60;min-width:260px;margin:0;padding:8px 0;list-style:none;background:var(--white);border:1px solid var(--newel-grey);border-radius:4px">
+<li><a href="laddbox.html" data-text="Laddning" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">Laddning</a></li>
+<li><a href="imd.html" data-text="IMD" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">IMD</a></li>
+<li><a href="supportavtal.html" data-text="Supportavtal" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">Supportavtal</a></li>
+<li><a href="led.html" data-text="LED" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">LED</a></li>
+</ul>
+</div>
+<div class="dd" style="position:relative">
+<button class="dd-btn" type="button" aria-expanded="false" aria-controls="dd-about" style="display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:10px 8px 7px;margin:0;border:0;border-bottom:3px solid transparent;background:transparent;color:var(--newel-black);font-family:inherit;font-size:16px;line-height:24px;font-weight:400;cursor:pointer"><span class="dd-lbl" data-text="Om oss">Om oss</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M3 6l5 5 5-5"/></svg></button>
+<ul class="dd-panel" id="dd-about" style="display:none;position:absolute;left:0;top:100%;z-index:60;min-width:260px;margin:0;padding:8px 0;list-style:none;background:var(--white);border:1px solid var(--newel-grey);border-radius:4px">
+<li><a href="omnewel.html" data-text="Om NEWEL" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">Om NEWEL</a></li>
+<li><a href="referenser.html" data-text="Kundcase" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">Kundcase</a></li>
+<li><a href="nyheter.html" data-text="Nyheter" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">Nyheter</a></li>
+</ul>
+</div>
+<div class="dd" style="position:relative">
+<button class="dd-btn" type="button" aria-expanded="false" aria-controls="dd-contact" style="display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:10px 8px 7px;margin:0;border:0;border-bottom:3px solid transparent;background:transparent;color:var(--newel-black);font-family:inherit;font-size:16px;line-height:24px;font-weight:400;cursor:pointer"><span class="dd-lbl" data-text="Kontakt">Kontakt</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M3 6l5 5 5-5"/></svg></button>
+<ul class="dd-panel" id="dd-contact" style="display:none;position:absolute;left:0;top:100%;z-index:60;min-width:260px;margin:0;padding:8px 0;list-style:none;background:var(--white);border:1px solid var(--newel-grey);border-radius:4px">
+<li><a href="offert.html" data-text="Offertförfrågan" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">Offertförfrågan</a></li>
+<li><a href="serviceanmalan.html" data-text="Felanmälan" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">Felanmälan</a></li>
+</ul>
+</div>
 </nav>
 <a class="btn btn-primary site-cta" href="offert.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:var(--accent-fill);color:var(--ink-strong);font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">Begär offert</a>
 <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Meny"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path class="nt-open" d="M3 6h18M3 12h18M3 18h18"/><path class="nt-close" d="M5 5l14 14M19 5L5 19"/></svg></button>
@@ -82,7 +123,7 @@ header nav a[aria-current="page"],header nav a[aria-current="page"]:hover,header
 </article>
 <article style="flex:1 1 320px;background:var(--light-grey);border-radius:8px;padding:32px;display:flex;flex-direction:column;gap:16px">
 <h2 class="h3">IMD – individuell mätning och debitering</h2>
-<p>Varje användare betalar för sin egen laddning, utan att föreningen eller fastighetsägaren står för kostnaden.</p>
+<p>Varje användare betalar för sin egen laddning, utan att föreningen eller fastighetsbolaget står för kostnaden.</p>
 <a href="imd.html" style="font-weight:700;margin-top:auto;padding:8px 0">Läs om IMD →</a>
 </article>
 <article style="flex:1 1 320px;background:var(--light-grey);border-radius:8px;padding:32px;display:flex;flex-direction:column;gap:16px">
@@ -126,33 +167,38 @@ header nav a[aria-current="page"],header nav a[aria-current="page"]:hover,header
 </div>
 </div>
 <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:8px">
-<span style="font-weight:700">Laddning</span>
+<span style="font-weight:700">Branschlösningar</span>
 <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
 <li><a href="brf.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">BRF &amp; samfälligheter</a></li>
-<li><a href="fastighetsagare.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Fastighetsägare</a></li>
+<li><a href="fastighetsagare.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Fastighetsbolag</a></li>
 <li><a href="foretag.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Företag</a></li>
 </ul>
 </div>
 <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:8px">
-<span style="font-weight:700">Tjänster</span>
+<span style="font-weight:700">Produkter &amp; tjänster</span>
 <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
-<li><a href="laddbox.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Laddbox och laddstolpe</a></li>
+<li><a href="laddbox.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Laddning</a></li>
 <li><a href="imd.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">IMD</a></li>
 <li><a href="supportavtal.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Supportavtal</a></li>
-<li><a href="serviceanmalan.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Serviceanmälan</a></li>
+<li><a href="led.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">LED</a></li>
 </ul>
 </div>
 <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:8px">
-<span style="font-weight:700">NEWEL</span>
+<span style="font-weight:700">Om oss</span>
 <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
-<li><a href="referenser.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Referenser</a></li>
+<li><a href="omnewel.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Om NEWEL</a></li>
+<li><a href="referenser.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Kundcase</a></li>
 <li><a href="nyheter.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Nyheter</a></li>
-<li><a href="kontakt.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Kontakt</a></li>
-<li><a href="offert.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Begär offert</a></li>
+</ul>
+</div>
+<div style="flex:1 1 160px;display:flex;flex-direction:column;gap:8px">
+<a href="kontakt.html" style="font-weight:700;color:var(--white);text-decoration:none;display:inline-block;padding:0">Kontakt</a>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
+<li><a href="offert.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Offertförfrågan</a></li>
+<li><a href="serviceanmalan.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Felanmälan</a></li>
 </ul>
 </div>
 </div>
-<div style="font-size:14px;line-height:20px;color:var(--light-grey);display:flex;flex-wrap:wrap;gap:8px 32px"><span><strong style="color:var(--white)">Medlem hos:</strong> Elsäkerhetsverket, Svensk Solenergi, Installatörsföretagen</span><span><strong style="color:var(--white)">Partner med:</strong> Ahlsell, SEOM, Electricity</span></div>
 <div style="border-top:1px solid var(--newel-grey);padding-top:24px;display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between;font-size:14px;line-height:20px;color:var(--light-grey)">
 <span>© 2026 NEWEL Energy Systems AB</span>
 <a href="integritetspolicy.html" style="color:var(--light-grey);padding:8px 0;display:inline-block">Integritetspolicy</a>

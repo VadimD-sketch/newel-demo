@@ -9,7 +9,7 @@
     email: 'enter a valid email address, for example name@company.com.',
     org: 'enter the organisation number with 10 digits, for example 556677-8899.',
     consent: 'accept the handling of your data to send the form.',
-    thanks: { offert: 'Thank you! We have received your quote request.', service: 'Thank you! We have received your service report.', intresse: 'Thank you! We have received your expression of interest.', other: 'Thank you! We have received your message.' },
+    thanks: { offert: 'Thank you! We have received your quote request.', service: 'Thank you! We have received your fault report.', intresse: 'Thank you! We have received your expression of interest.', other: 'Thank you! We have received your message.' },
     demo: 'This is a demo – nothing has been sent.', again: 'Send another'
   } : {
     err: 'Fel:',
@@ -18,7 +18,7 @@
     email: 'ange en giltig e-postadress, till exempel namn@foretag.se.',
     org: 'ange organisationsnummer med 10 siffror, till exempel 556677-8899.',
     consent: 'godkänn hanteringen av era uppgifter för att kunna skicka.',
-    thanks: { offert: 'Tack! Vi har tagit emot er offertförfrågan.', service: 'Tack! Vi har tagit emot er serviceanmälan.', intresse: 'Tack! Vi har tagit emot er intresseanmälan.', other: 'Tack! Vi har tagit emot ert meddelande.' },
+    thanks: { offert: 'Tack! Vi har tagit emot er offertförfrågan.', service: 'Tack! Vi har tagit emot er felanmälan.', intresse: 'Tack! Vi har tagit emot er intresseanmälan.', other: 'Tack! Vi har tagit emot ert meddelande.' },
     demo: 'Det här är en demo – inget har skickats.', again: 'Skicka en ny'
   };
   var ICON = '<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M12 3L2 21h20L12 3z"/><path d="M12 10v5M12 18v.5"/></svg>';
@@ -86,7 +86,7 @@
     return first;
   }
   function success(f, btn) {
-    var bt = btn.textContent; var kind = /offert|quote/i.test(bt) ? 'offert' : /service/i.test(bt) ? 'service' : /intresse|interest/i.test(bt) ? 'intresse' : 'other';
+    var bt = btn.textContent; var kind = /offert|quote/i.test(bt) ? 'offert' : /felanm|fault/i.test(bt) ? 'service' : /intresse|interest/i.test(bt) ? 'intresse' : 'other';
     var kids = Array.prototype.slice.call(f.children);
     kids.forEach(function (c) { c.setAttribute('data-prev-display', c.style.display || ''); c.style.display = 'none'; });
     var panel = document.createElement('div');
@@ -123,6 +123,43 @@
       if (e.key === 'Enter' && t.tagName === 'INPUT' && t.type !== 'checkbox' && t.type !== 'radio') { e.preventDefault(); run(); }
     });
   });
+})();
+/* Header dropdown menus: hover on desktop, click/Enter/Space everywhere, Escape closes */
+(function () {
+  var groups = [].slice.call(document.querySelectorAll('header .dd'));
+  if (!groups.length) return;
+  document.documentElement.classList.add('dd-js');
+  var mq = window.matchMedia('(hover: hover) and (min-width: 1121px)');
+  function setOpen(g, open) {
+    g.classList.toggle('open', open);
+    g.querySelector('.dd-btn').setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  function closeAll(except) { groups.forEach(function (g) { if (g !== except) setOpen(g, false); }); }
+  groups.forEach(function (g) {
+    var b = g.querySelector('.dd-btn'), t, byHover = false;
+    b.addEventListener('click', function () {
+      if (byHover) { byHover = false; return; }
+      var o = !g.classList.contains('open');
+      closeAll(g); setOpen(g, o);
+    });
+    g.addEventListener('mouseenter', function () {
+      if (!mq.matches) return;
+      clearTimeout(t); closeAll(g);
+      if (!g.classList.contains('open')) { setOpen(g, true); byHover = true; }
+    });
+    g.addEventListener('mouseleave', function () {
+      if (!mq.matches) return;
+      byHover = false;
+      t = setTimeout(function () { setOpen(g, false); }, 150);
+    });
+    g.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && g.classList.contains('open')) { setOpen(g, false); b.focus(); e.stopPropagation(); }
+    });
+    g.addEventListener('focusout', function (e) {
+      if (e.relatedTarget && !g.contains(e.relatedTarget)) setOpen(g, false);
+    });
+  });
+  document.addEventListener('click', function (e) { if (!e.target.closest('header .dd')) closeAll(); });
 })();
 document.querySelectorAll('.chip').forEach(function (c) {
   c.addEventListener('click', function () {

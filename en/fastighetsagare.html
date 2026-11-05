@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>EV charging for property owners and tenants – NEWEL</title>
+<title>EV charging for property companies and tenants – NEWEL</title>
 <link rel="alternate" hreflang="sv" href="../fastighetsagare.html">
-<meta name="description" content="Tenant charging: installation, billing and support for property owners and managers from NEWEL.">
+<meta name="description" content="Tenant charging: installation, billing and support for property companies and managers from NEWEL.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 <style>
 body{margin:0;font-family:Roboto,system-ui,"Segoe UI",Arial,sans-serif;font-size:16px;line-height:26px;color:var(--newel-black);background:var(--white)}
@@ -42,9 +42,23 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .h1{font-size:36px;line-height:44px}
 .sec{padding:48px 0}
 }
-header nav a:hover{font-weight:700 !important;text-decoration:none !important}
-header nav a::after{content:attr(data-text);display:block;height:0;overflow:hidden;visibility:hidden;font-weight:700;pointer-events:none}
-header nav a[aria-current="page"],header nav a[aria-current="page"]:hover,header nav a[aria-current="page"]:focus{border-bottom:3px solid var(--newel-orange) !important}
+/*dd*/
+header nav .dd{position:relative}
+header nav .dd-btn{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:10px 8px 7px;margin:0;border:0;border-bottom:3px solid transparent;border-radius:0;background:transparent;color:var(--newel-black);font-family:inherit;font-size:16px;line-height:24px;font-weight:400;cursor:pointer}
+header nav .dd-btn:hover{font-weight:700}
+header nav .dd-btn[data-current="page"]{border-bottom:3px solid var(--newel-orange) !important;font-weight:700}
+header nav .dd.open>.dd-btn[data-current="page"],html:not(.dd-js) header nav .dd:hover>.dd-btn[data-current="page"],html:not(.dd-js) header nav .dd:focus-within>.dd-btn[data-current="page"]{border-bottom-color:transparent !important}
+header nav .dd-btn svg{flex:none;transition:transform .15s}
+header nav .dd-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+header nav .dd-lbl{display:inline-flex;flex-direction:column;align-items:center}
+header nav .dd-lbl::after,header nav .dd-panel a::after{content:attr(data-text);display:block;height:0;overflow:hidden;visibility:hidden;font-weight:700;pointer-events:none}
+header nav .dd-panel{display:none;position:absolute;left:0;top:100%;z-index:60;min-width:260px;margin:0;padding:8px 0;list-style:none;background:var(--white);border:1px solid var(--newel-grey);border-radius:4px}
+header nav .dd:last-child>.dd-panel{left:auto;right:0}
+header nav .dd.open>.dd-panel,html:not(.dd-js) header nav .dd:hover>.dd-panel,html:not(.dd-js) header nav .dd:focus-within>.dd-panel{display:block !important}
+header nav .dd-panel a{display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;font-weight:400;text-decoration:none !important;border:0 !important}
+header nav .dd-panel a:hover{font-weight:700 !important}
+header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--light-grey)}
+/*end-dd*/
 </style>
 <link rel="stylesheet" href="../assets/site.css?v=3">
 <link rel="stylesheet" href="../assets/site-en.css?v=3">
@@ -54,11 +68,10 @@ header nav a[aria-current="page"],header nav a[aria-current="page"]:hover,header
 <header style="background:var(--white);color:var(--newel-black);font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px">
 <div style="background:var(--newel-black)">
 <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;gap:0 24px;justify-content:space-between;align-items:center">
-<span class="util-tag" style="font-size:14px;line-height:20px;color:var(--white);padding:12px 0">EV charging for housing co-ops, associations, property owners and businesses</span>
+<span class="util-tag" style="font-size:14px;line-height:20px;color:var(--white);padding:12px 0">EV charging for housing co-ops, associations, property companies and businesses</span>
 <div style="display:flex;flex-wrap:wrap;gap:0 24px;align-items:center">
 <a class="util-hide" href="kontakt.html" style="color:var(--white);font-size:14px;line-height:20px;text-decoration:none;padding:12px 0">Contact</a>
-<a href="serviceanmalan.html" style="color:var(--white);font-size:14px;line-height:20px;text-decoration:none;padding:12px 0">Service request</a>
-<a class="util-hide" href="intresseanmalan.html" style="color:var(--white);font-size:14px;line-height:20px;text-decoration:none;padding:12px 0">Expression of interest</a>
+<a href="serviceanmalan.html" style="color:var(--white);font-size:14px;line-height:20px;text-decoration:none;padding:12px 0">Fault report</a>
 <span class="lang-switch" role="group" aria-label="Language"><a href="../fastighetsagare.html" hreflang="sv" lang="sv" aria-label="SV, Svenska">SV</a><span aria-current="true" lang="en">EN</span></span>
 <a href="tel:+468181412" style="color:var(--white);font-size:14px;line-height:20px;font-weight:700;text-decoration:none;padding:12px 0">Tel +46 8-18 14 12</a>
 </div>
@@ -68,14 +81,39 @@ header nav a[aria-current="page"],header nav a[aria-current="page"]:hover,header
 <a class="site-logo" href="index.html" aria-label="NEWEL – home" style="display:inline-flex;padding:4px 0">
 <img src="../assets/logo-color.svg" alt="NEWEL" style="height:40px;width:auto;display:block">
 </a>
-<nav id="site-nav" class="site-nav" aria-label="Main menu" style="display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center">
-<a href="brf.html" data-text="Co-ops &amp; associations" style="color:var(--newel-black);text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">Co-ops &amp; associations</a>
-<a href="fastighetsagare.html" aria-current="page" data-text="Property owners" style="color:var(--newel-black);text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid var(--newel-orange);font-weight:700">Property owners</a>
-<a href="foretag.html" data-text="Businesses" style="color:var(--newel-black);text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">Businesses</a>
-<a href="imd.html" data-text="IMD" style="color:var(--newel-black);text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">IMD</a>
-<a href="supportavtal.html" data-text="Support agreement" style="color:var(--newel-black);text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">Support agreement</a>
-<a href="referenser.html" data-text="References" style="color:var(--newel-black);text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">References</a>
-<a href="nyheter.html" data-text="News" style="color:var(--newel-black);text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">News</a>
+<nav id="site-nav" class="site-nav" aria-label="Main menu" style="display:flex;align-items:center;gap:8px">
+<div class="dd" style="position:relative">
+<button class="dd-btn" type="button" aria-expanded="false" aria-controls="dd-ind" data-current="page" style="display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:10px 8px 7px;margin:0;border:0;border-bottom:3px solid transparent;background:transparent;color:var(--newel-black);font-family:inherit;font-size:16px;line-height:24px;font-weight:400;cursor:pointer"><span class="dd-lbl" data-text="Industry solutions">Industry solutions</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M3 6l5 5 5-5"/></svg></button>
+<ul class="dd-panel" id="dd-ind" style="display:none;position:absolute;left:0;top:100%;z-index:60;min-width:260px;margin:0;padding:8px 0;list-style:none;background:var(--white);border:1px solid var(--newel-grey);border-radius:4px">
+<li><a href="brf.html" data-text="Co-ops &amp; associations" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">Co-ops &amp; associations</a></li>
+<li><a href="fastighetsagare.html" data-text="Property companies" aria-current="page" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">Property companies</a></li>
+<li><a href="foretag.html" data-text="Businesses" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">Businesses</a></li>
+</ul>
+</div>
+<div class="dd" style="position:relative">
+<button class="dd-btn" type="button" aria-expanded="false" aria-controls="dd-prod" style="display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:10px 8px 7px;margin:0;border:0;border-bottom:3px solid transparent;background:transparent;color:var(--newel-black);font-family:inherit;font-size:16px;line-height:24px;font-weight:400;cursor:pointer"><span class="dd-lbl" data-text="Products &amp; services">Products &amp; services</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M3 6l5 5 5-5"/></svg></button>
+<ul class="dd-panel" id="dd-prod" style="display:none;position:absolute;left:0;top:100%;z-index:60;min-width:260px;margin:0;padding:8px 0;list-style:none;background:var(--white);border:1px solid var(--newel-grey);border-radius:4px">
+<li><a href="laddbox.html" data-text="Charging" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">Charging</a></li>
+<li><a href="imd.html" data-text="IMD" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">IMD</a></li>
+<li><a href="supportavtal.html" data-text="Support agreement" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">Support agreement</a></li>
+<li><a href="led.html" data-text="LED" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">LED</a></li>
+</ul>
+</div>
+<div class="dd" style="position:relative">
+<button class="dd-btn" type="button" aria-expanded="false" aria-controls="dd-about" style="display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:10px 8px 7px;margin:0;border:0;border-bottom:3px solid transparent;background:transparent;color:var(--newel-black);font-family:inherit;font-size:16px;line-height:24px;font-weight:400;cursor:pointer"><span class="dd-lbl" data-text="About us">About us</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M3 6l5 5 5-5"/></svg></button>
+<ul class="dd-panel" id="dd-about" style="display:none;position:absolute;left:0;top:100%;z-index:60;min-width:260px;margin:0;padding:8px 0;list-style:none;background:var(--white);border:1px solid var(--newel-grey);border-radius:4px">
+<li><a href="omnewel.html" data-text="About NEWEL" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">About NEWEL</a></li>
+<li><a href="referenser.html" data-text="Customer cases" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">Customer cases</a></li>
+<li><a href="nyheter.html" data-text="News" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">News</a></li>
+</ul>
+</div>
+<div class="dd" style="position:relative">
+<button class="dd-btn" type="button" aria-expanded="false" aria-controls="dd-contact" style="display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:10px 8px 7px;margin:0;border:0;border-bottom:3px solid transparent;background:transparent;color:var(--newel-black);font-family:inherit;font-size:16px;line-height:24px;font-weight:400;cursor:pointer"><span class="dd-lbl" data-text="Contact">Contact</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M3 6l5 5 5-5"/></svg></button>
+<ul class="dd-panel" id="dd-contact" style="display:none;position:absolute;left:0;top:100%;z-index:60;min-width:260px;margin:0;padding:8px 0;list-style:none;background:var(--white);border:1px solid var(--newel-grey);border-radius:4px">
+<li><a href="offert.html" data-text="Quote request" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">Quote request</a></li>
+<li><a href="serviceanmalan.html" data-text="Fault report" style="display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;text-decoration:none">Fault report</a></li>
+</ul>
+</div>
 </nav>
 <a class="btn btn-primary site-cta" href="offert.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:var(--accent-fill);color:var(--ink-strong);font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">Request a quote</a>
 <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path class="nt-open" d="M3 6h18M3 12h18M3 18h18"/><path class="nt-close" d="M5 5l14 14M19 5L5 19"/></svg></button>
@@ -86,11 +124,11 @@ header nav a[aria-current="page"],header nav a[aria-current="page"]:hover,header
 <main>
 <section class="sec" style="background:var(--white)">
 <div class="wrap" style="display:flex;flex-direction:column;gap:32px">
-<nav aria-label="Breadcrumb" class="cap"><a href="index.html" style="color:var(--newel-grey)">Home</a> / <span style="color:var(--newel-black)">Property owners</span></nav>
+<nav aria-label="Breadcrumb" class="cap"><a href="index.html" style="color:var(--newel-grey)">Home</a> / <span style="color:var(--newel-black)">Property companies</span></nav>
 <div style="display:flex;flex-wrap:wrap;gap:48px;align-items:center">
 <div style="flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:24px">
 <h1 class="h1">Charging for tenants in your properties</h1>
-<p class="sub">Installation, billing and support for property owners and managers – all from one supplier.</p>
+<p class="sub">Installation, billing and support for property companies and managers – all from one supplier.</p>
 <div style="display:flex;flex-wrap:wrap;gap:16px">
 <a class="btn btn-primary" href="offert.html">Request a quote</a>
 <a class="btn btn-secondary" href="kontakt.html">Talk to us</a>
@@ -104,7 +142,7 @@ header nav a[aria-current="page"],header nav a[aria-current="page"]:hover,header
 <section class="sec" style="background:var(--light-grey)">
 <div class="wrap" style="display:flex;flex-direction:column;gap:32px">
 <div style="display:flex;flex-direction:column;gap:8px">
-<h2 class="h2p">What property owners need from a charging solution</h2>
+<h2 class="h2p">What property companies need from a charging solution</h2>
 <p style="max-width:720px">Charging must work for the tenant and be simple for you to own and administer.</p>
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:24px">
@@ -165,7 +203,7 @@ header nav a[aria-current="page"],header nav a[aria-current="page"]:hover,header
 
 <section class="sec" style="background:var(--light-grey)">
 <div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px;align-items:center">
-<div class="ph" role="img" aria-label="Image placeholder: Zpark for property owners" style="flex:1 1 480px;aspect-ratio:4/3;background:var(--white)">
+<div class="ph" role="img" aria-label="Image placeholder: Zpark for property companies" style="flex:1 1 480px;aspect-ratio:4/3;background:var(--white)">
 <svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--newel-grey)" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><circle cx="9" cy="10" r="1.5"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
 <span>[IMAGE: Zpark – overview for managers, 4:3]</span>
 </div>
@@ -234,7 +272,7 @@ header nav a[aria-current="page"],header nav a[aria-current="page"]:hover,header
 </figure>
 </div>
 <div>
-<a class="btn btn-secondary" href="referenser.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:transparent;color:var(--newel-black);border:2px solid var(--newel-grey);font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">See all references</a>
+<a class="btn btn-secondary" href="referenser.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:transparent;color:var(--newel-black);border:2px solid var(--newel-grey);font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">See all customer cases</a>
 </div>
 </div>
 </section>
@@ -242,7 +280,7 @@ header nav a[aria-current="page"],header nav a[aria-current="page"]:hover,header
 
 <section class="sec" style="background:var(--light-grey)">
 <div class="wrap" style="display:flex;flex-direction:column;gap:32px">
-<h2 class="h2p">Frequently asked questions from property owners</h2>
+<h2 class="h2p">Frequently asked questions from property companies</h2>
 <div style="display:flex;flex-direction:column;gap:12px;max-width:880px">
 <details class="faq" open>
 <summary>How do we bill tenants for charging?</summary>
@@ -258,7 +296,7 @@ header nav a[aria-current="page"],header nav a[aria-current="page"]:hover,header
 </details>
 <details class="faq">
 <summary>How do tenants report faults?</summary>
-<p>Faults are reported through the Service request form. Read more under Support agreement.</p>
+<p>Faults are reported through the Fault report form. Read more under Support agreement.</p>
 </details>
 </div>
 </div>
@@ -297,30 +335,35 @@ header nav a[aria-current="page"],header nav a[aria-current="page"]:hover,header
 </div>
 </div>
 <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:8px">
-<span style="font-weight:700">Charging</span>
+<span style="font-weight:700">Industry solutions</span>
 <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
 <li><a href="brf.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Co-ops &amp; associations</a></li>
-<li><a href="fastighetsagare.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Property owners</a></li>
+<li><a href="fastighetsagare.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Property companies</a></li>
 <li><a href="foretag.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Businesses</a></li>
-<li><a href="laddbox.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Wallbox and charging post</a></li>
 </ul>
 </div>
 <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:8px">
-<span style="font-weight:700">Services</span>
+<span style="font-weight:700">Products &amp; services</span>
 <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
+<li><a href="laddbox.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Charging</a></li>
 <li><a href="imd.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">IMD</a></li>
 <li><a href="supportavtal.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Support agreement</a></li>
-<li><a href="serviceanmalan.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Service request</a></li>
-<li><a href="intresseanmalan.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Expression of interest</a></li>
+<li><a href="led.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">LED</a></li>
 </ul>
 </div>
 <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:8px">
-<span style="font-weight:700">NEWEL</span>
+<span style="font-weight:700">About us</span>
 <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
-<li><a href="referenser.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">References</a></li>
+<li><a href="omnewel.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">About NEWEL</a></li>
+<li><a href="referenser.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Customer cases</a></li>
 <li><a href="nyheter.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">News</a></li>
-<li><a href="kontakt.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Contact</a></li>
+</ul>
+</div>
+<div style="flex:1 1 160px;display:flex;flex-direction:column;gap:8px">
+<a href="kontakt.html" style="font-weight:700;color:var(--white);text-decoration:none;display:inline-block;padding:0">Contact</a>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
 <li><a href="offert.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Quote request</a></li>
+<li><a href="serviceanmalan.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Fault report</a></li>
 </ul>
 </div>
 </div>

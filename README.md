@@ -1,10 +1,10 @@
 # NEWEL – demowebbplats
 
 Statisk demo (ren HTML, inga byggsteg) av nya newel.se. Sidor: startsida, BRF och samfälligheter,
-fastighetsägare, företag, laddbox, IMD, supportavtal, offertförfrågan, intresseanmälan,
-serviceanmälan, kontakt, referenser och nyheter.
+fastighetsbolag, företag, laddbox, IMD, supportavtal, offertförfrågan, intresseanmälan,
+felanmälan, kontakt, kundcase och nyheter.
 
-- Engelsk version ligger i `en/` (samma filnamn som de svenska sidorna). Språkbyte via länken *English* / *Svenska* i sidhuvudet. Bildplatshållare och sidtitlar är översatta; sidnamn som Serviceanmälan och Intresseanmälan har engelska motsvarigheter.
+- Engelsk version ligger i `en/` (samma filnamn som de svenska sidorna). Språkbyte via länken *English* / *Svenska* i sidhuvudet. Bildplatshållare och sidtitlar är översatta; sidnamn som Felanmälan och Intresseanmälan har engelska motsvarigheter.
 - **Variant B (förenklad struktur)** ligger i `v2/` (svenska) och `v2/en/` (engelska): 5 menyval, 3 formulär, kortare startsida. Jämför med originalet i rotmappen.
 - Platshållare i hakparentes, t.ex. `[KUNDCITAT]`, ska ersättas med riktigt innehåll och riktiga bilder.
 - Formulären skickar inget i demon (`assets/demo.js` visar bara ett tack-meddelande).

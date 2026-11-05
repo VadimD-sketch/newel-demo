@@ -8,9 +8,21 @@ select.field{-webkit-appearance:none;appearance:none;padding-right:44px;cursor:p
 .lang-switch a:focus-visible{outline:2px solid var(--newel-orange);outline-offset:-2px}
 img{max-width:100%}
 footer a:focus-visible,header>div:first-child a:focus-visible{outline:2px solid var(--white);outline-offset:2px}
-header nav a:hover{font-weight:700 !important;text-decoration:none !important}
-header nav a::after{content:attr(data-text);display:block;height:0;overflow:hidden;visibility:hidden;font-weight:700;pointer-events:none}
-header nav a[aria-current="page"],header nav a[aria-current="page"]:hover,header nav a[aria-current="page"]:focus{border-bottom:3px solid #f15b28/*raw*/ !important}
+header nav .dd{position:relative}
+header nav .dd-btn{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:10px 8px 7px;margin:0;border:0;border-bottom:3px solid transparent;border-radius:0;background:transparent;color:var(--newel-black);font-family:inherit;font-size:16px;line-height:24px;font-weight:400;cursor:pointer}
+header nav .dd-btn:hover{font-weight:700}
+header nav .dd-btn[data-current="page"]{border-bottom:3px solid #f15b28/*raw*/ !important;font-weight:700}
+header nav .dd.open>.dd-btn[data-current="page"],html:not(.dd-js) header nav .dd:hover>.dd-btn[data-current="page"],html:not(.dd-js) header nav .dd:focus-within>.dd-btn[data-current="page"]{border-bottom-color:transparent !important}
+header nav .dd-btn svg{flex:none;transition:transform .15s}
+header nav .dd-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+header nav .dd-lbl{display:inline-flex;flex-direction:column;align-items:center}
+header nav .dd-lbl::after,header nav .dd-panel a::after{content:attr(data-text);display:block;height:0;overflow:hidden;visibility:hidden;font-weight:700;pointer-events:none}
+header nav .dd-panel{display:none;position:absolute;left:0;top:100%;z-index:60;min-width:260px;margin:0;padding:8px 0;list-style:none;background:var(--white);border:1px solid var(--newel-grey);border-radius:4px}
+header nav .dd:last-child>.dd-panel{left:auto;right:0}
+header nav .dd.open>.dd-panel,html:not(.dd-js) header nav .dd:hover>.dd-panel,html:not(.dd-js) header nav .dd:focus-within>.dd-panel{display:block !important}
+header nav .dd-panel a{display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;font-weight:400;text-decoration:none !important;border:0 !important}
+header nav .dd-panel a:hover{font-weight:700 !important}
+header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--light-grey)}
 .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .field-error{display:flex;gap:8px;align-items:flex-start;margin:8px 0 0;font-size:14px;line-height:20px;color:var(--newel-black)}
 .field-error svg{flex:none}
@@ -28,10 +40,14 @@ input[type="checkbox"][aria-invalid="true"],input[type="radio"][aria-invalid="tr
   .site-logo img{height:32px !important}
   .nav-toggle{display:inline-flex}
   .site-cta{margin-left:auto;padding:0 16px !important}
-  .site-nav{display:none !important;order:10;width:100%;flex-direction:column;align-items:stretch !important;gap:0 !important}
+  .site-nav{display:none !important;order:10 !important;width:100%;flex-direction:column;align-items:stretch !important;gap:0 !important}
   .site-nav.open{display:flex !important}
-  .site-nav a{display:flex;align-items:center;min-height:48px;padding:12px 0 !important;border-bottom:1px solid var(--light-grey) !important}
-  .site-nav a[aria-current="page"]{border-bottom:3px solid #f15b28/*raw*/ !important}
+  .site-nav .dd{width:100%;border-bottom:1px solid var(--light-grey)}
+  header nav.site-nav .dd-lbl{align-items:flex-start}
+  header nav.site-nav .dd-btn{width:100%;justify-content:space-between;min-height:48px;padding:12px 0 !important}
+  .site-nav .dd-btn[data-current="page"]{border-bottom:0 !important;box-shadow:inset 4px 0 0 #f15b28/*raw*/;padding-left:12px !important}
+  header nav.site-nav .dd-panel{position:static !important;min-width:0;border:0 !important;border-radius:0;padding:0 0 8px 12px !important;background:transparent !important}
+  .site-nav .dd:last-child>.dd-panel{right:auto}
 }
 @media (max-width:480px){
   header>div:first-child>div>div{gap:0 14px !important}
