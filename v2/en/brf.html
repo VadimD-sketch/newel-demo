@@ -9,47 +9,51 @@
 <meta name="description" content="Wallbox and charging post installation for housing co-ops and homeowner associations. NEWEL helps from quote to operation, with IMD and support.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 <style>
-body{margin:0;font-family:Roboto,system-ui,"Segoe UI",Arial,sans-serif;font-size:16px;line-height:26px;color:#262625;background:#ffffff}
+body{margin:0;font-family:Roboto,system-ui,"Segoe UI",Arial,sans-serif;font-size:16px;line-height:26px;color:var(--newel-black);background:var(--white)}
 *{box-sizing:border-box}
 h1,h2,h3,p{margin:0}
-a{color:#262625}
+a{color:var(--newel-black)}
 a:hover{text-decoration:underline !important}
 .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
 .sec{padding:64px 0;overflow:hidden}
-.h1{font-size:48px;line-height:56px;font-weight:700;color:#262625}
-.sub{font-size:28px;line-height:36px;font-weight:700;color:#676867}
-.h2{align-self:flex-start;display:inline-block;margin-left:calc(50% - 50vw);padding:8px 24px 8px calc(50vw - 50%);background:#eeeeee;font-size:28px;line-height:36px;font-weight:700;color:#262625}
-.h2p{font-size:28px;line-height:36px;font-weight:700;color:#262625}
-.h3{font-size:20px;line-height:28px;font-weight:700;color:#262625}
-.cap{font-size:14px;line-height:20px;color:#676867}
+.h1{font-size:48px;line-height:56px;font-weight:700;color:var(--newel-black)}
+.sub{font-size:28px;line-height:36px;font-weight:700;color:var(--newel-grey)}
+.h2{align-self:flex-start;display:inline-block;margin-left:calc(50% - 50vw);padding:8px 24px 8px calc(50vw - 50%);background:var(--light-grey);font-size:28px;line-height:36px;font-weight:700;color:var(--newel-black)}
+.h2p{font-size:28px;line-height:36px;font-weight:700;color:var(--newel-black)}
+.h3{font-size:20px;line-height:28px;font-weight:700;color:var(--newel-black)}
+.cap{font-size:14px;line-height:20px;color:var(--newel-grey)}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:4px;font-size:16px;line-height:24px;font-weight:700;text-decoration:none;border:2px solid transparent}
-.btn-primary{background:#f15b28;color:#1a1a1a;border-color:#f15b28}
-.btn-primary:hover{background:#262625 !important;color:#ffffff !important;border-color:#262625 !important;text-decoration:none !important}
-.btn-secondary{background:transparent;color:#262625;border-color:#676867}
-.btn-secondary:hover{background:#262625 !important;color:#ffffff !important;border-color:#262625 !important;text-decoration:none !important}
-.btn-dark:hover{background:#ffffff !important;color:#262625 !important;text-decoration:none !important}
-.btn-outline-dark:hover{background:#262625 !important;color:#ffffff !important;text-decoration:none !important}
-.ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:#eeeeee;border:1px dashed #676867;color:#676867;font-size:14px;line-height:20px;text-align:center;padding:16px}
-.card{background:#eeeeee;border-radius:8px;padding:24px}
-.faq{background:#ffffff;border-radius:8px;padding:0 24px}
+.btn-primary{background:var(--accent-fill);color:var(--ink-strong);border-color:var(--accent-fill)}
+.btn-primary:hover{background:var(--newel-black) !important;color:var(--accent-fill) !important;border-color:var(--newel-black) !important;text-decoration:none !important}
+.btn-primary:active{background:var(--orange-700) !important;color:var(--white) !important;border-color:var(--orange-700) !important}
+.btn-primary:focus-visible{outline:2px solid var(--ink-strong);outline-offset:2px}
+.btn-primary:disabled,.btn-primary[aria-disabled="true"]{background:var(--orange-100) !important;color:var(--orange-300) !important;border-color:var(--orange-100) !important;cursor:not-allowed}
+.btn-secondary{background:transparent;color:var(--newel-black);border-color:var(--newel-grey)}
+.btn-secondary:hover{background:var(--newel-black) !important;color:var(--white) !important;border-color:var(--newel-black) !important;text-decoration:none !important}
+.btn-dark:hover{background:var(--white) !important;color:var(--newel-black) !important;text-decoration:none !important}
+.btn-outline-dark:hover{background:var(--newel-black) !important;color:var(--white) !important;text-decoration:none !important}
+.ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--light-grey);border:1px dashed var(--newel-grey);color:var(--newel-grey);font-size:14px;line-height:20px;text-align:center;padding:16px}
+.card{background:var(--light-grey);border-radius:8px;padding:24px}
+.faq{background:var(--white);border-radius:8px;padding:0 24px}
 .faq summary{cursor:pointer;font-weight:700;padding:14px 0;min-height:48px;display:flex;align-items:center}
 .faq p{padding:0 0 20px}
-a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid #262625;outline-offset:2px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--newel-black);outline-offset:2px}
 @media (max-width:640px){
 .h1{font-size:36px;line-height:44px}
 .sec{padding:48px 0}
 }
 </style>
 <link rel="stylesheet" href="../../assets/site.css?v=3">
+<style>:root{--white:#ffffff;--light-grey:#eeeeee;--newel-grey:#676867;--newel-black:#262625;--ink-strong:#1a1a1a;--accent-fill:#f15b22;--newel-orange:#f15b28;--orange-50:#fff4ee;--orange-100:#ffe7db;--orange-200:#ffcfb8;--orange-300:#ffb08e;--orange-400:#ff8557;--orange-600:#d0481f;--orange-700:#ab381b;--orange-800:#862b18;--orange-900:#662215;--orange-950:#411008}</style>
 </head>
 <body>
-<header style="background:#ffffff;color:#262625;font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px">
-<div style="background:#262625">
+<header style="background:var(--white);color:var(--newel-black);font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px">
+<div style="background:var(--newel-black)">
 <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;gap:0 24px;justify-content:flex-end;align-items:center">
 <div style="display:flex;flex-wrap:wrap;gap:0 24px;align-items:center">
-<a href="serviceanmalan.html" style="color:#ffffff;font-size:14px;line-height:20px;text-decoration:none;padding:12px 0">Service request</a>
-<span class="lang-switch" role="group" aria-label="Language"><a href="../brf.html" hreflang="sv" lang="sv" aria-label="Svenska">SV</a><a href="#" aria-current="true" lang="en" onclick="return false">EN</a></span>
-<a href="tel:+468181412" style="color:#ffffff;font-size:14px;line-height:20px;font-weight:700;text-decoration:none;padding:12px 0">Tel +46 8-18 14 12</a>
+<a href="serviceanmalan.html" style="color:var(--white);font-size:14px;line-height:20px;text-decoration:none;padding:12px 0">Service request</a>
+<span class="lang-switch" role="group" aria-label="Language"><a href="../brf.html" hreflang="sv" lang="sv" aria-label="SV, Svenska">SV</a><span aria-current="true" lang="en">EN</span></span>
+<a href="tel:+468181412" style="color:var(--white);font-size:14px;line-height:20px;font-weight:700;text-decoration:none;padding:12px 0">Tel +46 8-18 14 12</a>
 </div>
 </div>
 </div>
@@ -58,22 +62,22 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <img src="../../assets/logo-color.svg" alt="NEWEL" style="height:40px;width:auto;display:block">
 </a>
 <nav id="site-nav" class="site-nav" aria-label="Main menu" style="display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center">
-<a href="brf.html" aria-current="page" style="color:#262625;text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid #f15b28;font-weight:700">Co-ops &amp; associations</a>
-<a href="fastighetsagare.html" style="color:#262625;text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">Property owners</a>
-<a href="foretag.html" style="color:#262625;text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">Businesses</a>
-<a href="tjanster.html" style="color:#262625;text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">Services</a>
-<a href="referenser.html" style="color:#262625;text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">References</a>
+<a href="brf.html" aria-current="page" style="color:var(--newel-black);text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid var(--newel-orange);font-weight:700">Co-ops &amp; associations</a>
+<a href="fastighetsagare.html" style="color:var(--newel-black);text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">Property owners</a>
+<a href="foretag.html" style="color:var(--newel-black);text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">Businesses</a>
+<a href="tjanster.html" style="color:var(--newel-black);text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">Services</a>
+<a href="referenser.html" style="color:var(--newel-black);text-decoration:none;font-size:16px;line-height:24px;padding:10px 0 7px;border-bottom:3px solid transparent;font-weight:400">References</a>
 </nav>
-<a class="btn btn-primary site-cta" href="offert.html?typ=brf" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:#f15b28;color:#1a1a1a;font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">Request a quote</a>
+<a class="btn btn-primary site-cta" href="offert.html?typ=brf" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:var(--accent-fill);color:var(--ink-strong);font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">Request a quote</a>
 <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path class="nt-open" d="M3 6h18M3 12h18M3 18h18"/><path class="nt-close" d="M5 5l14 14M19 5L5 19"/></svg></button>
 </div>
-<div style="height:1px;background:#eeeeee"></div>
+<div style="height:1px;background:var(--light-grey)"></div>
 </header>
 
 <main>
-<section class="sec" style="background:#ffffff">
+<section class="sec" style="background:var(--white)">
 <div class="wrap" style="display:flex;flex-direction:column;gap:32px">
-<nav aria-label="Breadcrumb" class="cap"><a href="index.html" style="color:#676867">Home</a> / <span style="color:#262625">Housing co-ops and associations</span></nav>
+<nav aria-label="Breadcrumb" class="cap"><a href="index.html" style="color:var(--newel-grey)">Home</a> / <span style="color:var(--newel-black)">Housing co-ops and associations</span></nav>
 <div style="display:flex;flex-wrap:wrap;gap:48px;align-items:center">
 <div style="flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:24px">
 <h1 class="h1">Wallboxes and charging posts for housing co-ops and associations</h1>
@@ -87,22 +91,22 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 </div>
 </section>
 
-<section class="sec" style="background:#eeeeee">
+<section class="sec" style="background:var(--light-grey)">
 <div class="wrap" style="display:flex;flex-direction:column;gap:32px">
 <div style="display:flex;flex-direction:column;gap:8px">
 <h2 class="h2p">Wallbox and charging post installation in your association</h2>
 <p style="max-width:720px">Whether you have a garage, open parking or a shared facility, we help you from first need to working charging.</p>
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:24px">
-<article style="flex:1 1 320px;background:#ffffff;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:12px">
+<article style="flex:1 1 320px;background:var(--white);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:12px">
 <h3 class="h3">Wallbox in the garage</h3>
 <p>We install wallboxes at the spaces in the association's garage. We review the electrical installation and propose a solution that suits you.</p>
 </article>
-<article style="flex:1 1 320px;background:#ffffff;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:12px">
+<article style="flex:1 1 320px;background:var(--white);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:12px">
 <h3 class="h3">Charging post for the association</h3>
 <p>Charging posts on shared parking for homeowner associations and joint facilities, with billing per user.</p>
 </article>
-<article style="flex:1 1 320px;background:#ffffff;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:12px">
+<article style="flex:1 1 320px;background:var(--white);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:12px">
 <h3 class="h3">The cost follows the user</h3>
 <p>With IMD (individual metering and billing) each user is billed for their actual consumption, so the association never pays for someone else's charging.</p>
 </article>
@@ -112,95 +116,95 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 
 
-<section style="background:#ffffff;color:#262625;font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px;padding:64px 0;overflow:hidden">
+<section style="background:var(--white);color:var(--newel-black);font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px;padding:64px 0;overflow:hidden">
 <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:32px">
-<h2 style="margin:0 0 0 calc(50% - 50vw);align-self:flex-start;display:inline-block;padding:8px 24px 8px calc(50vw - 50%);background:#eeeeee;font-size:28px;line-height:36px;font-weight:700;color:#262625">Associations and companies that charge with NEWEL</h2>
+<h2 style="margin:0 0 0 calc(50% - 50vw);align-self:flex-start;display:inline-block;padding:8px 24px 8px calc(50vw - 50%);background:var(--light-grey);font-size:28px;line-height:36px;font-weight:700;color:var(--newel-black)">Associations and companies that charge with NEWEL</h2>
 <div style="display:flex;flex-wrap:wrap;gap:24px">
-<figure style="margin:0;flex:1 1 320px;background:#eeeeee;border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
-<div role="img" aria-label="Image placeholder: charging installation at a reference customer" style="aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:#ffffff;border:1px dashed #676867;color:#676867;font-size:14px;line-height:20px;text-align:center;padding:16px">
-<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#676867" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><circle cx="9" cy="10" r="1.5"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
+<figure style="margin:0;flex:1 1 320px;background:var(--light-grey);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
+<div role="img" aria-label="Image placeholder: charging installation at a reference customer" style="aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--white);border:1px dashed var(--newel-grey);color:var(--newel-grey);font-size:14px;line-height:20px;text-align:center;padding:16px">
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--newel-grey)" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><circle cx="9" cy="10" r="1.5"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
 <span>[IMAGE: charging installation at a customer]</span>
 </div>
 <figcaption style="padding:24px;display:flex;flex-direction:column;gap:8px">
 <blockquote style="margin:0">“[CUSTOMER QUOTE: one or two sentences from the board, property manager or CEO]”</blockquote>
 <span style="font-weight:700">[CO-OP NAME]</span>
-<span style="font-size:14px;line-height:20px;color:#676867">[PLACE] · [NUMBER] charge points</span>
+<span style="font-size:14px;line-height:20px;color:var(--newel-grey)">[PLACE] · [NUMBER] charge points</span>
 </figcaption>
 </figure>
-<figure style="margin:0;flex:1 1 320px;background:#eeeeee;border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
-<div role="img" aria-label="Image placeholder: charging installation at a reference customer" style="aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:#ffffff;border:1px dashed #676867;color:#676867;font-size:14px;line-height:20px;text-align:center;padding:16px">
-<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#676867" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><circle cx="9" cy="10" r="1.5"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
+<figure style="margin:0;flex:1 1 320px;background:var(--light-grey);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
+<div role="img" aria-label="Image placeholder: charging installation at a reference customer" style="aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--white);border:1px dashed var(--newel-grey);color:var(--newel-grey);font-size:14px;line-height:20px;text-align:center;padding:16px">
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--newel-grey)" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><circle cx="9" cy="10" r="1.5"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
 <span>[IMAGE: charging installation at a customer]</span>
 </div>
 <figcaption style="padding:24px;display:flex;flex-direction:column;gap:8px">
 <blockquote style="margin:0">“[CUSTOMER QUOTE: one or two sentences from the board, property manager or CEO]”</blockquote>
 <span style="font-weight:700">[ASSOCIATION NAME]</span>
-<span style="font-size:14px;line-height:20px;color:#676867">[PLACE] · [NUMBER] charge points</span>
+<span style="font-size:14px;line-height:20px;color:var(--newel-grey)">[PLACE] · [NUMBER] charge points</span>
 </figcaption>
 </figure>
-<figure style="margin:0;flex:1 1 320px;background:#eeeeee;border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
-<div role="img" aria-label="Image placeholder: charging installation at a reference customer" style="aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:#ffffff;border:1px dashed #676867;color:#676867;font-size:14px;line-height:20px;text-align:center;padding:16px">
-<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#676867" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><circle cx="9" cy="10" r="1.5"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
+<figure style="margin:0;flex:1 1 320px;background:var(--light-grey);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
+<div role="img" aria-label="Image placeholder: charging installation at a reference customer" style="aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--white);border:1px dashed var(--newel-grey);color:var(--newel-grey);font-size:14px;line-height:20px;text-align:center;padding:16px">
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--newel-grey)" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><circle cx="9" cy="10" r="1.5"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
 <span>[IMAGE: charging installation at a customer]</span>
 </div>
 <figcaption style="padding:24px;display:flex;flex-direction:column;gap:8px">
 <blockquote style="margin:0">“[CUSTOMER QUOTE: one or two sentences from the board, property manager or CEO]”</blockquote>
 <span style="font-weight:700">[COMPANY NAME]</span>
-<span style="font-size:14px;line-height:20px;color:#676867">[PLACE] · [NUMBER] charge points</span>
+<span style="font-size:14px;line-height:20px;color:var(--newel-grey)">[PLACE] · [NUMBER] charge points</span>
 </figcaption>
 </figure>
 </div>
 <div>
-<a class="btn btn-secondary" href="referenser.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:transparent;color:#262625;border:2px solid #676867;font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">See all references</a>
+<a class="btn btn-secondary" href="referenser.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:transparent;color:var(--newel-black);border:2px solid var(--newel-grey);font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">See all references</a>
 </div>
 </div>
 </section>
 
 
-<section id="steg" style="background:#ffffff;color:#262625;font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px;padding:64px 0;overflow:hidden">
+<section id="steg" style="background:var(--white);color:var(--newel-black);font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px;padding:64px 0;overflow:hidden">
 <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:32px">
-<h2 style="margin:0 0 0 calc(50% - 50vw);align-self:flex-start;display:inline-block;padding:8px 24px 8px calc(50vw - 50%);background:#eeeeee;font-size:28px;line-height:36px;font-weight:700;color:#262625">From quote request to installation in five steps</h2>
+<h2 style="margin:0 0 0 calc(50% - 50vw);align-self:flex-start;display:inline-block;padding:8px 24px 8px calc(50vw - 50%);background:var(--light-grey);font-size:28px;line-height:36px;font-weight:700;color:var(--newel-black)">From quote request to installation in five steps</h2>
 <p style="margin:0;max-width:720px">This is how it works when you install wallboxes or charging posts with NEWEL.</p>
 <ol style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:32px">
-<li style="flex:1 1 200px;border-top:4px solid #eeeeee;padding-top:16px;display:flex;flex-direction:column;gap:8px">
-<span aria-hidden="true" style="font-size:48px;line-height:56px;font-weight:700;color:#f15b28">1</span>
+<li style="flex:1 1 200px;border-top:4px solid var(--light-grey);padding-top:16px;display:flex;flex-direction:column;gap:8px">
+<span aria-hidden="true" style="font-size:48px;line-height:56px;font-weight:700;color:var(--newel-orange)">1</span>
 <h3 style="margin:0;font-size:20px;line-height:28px;font-weight:700">Quote request</h3>
 <p style="margin:0">You tell us about the site and how many charge points you want.</p>
 </li>
-<li style="flex:1 1 200px;border-top:4px solid #eeeeee;padding-top:16px;display:flex;flex-direction:column;gap:8px">
-<span aria-hidden="true" style="font-size:48px;line-height:56px;font-weight:700;color:#262625">2</span>
+<li style="flex:1 1 200px;border-top:4px solid var(--light-grey);padding-top:16px;display:flex;flex-direction:column;gap:8px">
+<span aria-hidden="true" style="font-size:48px;line-height:56px;font-weight:700;color:var(--newel-black)">2</span>
 <h3 style="margin:0;font-size:20px;line-height:28px;font-weight:700">Review</h3>
 <p style="margin:0">We go through the electrical installation, the parking and your wishes.</p>
 </li>
-<li style="flex:1 1 200px;border-top:4px solid #eeeeee;padding-top:16px;display:flex;flex-direction:column;gap:8px">
-<span aria-hidden="true" style="font-size:48px;line-height:56px;font-weight:700;color:#262625">3</span>
+<li style="flex:1 1 200px;border-top:4px solid var(--light-grey);padding-top:16px;display:flex;flex-direction:column;gap:8px">
+<span aria-hidden="true" style="font-size:48px;line-height:56px;font-weight:700;color:var(--newel-black)">3</span>
 <h3 style="margin:0;font-size:20px;line-height:28px;font-weight:700">Quote</h3>
 <p style="margin:0">You get a clear quote to take to the board or management.</p>
 </li>
-<li style="flex:1 1 200px;border-top:4px solid #eeeeee;padding-top:16px;display:flex;flex-direction:column;gap:8px">
-<span aria-hidden="true" style="font-size:48px;line-height:56px;font-weight:700;color:#262625">4</span>
+<li style="flex:1 1 200px;border-top:4px solid var(--light-grey);padding-top:16px;display:flex;flex-direction:column;gap:8px">
+<span aria-hidden="true" style="font-size:48px;line-height:56px;font-weight:700;color:var(--newel-black)">4</span>
 <h3 style="margin:0;font-size:20px;line-height:28px;font-weight:700">Installation</h3>
 <p style="margin:0">Our installers mount the wallboxes or charging posts at your site.</p>
 </li>
-<li style="flex:1 1 200px;border-top:4px solid #eeeeee;padding-top:16px;display:flex;flex-direction:column;gap:8px">
-<span aria-hidden="true" style="font-size:48px;line-height:56px;font-weight:700;color:#262625">5</span>
+<li style="flex:1 1 200px;border-top:4px solid var(--light-grey);padding-top:16px;display:flex;flex-direction:column;gap:8px">
+<span aria-hidden="true" style="font-size:48px;line-height:56px;font-weight:700;color:var(--newel-black)">5</span>
 <h3 style="margin:0;font-size:20px;line-height:28px;font-weight:700">Start-up and support</h3>
 <p style="margin:0">Charging goes live, IMD is connected where needed, and you have support to turn to.</p>
 </li>
 </ol>
 <div>
-<a class="btn btn-primary" href="offert.html?typ=brf" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:#f15b28;color:#1a1a1a;font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">Request a quote</a>
+<a class="btn btn-primary" href="offert.html?typ=brf" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:var(--accent-fill);color:var(--ink-strong);font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">Request a quote</a>
 </div>
 </div>
 </section>
 
-<section class="sec" style="background:#eeeeee">
+<section class="sec" style="background:var(--light-grey)">
 <div class="wrap" style="display:flex;flex-direction:column;gap:32px">
 <h2 class="h2p">What the solution includes</h2>
 <div style="display:flex;flex-wrap:wrap;gap:24px">
-<article style="flex:1 1 320px;background:#ffffff;border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
+<article style="flex:1 1 320px;background:var(--white);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
 <div class="ph" role="img" aria-label="Image placeholder: wallbox and charging post" style="aspect-ratio:16/9">
-<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#676867" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><circle cx="9" cy="10" r="1.5"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--newel-grey)" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><circle cx="9" cy="10" r="1.5"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
 <span>[IMAGE: wallbox and charging post, 16:9]</span>
 </div>
 <div style="padding:24px;display:flex;flex-direction:column;gap:12px;flex:1">
@@ -209,9 +213,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <a href="laddbox.html" style="font-weight:700;margin-top:auto;padding:8px 0">See wallbox and charging post →</a>
 </div>
 </article>
-<article style="flex:1 1 320px;background:#ffffff;border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
+<article style="flex:1 1 320px;background:var(--white);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
 <div class="ph" role="img" aria-label="Image placeholder: IMD" style="aspect-ratio:16/9">
-<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#676867" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><circle cx="9" cy="10" r="1.5"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--newel-grey)" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><circle cx="9" cy="10" r="1.5"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
 <span>[IMAGE: IMD overview, 16:9]</span>
 </div>
 <div style="padding:24px;display:flex;flex-direction:column;gap:12px;flex:1">
@@ -220,9 +224,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <a href="imd.html" style="font-weight:700;margin-top:auto;padding:8px 0">Read about IMD →</a>
 </div>
 </article>
-<article style="flex:1 1 320px;background:#ffffff;border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
+<article style="flex:1 1 320px;background:var(--white);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
 <div class="ph" role="img" aria-label="Image placeholder: support" style="aspect-ratio:16/9">
-<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#676867" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><circle cx="9" cy="10" r="1.5"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--newel-grey)" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><circle cx="9" cy="10" r="1.5"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
 <span>[IMAGE: installer on site, 16:9]</span>
 </div>
 <div style="padding:24px;display:flex;flex-direction:column;gap:12px;flex:1">
@@ -236,7 +240,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 </section>
 
 
-<section class="sec" style="background:#eeeeee">
+<section class="sec" style="background:var(--light-grey)">
 <div class="wrap" style="display:flex;flex-direction:column;gap:32px">
 <h2 class="h2p">Frequently asked questions from co-ops and associations</h2>
 <div style="display:flex;flex-direction:column;gap:12px;max-width:880px">
@@ -261,30 +265,30 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 </section>
 </main>
 
-<section style="background:#f15b28;color:#1a1a1a;font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px">
+<section style="background:var(--newel-orange);color:var(--ink-strong);font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px">
 <div style="max-width:1200px;margin:0 auto;padding:64px 24px;display:flex;flex-wrap:wrap;gap:32px;align-items:center;justify-content:space-between">
 <div style="flex:1 1 520px;display:flex;flex-direction:column;gap:16px">
-<h2 style="margin:0;font-size:36px;line-height:44px;font-weight:700;color:#262625">Ready to install charging?</h2>
-<p style="margin:0;color:#262625">Tell us about your association, property or workplace and we will come back with a proposal. Reply within [RESPONSE TIME, e.g. two working days].</p>
-<p style="margin:0;font-weight:700;color:#262625">Or call us: +46 8-18 14 12</p>
+<h2 style="margin:0;font-size:36px;line-height:44px;font-weight:700;color:var(--newel-black)">Ready to install charging?</h2>
+<p style="margin:0;color:var(--newel-black)">Tell us about your association, property or workplace and we will come back with a proposal. Reply within [RESPONSE TIME, e.g. two working days].</p>
+<p style="margin:0;font-weight:700;color:var(--newel-black)">Or call us: +46 8-18 14 12</p>
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:16px">
-<a class="btn btn-dark" href="offert.html?typ=brf" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:#262625;color:#ffffff;border:2px solid #262625;font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">Request a quote</a>
-<a class="btn btn-outline-dark" href="kontakt.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:transparent;color:#262625;border:2px solid #262625;font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">Contact us</a>
+<a class="btn btn-dark" href="offert.html?typ=brf" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:var(--newel-black);color:var(--white);border:2px solid var(--newel-black);font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">Request a quote</a>
+<a class="btn btn-outline-dark" href="kontakt.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:transparent;color:var(--newel-black);border:2px solid var(--newel-black);font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">Contact us</a>
 </div>
 </div>
 </section>
 
 
-<footer style="background:#262625;color:#ffffff;font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px">
+<footer style="background:var(--newel-black);color:var(--white);font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px">
 <div style="max-width:1200px;margin:0 auto;padding:64px 24px 32px;display:flex;flex-direction:column;gap:48px">
 <div style="display:flex;flex-wrap:wrap;gap:48px">
 <div style="flex:1 1 280px;display:flex;flex-direction:column;gap:16px">
 <a href="index.html" aria-label="NEWEL – home" style="display:inline-flex;align-self:flex-start;padding:4px 0">
 <img src="../../assets/logo-light.svg" alt="NEWEL" style="height:40px;width:auto;display:block">
 </a>
-<div style="display:flex;flex-direction:column;color:#eeeeee">
-<span style="font-weight:700;color:#ffffff">NEWEL Energy Systems AB</span>
+<div style="display:flex;flex-direction:column;color:var(--light-grey)">
+<span style="font-weight:700;color:var(--white)">NEWEL Energy Systems AB</span>
 <span>[STREET ADDRESS]</span>
 <span>[POSTCODE] [CITY]</span>
 <span>Tel +46 8-18 14 12</span>
@@ -295,34 +299,34 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:8px">
 <span style="font-weight:700">Charging</span>
 <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
-<li><a href="brf.html" style="display:inline-block;padding:6px 0;color:#ffffff;text-decoration:none">Co-ops &amp; associations</a></li>
-<li><a href="fastighetsagare.html" style="display:inline-block;padding:6px 0;color:#ffffff;text-decoration:none">Property owners</a></li>
-<li><a href="foretag.html" style="display:inline-block;padding:6px 0;color:#ffffff;text-decoration:none">Businesses</a></li>
+<li><a href="brf.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Co-ops &amp; associations</a></li>
+<li><a href="fastighetsagare.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Property owners</a></li>
+<li><a href="foretag.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Businesses</a></li>
 </ul>
 </div>
 <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:8px">
 <span style="font-weight:700">Services</span>
 <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
-<li><a href="laddbox.html" style="display:inline-block;padding:6px 0;color:#ffffff;text-decoration:none">Wallbox and charging post</a></li>
-<li><a href="imd.html" style="display:inline-block;padding:6px 0;color:#ffffff;text-decoration:none">IMD</a></li>
-<li><a href="supportavtal.html" style="display:inline-block;padding:6px 0;color:#ffffff;text-decoration:none">Support agreement</a></li>
-<li><a href="serviceanmalan.html" style="display:inline-block;padding:6px 0;color:#ffffff;text-decoration:none">Service request</a></li>
+<li><a href="laddbox.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Wallbox and charging post</a></li>
+<li><a href="imd.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">IMD</a></li>
+<li><a href="supportavtal.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Support agreement</a></li>
+<li><a href="serviceanmalan.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Service request</a></li>
 </ul>
 </div>
 <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:8px">
 <span style="font-weight:700">NEWEL</span>
 <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
-<li><a href="referenser.html" style="display:inline-block;padding:6px 0;color:#ffffff;text-decoration:none">References</a></li>
-<li><a href="nyheter.html" style="display:inline-block;padding:6px 0;color:#ffffff;text-decoration:none">News</a></li>
-<li><a href="kontakt.html" style="display:inline-block;padding:6px 0;color:#ffffff;text-decoration:none">Contact</a></li>
-<li><a href="offert.html?typ=brf" style="display:inline-block;padding:6px 0;color:#ffffff;text-decoration:none">Request a quote</a></li>
+<li><a href="referenser.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">References</a></li>
+<li><a href="nyheter.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">News</a></li>
+<li><a href="kontakt.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Contact</a></li>
+<li><a href="offert.html?typ=brf" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Request a quote</a></li>
 </ul>
 </div>
 </div>
-<div style="font-size:14px;line-height:20px;color:#eeeeee;display:flex;flex-wrap:wrap;gap:8px 32px"><span><strong style="color:#ffffff">Member of:</strong> Elsäkerhetsverket, Svensk Solenergi, Installatörsföretagen</span><span><strong style="color:#ffffff">Partners:</strong> Ahlsell, SEOM, Electricity</span></div>
-<div style="border-top:1px solid #676867;padding-top:24px;display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between;font-size:14px;line-height:20px;color:#eeeeee">
+<div style="font-size:14px;line-height:20px;color:var(--light-grey);display:flex;flex-wrap:wrap;gap:8px 32px"><span><strong style="color:var(--white)">Member of:</strong> Elsäkerhetsverket, Svensk Solenergi, Installatörsföretagen</span><span><strong style="color:var(--white)">Partners:</strong> Ahlsell, SEOM, Electricity</span></div>
+<div style="border-top:1px solid var(--newel-grey);padding-top:24px;display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between;font-size:14px;line-height:20px;color:var(--light-grey)">
 <span>© 2026 NEWEL Energy Systems AB</span>
-<a href="#" style="color:#eeeeee;padding:8px 0;display:inline-block">Privacy policy [LINK]</a>
+<a href="integritetspolicy.html" style="color:var(--light-grey);padding:8px 0;display:inline-block">Privacy policy</a>
 </div>
 </div>
 </footer>
