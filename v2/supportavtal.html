@@ -41,9 +41,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .h1{font-size:36px;line-height:44px}
 .sec{padding:48px 0}
 }
+header nav a:hover{font-weight:700 !important;text-decoration:none !important}
+header nav a::after{content:attr(data-text);display:block;height:0;overflow:hidden;visibility:hidden;font-weight:700;pointer-events:none}
+header nav a[aria-current="page"],header nav a[aria-current="page"]:hover,header nav a[aria-current="page"]:focus{border-bottom-color:var(--newel-orange) !important}
 </style>
 <link rel="stylesheet" href="../assets/site.css?v=3">
-<style>:root{--white:var(--white);--light-grey:var(--light-grey);--newel-grey:var(--newel-grey);--newel-black:var(--newel-black);--ink-strong:var(--ink-strong);--accent-fill:var(--accent-fill);--newel-orange:var(--newel-orange);--orange-50:var(--orange-50);--orange-100:var(--orange-100);--orange-200:var(--orange-200);--orange-300:var(--orange-300);--orange-400:var(--orange-400);--orange-600:var(--orange-600);--orange-700:var(--orange-700);--orange-800:var(--orange-800);--orange-900:var(--orange-900);--orange-950:var(--orange-950)}</style>
+<style>:root{--white:#ffffff;--light-grey:#eeeeee;--newel-grey:#676867;--newel-black:#262625;--ink-strong:#1a1a1a;--accent-fill:#f15b22;--newel-orange:#f15b28;--orange-50:#fff4ee;--orange-100:#ffe7db;--orange-200:#ffcfb8;--orange-300:#ffb08e;--orange-400:#ff8557;--orange-600:#d0481f;--orange-700:#ab381b;--orange-800:#862b18;--orange-900:#662215;--orange-950:#411008}</style>
 </head>
 <body>
 <header style="background:var(--white);color:var(--newel-black);font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px">
