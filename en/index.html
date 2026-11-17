@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>NEWEL – wallboxes and charging posts for co-ops, property companies and businesses</title>
+<title>NEWEL – charging, IMD and service for homes, co-ops, property companies and businesses</title>
 <link rel="alternate" hreflang="sv" href="../index.html">
-<meta name="description" content="NEWEL installs and supports wallboxes and charging posts for housing co-ops, associations, property companies and businesses – from quote to finished installation.">
+<meta name="description" content="NEWEL installs and looks after charging, IMD, LED and support for homeowners, housing co-ops, associations, property companies and businesses – from quote to operation.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 <style>
 body{margin:0;font-family:Roboto,system-ui,"Segoe UI",Arial,sans-serif;font-size:16px;line-height:26px;color:var(--newel-black);background:var(--white)}
@@ -63,12 +63,68 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 <link rel="stylesheet" href="../assets/site.css?v=3">
 <link rel="stylesheet" href="../assets/site-en.css?v=3">
 <style>:root{--white:#ffffff;--light-grey:#eeeeee;--newel-grey:#676867;--newel-black:#262625;--ink-strong:#1a1a1a;--accent-fill:#f15b22;--newel-orange:#f15b28;--orange-50:#fff4ee;--orange-100:#ffe7db;--orange-200:#ffcfb8;--orange-300:#ffb08e;--orange-400:#ff8557;--orange-600:#d0481f;--orange-700:#ab381b;--orange-800:#862b18;--orange-900:#662215;--orange-950:#411008}</style>
+<style>
+/* Startsida v3 */
+.stack{display:flex;flex-direction:column;gap:32px}
+.intro{display:flex;flex-direction:column;gap:8px;max-width:720px}
+.lead{font-size:18px;line-height:28px}
+.btn-row{display:flex;flex-wrap:wrap;gap:16px}
+.hero{display:flex;flex-wrap:wrap;align-items:center;gap:48px}
+.hero-text{flex:1 1 440px;display:flex;flex-direction:column;gap:24px}
+.hero-text .lead{max-width:560px}
+.hero-img{flex:1 1 480px;min-width:0;width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.aud{display:flex;flex-direction:column;background:var(--white);border-radius:8px;overflow:hidden;color:var(--newel-black);text-decoration:none}
+.aud-img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;border:0}
+.ph.aud-img{display:flex;border:0;background:#dcdcdc;color:var(--newel-black)}
+.aud-body{flex:1;display:flex;flex-direction:column;gap:8px;padding:24px}
+.aud-body p{color:var(--newel-grey)}
+.aud .more{margin-top:auto;padding-top:8px;font-weight:700;text-decoration:underline}
+.svc{display:flex;flex-direction:column;gap:12px;padding:24px;border:1px solid var(--light-grey);border-radius:8px;color:var(--newel-black);text-decoration:none}
+.svc:hover{border-color:var(--newel-grey)}
+.svc p{color:var(--newel-grey)}
+.why{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
+.why li{display:flex;flex-direction:column;gap:12px}
+.why-ic{width:56px;height:56px;border-radius:4px;background:var(--accent-fill);color:var(--ink-strong);display:flex;align-items:center;justify-content:center}
+.why p{color:var(--newel-grey)}
+.zpark{display:flex;flex-wrap:wrap;align-items:center;gap:48px;background:var(--white);border-radius:8px;overflow:hidden}
+.zpark img{flex:1 1 420px;min-width:0;width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.zpark-body{flex:1 1 380px;display:flex;flex-direction:column;gap:16px;padding:32px 32px 32px 0}
+.pcard{background:var(--white);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px}
+.logos{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.logos img{height:40px;width:auto;display:block}
+.partner-band{display:flex;flex-wrap:wrap;gap:32px;background:var(--newel-black);color:var(--white);border-radius:8px;padding:32px}
+.partner-intro{flex:1 1 260px;display:flex;flex-direction:column;gap:8px}
+.partner-intro p{color:var(--light-grey)}
+.partner-form{flex:2 1 480px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px 24px}
+.partner-form .lbl{color:var(--white)}
+.partner-form .span2{grid-column:1/-1}
+.partner-form a:focus-visible,.partner-form input:focus-visible,.partner-form textarea:focus-visible{outline-color:var(--white)}
+.partner-form .btn-primary:focus-visible{outline:2px solid var(--white)}
+.partner-form .field-error{color:var(--white)}
+.partner-form .field[aria-invalid="true"]{border-color:var(--white)}
+.offert{display:flex;flex-wrap:wrap;gap:48px}
+.offert-intro{flex:1 1 320px;display:flex;flex-direction:column;gap:12px}
+.offert-form{flex:1 1 480px;max-width:600px;background:var(--white);padding:32px;display:flex;flex-direction:column;gap:24px}
+.offert-form fieldset{border:0;margin:0;padding:0}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{position:relative;display:inline-flex}
+.opt input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.opt span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--newel-grey);border-radius:4px;font-weight:700;background:var(--white)}
+.opt input:checked+span{background:var(--newel-black);color:var(--white);border-color:var(--newel-black)}
+.opt input:focus-visible+span{outline:2px solid var(--newel-black);outline-offset:2px}
+.consent{display:flex;gap:12px;align-items:flex-start}
+.consent input{width:20px;height:20px;margin:2px 0 0;flex:none}
+@media (max-width:840px){.zpark-body{padding:0 24px 24px}.zpark{gap:24px}}
+@media (max-width:640px){.offert-form,.partner-band{padding:24px}}
+</style>
 </head>
 <body>
 <header style="background:var(--white);color:var(--newel-black);font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px">
 <div style="background:var(--newel-black)">
 <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;gap:0 24px;justify-content:space-between;align-items:center">
-<span class="util-tag" style="font-size:14px;line-height:20px;color:var(--white);padding:12px 0">EV charging for housing co-ops, associations, property companies and businesses</span>
+<span class="util-tag" style="font-size:14px;line-height:20px;color:var(--white);padding:12px 0">Charging, IMD and service for homes, co-ops, property companies and businesses</span>
 <div style="display:flex;flex-wrap:wrap;gap:0 24px;align-items:center">
 <a class="util-hide" href="kontakt.html" style="color:var(--white);font-size:14px;line-height:20px;text-decoration:none;padding:12px 0">Contact</a>
 <a href="serviceanmalan.html" style="color:var(--white);font-size:14px;line-height:20px;text-decoration:none;padding:12px 0">Fault report</a>
@@ -123,94 +179,117 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 
 <main>
 <section class="sec" style="background:var(--white)">
-<div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start">
-<div style="flex:1 1 560px;min-width:0;display:flex;flex-direction:column;gap:24px">
-<h1 class="h1">Wallboxes and charging posts for co-ops, property companies and businesses</h1>
-<p class="sub">We install, commission and support EV charging – from quote to finished installation.</p>
-<div style="display:flex;flex-wrap:wrap;gap:16px">
-<a class="btn btn-primary" href="offert.html">Request a quote</a>
-<a class="btn btn-secondary" href="#steg">How it works</a>
-</div>
-<img src="../assets/hero.jpg" fetchpriority="high" alt="Installer mounting a wallbox on a wooden facade" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;object-position:72% 50%;border-radius:8px">
-</div>
-<form class="card" action="#" style="flex:1 1 400px;max-width:520px;display:flex;flex-direction:column;gap:24px">
-<h2 class="h2p">Request a quote</h2>
-<p>Fill in the essentials and we will come back with the next step.</p>
-<div>
-<label class="lbl" for="hf-namn">Association or company</label>
-<input class="field" id="hf-namn" name="organisation" type="text" autocomplete="organization">
-</div>
-<div>
-<label class="lbl" for="hf-typ">Customer type</label>
-<select class="field" id="hf-typ" name="kundtyp">
-<option>Housing co-operative (BRF)</option>
-<option>Homeowner association</option>
-<option>Property companies</option>
-<option>Businesses</option>
-</select>
-</div>
-<div>
-<label class="lbl" for="hf-kontakt">Contact person</label>
-<input class="field" id="hf-kontakt" name="kontaktperson" type="text" autocomplete="name">
-</div>
-<div style="display:flex;flex-wrap:wrap;gap:24px">
-<div style="flex:1 1 180px">
-<label class="lbl" for="hf-epost">Email</label>
-<input class="field" id="hf-epost" name="epost" type="email" autocomplete="email">
-</div>
-<div style="flex:1 1 180px">
-<label class="lbl" for="hf-tel">Phone</label>
-<input class="field" id="hf-tel" name="telefon" type="tel" autocomplete="tel">
+<div class="wrap hero">
+<div class="hero-text">
+<h1 class="h1">Charging, IMD and service – installed and looked after by us</h1>
+<p class="lead">For homeowners, housing co-ops, property companies and businesses. One contact all the way: quote, installation, billing and support.</p>
+<div class="btn-row">
+<a class="btn btn-primary" href="#offert">Request a quote</a>
+<a class="btn btn-secondary" href="serviceanmalan.html">Report a fault</a>
 </div>
 </div>
-<div>
-<label class="lbl" for="hf-antal">Approximate number of parking spaces</label>
-<input class="field" id="hf-antal" name="antal" type="text" inputmode="numeric">
-</div>
-<div style="display:flex;gap:12px;align-items:flex-start">
-<input id="hf-gdpr" name="samtycke" type="checkbox" style="width:24px;height:24px;margin:0;flex:none;accent-color:var(--newel-black)">
-<label for="hf-gdpr" class="cap" style="color:var(--newel-black)">I accept that NEWEL processes my data in accordance with the <a href="#" style="color:var(--newel-black);text-decoration:underline">privacy policy</a> form.</label>
-</div>
-<button class="btn btn-primary" type="button" style="font-family:inherit;cursor:pointer">Send quote request</button>
-</form>
+<img class="hero-img" src="../assets/hero.jpg" fetchpriority="high" alt="Installer mounting a wallbox on a timber facade">
 </div>
 </section>
 
 <section class="sec" style="background:var(--light-grey)">
-<div class="wrap" style="display:flex;flex-direction:column;gap:32px">
-<div style="display:flex;flex-direction:column;gap:8px">
-<h2 class="h2p">Charging for you</h2>
-<p style="max-width:720px">Choose what fits your organisation. Every solution rests on the same foundation: a clear quote, installation and support.</p>
+<div class="wrap stack">
+<div class="intro">
+<h2 class="h2p">Who are you?</h2>
+<p>Choose what fits you. Every solution rests on the same foundation: a clear quote, installation and support.</p>
 </div>
-<div style="display:flex;flex-wrap:wrap;gap:24px">
-<article style="flex:1 1 320px;background:var(--white);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
-<img src="../assets/brf.jpg" fetchpriority="high" alt="Electric car charging at a charging post in a car park" style="display:block;width:100%;aspect-ratio:3/2;object-fit:cover;object-position:40% 50%">
-<div style="padding:24px;display:flex;flex-direction:column;gap:12px;flex:1">
+<div class="grid4">
+<a class="aud" href="laddbox.html">
+<div class="ph aud-img" role="img" aria-label="Image placeholder: house with a wallbox"><span>[IMAGE: house with a wallbox]</span></div>
+<div class="aud-body">
+<h3 class="h3">Homeowners</h3>
+<p>A wallbox at home, installed by authorised electricians. [MORE SERVICES FOR PRIVATE CUSTOMERS?]</p>
+<span class="more">Wallbox for your home</span>
+</div>
+</a>
+<a class="aud" href="brf.html">
+<img class="aud-img" src="../assets/brf.jpg" alt="Electric car charging at a charging post in a car park">
+<div class="aud-body">
 <h3 class="h3">Housing co-ops and associations</h3>
-<p>Installation of wallboxes and charging posts for housing co-operatives and homeowner associations, with IMD so each user pays for their own charging.</p>
-<a href="brf.html" style="font-weight:700;margin-top:auto;padding:8px 0">Charging for co-ops and associations →</a>
+<p>Wallboxes and charging posts for your association, with IMD so that each user pays for their own charging.</p>
+<span class="more">For co-ops and associations</span>
 </div>
-</article>
-<article style="flex:1 1 320px;background:var(--white);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
-<img src="../assets/fastighet.jpg" alt="Person plugging a charging cable into a white electric car" style="display:block;width:100%;aspect-ratio:3/2;object-fit:cover;object-position:44% 50%">
-<div style="padding:24px;display:flex;flex-direction:column;gap:12px;flex:1">
+</a>
+<a class="aud" href="fastighetsagare.html">
+<img class="aud-img" src="../assets/fastighet.jpg" alt="Person plugging a charging cable into a white electric car">
+<div class="aud-body">
 <h3 class="h3">Property companies</h3>
-<p>Charging for residents and tenants in your properties – installation, billing and support from one supplier.</p>
-<a href="fastighetsagare.html" style="font-weight:700;margin-top:auto;padding:8px 0">Charging for property companies →</a>
+<p>Charging for residents and tenants – installation, billing and support from one supplier.</p>
+<span class="more">For property companies</span>
 </div>
-</article>
-<article style="flex:1 1 320px;background:var(--white);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
-<img src="../assets/foretag.jpg" alt="Electric cars charging at charging posts in a car park" style="display:block;width:100%;aspect-ratio:3/2;object-fit:cover;object-position:62% 50%">
-<div style="padding:24px;display:flex;flex-direction:column;gap:12px;flex:1">
+</a>
+<a class="aud" href="foretag.html">
+<img class="aud-img" src="../assets/foretag.jpg" alt="Electric cars charging at charging posts in a parking garage">
+<div class="aud-body">
 <h3 class="h3">Businesses</h3>
-<p>Charge points for staff parking, visitors and company cars, with consumption tracked per user.</p>
-<a href="foretag.html" style="font-weight:700;margin-top:auto;padding:8px 0">Charging for businesses →</a>
+<p>Charge points for staff, visitors and company cars, with consumption tracked per user.</p>
+<span class="more">For businesses</span>
 </div>
-</article>
+</a>
 </div>
 </div>
 </section>
 
+<section class="sec" style="background:var(--white)">
+<div class="wrap stack">
+<h2 class="h2p">What we do</h2>
+<div class="grid4">
+<a class="svc" href="laddbox.html">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0zM12 18v4"/></svg>
+<h3 class="h3">Charging</h3>
+<p>Wallboxes and charging posts – design, installation and commissioning.</p>
+</a>
+<a class="svc" href="imd.html">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><path d="M7 9h10M7 13h6M7 17h3"/></svg>
+<h3 class="h3">IMD</h3>
+<p>Individual metering and billing, so everyone pays for what they use.</p>
+</a>
+<a class="svc" href="supportavtal.html">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg>
+<h3 class="h3">Support agreement</h3>
+<p>A clear route to help when something isn’t working, plus fault reports online.</p>
+</a>
+<a class="svc" href="led.html">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/></svg>
+<h3 class="h3">LED</h3>
+<p>Energy-efficient lighting for properties, garages and businesses.</p>
+</a>
+</div>
+</div>
+</section>
+
+<section class="sec" style="background:var(--light-grey)">
+<div class="wrap stack">
+<h2 class="h2p">Why choose NEWEL?</h2>
+<ul class="why">
+<li>
+<span class="why-ic"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+<h3 class="h3">One contact all the way</h3>
+<p>The same team from quote and installation to billing and support.</p>
+</li>
+<li>
+<span class="why-ic"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span>
+<h3 class="h3">Authorised electricians</h3>
+<p>Members of Installatörsföretagen and Svensk Solenergi.</p>
+</li>
+<li>
+<span class="why-ic"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+<h3 class="h3">Fast help when something breaks</h3>
+<p>Report faults online. [STATE A RESPONSE TIME IF YOU WANT TO PROMISE ONE]</p>
+</li>
+<li>
+<span class="why-ic"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7"/></svg></span>
+<h3 class="h3">Clear quotes</h3>
+<p>You know what it costs and what’s included before work starts.</p>
+</li>
+</ul>
+</div>
+</section>
 
 <section id="steg" style="background:var(--white);color:var(--newel-black);font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px;padding:64px 0;overflow:hidden">
 <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:32px">
@@ -250,33 +329,54 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 </section>
 
 
-<section class="sec" style="background:var(--light-grey)">
-<div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px;align-items:center">
-<img src="../assets/zpark.jpg" alt="Person connecting an electric car to a Zpark charging station outdoors" style="flex:1 1 480px;min-width:0;width:100%;max-width:100%;aspect-ratio:4/3;object-fit:cover;object-position:35% 45%;border-radius:8px;display:block">
-<div style="flex:1 1 480px;display:flex;flex-direction:column;gap:24px">
-<h2 class="h2p">Charging with Zpark</h2>
-<p>NEWEL's charge points are followed up in Zpark. [BRIEFLY DESCRIBE WHAT ZPARK DOES AND WHY IT MATTERS TO THE CUSTOMER]</p>
-<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px">
-<li style="display:flex;gap:12px;align-items:flex-start">
-<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--newel-black)" stroke-width="2" stroke-linecap="square" style="flex:none;margin-top:1px"><path d="M4 12l5 5L20 6"/></svg>
-<span><strong>For the board and the manager:</strong> [BENEFIT 1]</span>
-</li>
-<li style="display:flex;gap:12px;align-items:flex-start">
-<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--newel-black)" stroke-width="2" stroke-linecap="square" style="flex:none;margin-top:1px"><path d="M4 12l5 5L20 6"/></svg>
-<span><strong>For the person charging:</strong> [BENEFIT 2]</span>
-</li>
-<li style="display:flex;gap:12px;align-items:flex-start">
-<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--newel-black)" stroke-width="2" stroke-linecap="square" style="flex:none;margin-top:1px"><path d="M4 12l5 5L20 6"/></svg>
-<span><strong>For the finances:</strong> [BENEFIT 3]</span>
-</li>
-</ul>
-<div>
-<a class="btn btn-secondary" href="laddbox.html">Read more about the charging solution</a>
+<section class="sec" id="partners" style="background:var(--light-grey)">
+<div class="wrap stack">
+<h2 class="h2p">Partners and memberships</h2>
+<article class="zpark">
+<img src="../assets/zpark.jpg" alt="Person connecting an electric car to a charging station with apartment buildings behind">
+<div class="zpark-body">
+<h3 class="h2p">Charging with Zpark</h3>
+<p>NEWEL’s charge points are followed up in Zpark. [BRIEFLY DESCRIBE WHAT ZPARK DOES AND WHY IT MATTERS TO THE CUSTOMER]</p>
+<div><a class="btn btn-secondary" href="laddbox.html">Read about the charging solution</a></div>
 </div>
+</article>
+<div class="grid3">
+<div class="pcard">
+<h3 class="h3">Partner of</h3>
+<div class="logos">
+<a href="https://www.ahlsell.se/" target="_blank" rel="noopener"><img src="https://newel.se/wp-content/uploads/logo-ahlsell-320x100-gra.png" alt="Ahlsell"></a>
+<a href="http://www.seom.se" target="_blank" rel="noopener"><img src="https://newel.se/wp-content/uploads/logo-seom-320x100-gra.png" alt="SEOM"></a>
+<a href="http://www.electricity.se" target="_blank" rel="noopener"><img src="https://newel.se/wp-content/uploads/logo-electricity-320x100-gra.png" alt="Electricity"></a>
+</div>
+</div>
+<div class="pcard">
+<h3 class="h3">Member of</h3>
+<div class="logos">
+<a href="http://www.elsakerhetsverket.se" target="_blank" rel="noopener"><img src="https://newel.se/wp-content/uploads/logo-elsakerhetsverket-320x100-gra.png" alt="Elsäkerhetsverket"></a>
+<a href="https://www.svensksolenergi.se/" target="_blank" rel="noopener"><img src="https://newel.se/wp-content/uploads/logo-sse-medlem-320x100-gra.png" alt="Svensk Solenergi"></a>
+<a href="https://www.installatorsforetagen.se" target="_blank" rel="noopener"><img src="https://newel.se/wp-content/uploads/logo-installatorsforetagen-320x100-gra.png" alt="Installatörsföretagen"></a>
+</div>
+</div>
+<div class="pcard">
+<h3 class="h3">Grants</h3>
+<p>[CURRENT INFORMATION ON GRANTS FOR CHARGING INFRASTRUCTURE: WHO CAN APPLY, HOW MUCH AND HOW NEWEL HELPS]</p>
+</div>
+</div>
+<div class="partner-band">
+<div class="partner-intro">
+<h3 class="h3" style="color:var(--white)">Want to partner with us?</h3>
+<p>Tell us briefly who you are and we’ll get in touch.</p>
+</div>
+<form class="partner-form" action="#">
+<div><label class="lbl" for="pf-org">Company</label><input class="field" id="pf-org" name="foretag" type="text" autocomplete="organization" required></div>
+<div><label class="lbl" for="pf-namn">Contact person</label><input class="field" id="pf-namn" name="kontaktperson" type="text" autocomplete="name" required></div>
+<div><label class="lbl" for="pf-kontakt">Phone or email</label><input class="field" id="pf-kontakt" name="kontakt" type="text" required></div>
+<div class="span2"><label class="lbl" for="pf-msg">How would you like to work together?</label><textarea class="field" id="pf-msg" name="samarbete" rows="3"></textarea></div>
+<div class="span2"><button class="btn btn-primary" type="button" style="font-family:inherit;cursor:pointer">Send</button></div>
+</form>
 </div>
 </div>
 </section>
-
 
 <section style="background:var(--white);color:var(--newel-black);font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px;padding:64px 0;overflow:hidden">
 <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:32px">
@@ -323,56 +423,33 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 </section>
 
 
-<section class="sec" style="background:var(--light-grey)">
-<div class="wrap" style="display:flex;flex-direction:column;gap:32px">
-<h2 class="h2p">Memberships, partners and grants</h2>
-<div style="display:flex;flex-wrap:wrap;gap:24px">
-<div style="flex:1 1 320px;background:var(--white);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px">
-<h3 class="h3">Member of</h3>
-<div style="display:flex;flex-wrap:wrap;gap:4px 24px;align-items:center">
-<a href="http://www.elsakerhetsverket.se" target="_blank" rel="noopener" style="display:inline-block;padding:8px 0"><img src="https://newel.se/wp-content/uploads/logo-elsakerhetsverket-320x100-gra.png" alt="Elsäkerhetsverket" style="height:44px;width:auto;display:block"></a>
-<a href="https://www.svensksolenergi.se/" target="_blank" rel="noopener" style="display:inline-block;padding:8px 0"><img src="https://newel.se/wp-content/uploads/logo-sse-medlem-320x100-gra.png" alt="Svensk Solenergi" style="height:44px;width:auto;display:block"></a>
-<a href="https://www.installatorsforetagen.se" target="_blank" rel="noopener" style="display:inline-block;padding:8px 0"><img src="https://newel.se/wp-content/uploads/logo-installatorsforetagen-320x100-gra.png" alt="Installatörsföretagen" style="height:44px;width:auto;display:block"></a>
+<section class="sec" id="offert" style="background:var(--light-grey)">
+<div class="wrap offert">
+<div class="offert-intro">
+<h2 class="h2p">Request a quote</h2>
+<p class="lead">Leave a phone number or email and we’ll call you to go through the details.</p>
+<p>Problem with an existing installation? <a href="serviceanmalan.html" style="font-weight:700">Report a fault</a></p>
 </div>
-<p>NEWEL is a member of Elsäkerhetsverket, Svensk Solenergi and Installatörsföretagen.</p>
+<form class="card offert-form" action="#">
+<fieldset>
+<legend class="lbl">I am a</legend>
+<div class="opts">
+<label class="opt"><input type="radio" name="kundtyp" value="Homeowner" required><span>Homeowner</span></label>
+<label class="opt"><input type="radio" name="kundtyp" value="Housing co-op / Association"><span>Housing co-op / Association</span></label>
+<label class="opt"><input type="radio" name="kundtyp" value="Property company"><span>Property company</span></label>
+<label class="opt"><input type="radio" name="kundtyp" value="Business"><span>Business</span></label>
 </div>
-<div style="flex:1 1 320px;background:var(--white);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px">
-<h3 class="h3">Partners</h3>
-<div style="display:flex;flex-wrap:wrap;gap:4px 24px;align-items:center">
-<a href="https://www.ahlsell.se/" target="_blank" rel="noopener" style="display:inline-block;padding:8px 0"><img src="https://newel.se/wp-content/uploads/logo-ahlsell-320x100-gra.png" alt="Ahlsell" style="height:44px;width:auto;display:block"></a>
-<a href="http://www.seom.se" target="_blank" rel="noopener" style="display:inline-block;padding:8px 0"><img src="https://newel.se/wp-content/uploads/logo-seom-320x100-gra.png" alt="SEOM" style="height:44px;width:auto;display:block"></a>
-<a href="http://www.electricity.se" target="_blank" rel="noopener" style="display:inline-block;padding:8px 0"><img src="https://newel.se/wp-content/uploads/logo-electricity-320x100-gra.png" alt="Electricity" style="height:44px;width:auto;display:block"></a>
-</div>
-<p>NEWEL works with Ahlsell, SEOM and Electricity.</p>
-</div>
-<div style="flex:1 1 320px;background:var(--white);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px">
-<h3 class="h3">Grants</h3>
-<p>[CURRENT INFORMATION ON CHARGING INFRASTRUCTURE GRANTS: WHO CAN APPLY, HOW MUCH AND HOW NEWEL HELPS]</p>
-<a href="#" style="font-weight:700;margin-top:auto;padding:8px 0">Read more about grants →</a>
-</div>
-</div>
+</fieldset>
+<div><label class="lbl" for="of-namn">Name</label><input class="field" id="of-namn" name="namn" type="text" autocomplete="name" required></div>
+<div><label class="lbl" for="of-kontakt">Phone or email</label><input class="field" id="of-kontakt" name="kontakt" type="text" required></div>
+<div><label class="lbl" for="of-msg">Message <span style="font-weight:400;color:var(--newel-grey)">(optional)</span></label><textarea class="field" id="of-msg" name="meddelande" rows="3"></textarea></div>
+<div class="consent"><input id="of-gdpr" name="samtycke" type="checkbox" required><label for="of-gdpr" class="cap">I accept that NEWEL processes my data in accordance with the <a href="integritetspolicy.html">privacy policy</a>.</label></div>
+<div><button class="btn btn-primary" type="button" style="font-family:inherit;cursor:pointer">Send quote request</button></div>
+</form>
 </div>
 </section>
 
 <section class="sec" style="background:var(--white)">
-<div class="wrap" style="display:flex;flex-direction:column;gap:32px">
-<h2 class="h2">More than charging</h2>
-<div style="display:flex;flex-wrap:wrap;gap:24px">
-<article class="card" style="flex:1 1 480px;padding:32px;display:flex;flex-direction:column;gap:16px">
-<h3 class="h3">IMD – Individual Metering and Billing</h3>
-<p>Each user is billed for their actual consumption. [BRIEFLY DESCRIBE HOW NEWEL'S IMD WORKS]</p>
-<div style="margin-top:auto"><a class="btn btn-secondary" href="imd.html">Read about IMD</a></div>
-</article>
-<article class="card" style="flex:1 1 480px;padding:32px;display:flex;flex-direction:column;gap:16px">
-<h3 class="h3">Support agreement for EV charging</h3>
-<p>An agreement that gives you a clear route to help when something doesn't work. [BRIEFLY DESCRIBE WHAT THE AGREEMENT INCLUDES]</p>
-<div style="margin-top:auto"><a class="btn btn-secondary" href="supportavtal.html">Read about support agreements</a></div>
-</article>
-</div>
-</div>
-</section>
-
-<section class="sec" style="background:var(--light-grey)">
 <div class="wrap" style="display:flex;flex-direction:column;gap:32px">
 <h2 class="h2p">News from NEWEL</h2>
 <div style="display:flex;flex-wrap:wrap;gap:24px">
