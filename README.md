@@ -18,6 +18,7 @@ felanmälan, kontakt, kundcase och nyheter.
 - Förenklade formulär (offert, intresseanmälan, kontakt): namn, telefon eller e-post och ett meddelande. Felanmälan är oförändrad.
 - Nytt omdömesformulär för slutkunder: `omdome.html` (EN: `en/omdome.html`) och utskriftsbart QR-kort `omdome-kort.html`. QR-koden pekar på föreslagna adresserna `newel.se/omdome` och `newel.se/en/review`.
 - Länk till Partners i sidfoten på alla sidor.
+- Ny sida för målgruppen Privatperson / Villa (`privat.html`, EN: `en/privat.html`) så att alla fyra målgruppskort på startsidan har en egen sida. Menyval och sidfotslänk har lagts till (inte i Variant B). BRF-sidan använder nu samma foto som sitt kort.
 
 ## Publicera på GitHub Pages
 
