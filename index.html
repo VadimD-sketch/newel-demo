@@ -63,6 +63,20 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 <style>:root{--white:#ffffff;--light-grey:#eeeeee;--newel-grey:#676867;--newel-black:#262625;--ink-strong:#1a1a1a;--accent-fill:#f15b22;--newel-orange:#f15b28;--orange-50:#fff4ee;--orange-100:#ffe7db;--orange-200:#ffcfb8;--orange-300:#ffb08e;--orange-400:#ff8557;--orange-600:#d0481f;--orange-700:#ab381b;--orange-800:#862b18;--orange-900:#662215;--orange-950:#411008}</style>
 <style>
 /* Startsida v3 */
+/* Compact services band */
+section.sec.svc-band{padding:32px 0}
+.svc-band .stack{gap:16px}
+.svc-band .h2p{font-size:24px;line-height:32px}
+.svc-band .svc{display:grid;grid-template-columns:24px 1fr;column-gap:12px;row-gap:6px;align-items:center;padding:16px;background:var(--white)}
+.svc-band .svc svg{width:24px;height:24px;grid-row:1}
+.svc-band .svc h3{grid-row:1;grid-column:2;font-size:18px;line-height:24px}
+.svc-band .svc p{grid-column:1/-1;font-size:14px;line-height:20px}
+.svc-band .svc{cursor:pointer;transition:box-shadow .15s ease,transform .15s ease,border-color .15s ease}
+.svc-band .svc:hover{border-color:var(--newel-black);box-shadow:0 6px 16px rgba(38,38,37,.14);transform:translateY(-2px)}
+.svc-band .svc:focus-visible{outline:3px solid var(--newel-orange);outline-offset:2px}
+.svc-band .svc h3::after{content:"→";display:inline-block;margin-left:8px;font-weight:400;transition:transform .15s ease}
+.svc-band .svc:hover h3::after{transform:translateX(4px)}
+@media (prefers-reduced-motion:reduce){.svc-band .svc,.svc-band .svc h3::after{transition:none}.svc-band .svc:hover,.svc-band .svc:hover h3::after{transform:none}}
 .stack{display:flex;flex-direction:column;gap:32px}
 .intro{display:flex;flex-direction:column;gap:8px;max-width:720px}
 .lead{font-size:18px;line-height:28px}
@@ -89,7 +103,7 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 .zpark{display:flex;flex-wrap:wrap;align-items:center;gap:48px;background:var(--white);border-radius:8px;overflow:hidden}
 .zpark img{flex:1 1 420px;min-width:0;width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
 .zpark-body{flex:1 1 380px;display:flex;flex-direction:column;gap:16px;padding:32px 32px 32px 0}
-.pcard{background:var(--white);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px}
+.pcard{background:var(--light-grey);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px}
 .logos{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
 .logos img{height:40px;width:auto;display:block}
 .partner-band{display:flex;flex-wrap:wrap;gap:32px;background:var(--newel-black);color:var(--white);border-radius:8px;padding:32px}
@@ -191,7 +205,35 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 </div>
 </section>
 
-<section class="sec" style="background:var(--light-grey)">
+<section class="sec svc-band" style="background:var(--light-grey)">
+<div class="wrap stack">
+
+<div class="grid4">
+<a class="svc" href="laddbox.html">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0zM12 18v4"></path></svg>
+<h3 class="h3">Laddning</h3>
+<p>Laddbox och laddstolpar – projektering, installation och driftsättning.</p>
+</a>
+<a class="svc" href="imd.html">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"></rect><path d="M7 9h10M7 13h6M7 17h3"></path></svg>
+<h3 class="h3">IMD</h3>
+<p>Individuell mätning och debitering, så att var och en betalar för sin förbrukning.</p>
+</a>
+<a class="svc" href="supportavtal.html">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"></path></svg>
+<h3 class="h3">Supportavtal</h3>
+<p>En tydlig väg till hjälp när något inte fungerar, och felanmälan direkt på webben.</p>
+</a>
+<a class="svc" href="led.html">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"></path></svg>
+<h3 class="h3">LED</h3>
+<p>Energieffektiv belysning för fastigheter, garage och verksamheter.</p>
+</a>
+</div>
+</div>
+</section>
+
+<section class="sec" style="background:var(--white)">
 <div class="wrap stack">
 <div class="intro">
 <h2 class="h2p">Vem är du?</h2>
@@ -234,101 +276,76 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 </div>
 </section>
 
-<section class="sec" style="background:var(--white)">
-<div class="wrap stack">
-<h2 class="h2p">Det här gör vi</h2>
-<div class="grid4">
-<a class="svc" href="laddbox.html">
-<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0zM12 18v4"/></svg>
-<h3 class="h3">Laddning</h3>
-<p>Laddbox och laddstolpar – projektering, installation och driftsättning.</p>
-</a>
-<a class="svc" href="imd.html">
-<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><path d="M7 9h10M7 13h6M7 17h3"/></svg>
-<h3 class="h3">IMD</h3>
-<p>Individuell mätning och debitering, så att var och en betalar för sin förbrukning.</p>
-</a>
-<a class="svc" href="supportavtal.html">
-<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg>
-<h3 class="h3">Supportavtal</h3>
-<p>En tydlig väg till hjälp när något inte fungerar, och felanmälan direkt på webben.</p>
-</a>
-<a class="svc" href="led.html">
-<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/></svg>
-<h3 class="h3">LED</h3>
-<p>Energieffektiv belysning för fastigheter, garage och verksamheter.</p>
-</a>
-</div>
-</div>
-</section>
-
 <section class="sec" style="background:var(--light-grey)">
 <div class="wrap stack">
 <h2 class="h2p">Varför välja NEWEL?</h2>
 <ul class="why">
 <li>
-<span class="why-ic"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+<span class="why-ic"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg></span>
 <h3 class="h3">En kontakt hela vägen</h3>
 <p>Samma team från offert och installation till debitering och support.</p>
 </li>
 <li>
-<span class="why-ic"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span>
+<span class="why-ic"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"></path><path d="m8.5 12 2.5 2.5 4.5-5"></path></svg></span>
 <h3 class="h3">Behöriga elinstallatörer</h3>
 <p>Medlemmar i Installatörsföretagen och Svensk Solenergi.</p>
 </li>
 <li>
-<span class="why-ic"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+<span class="why-ic"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
 <h3 class="h3">Snabb hjälp vid fel</h3>
 <p>Felanmälan direkt på webben. [ANGE SVARSTID OM NI VILL LOVA EN]</p>
 </li>
 <li>
-<span class="why-ic"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7"/></svg></span>
+<span class="why-ic"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M6 3h9l4 4v14H6z"></path><path d="M9 12h7M9 16h7"></path></svg></span>
 <h3 class="h3">Tydliga offerter</h3>
 <p>Ni vet vad det kostar och vad som ingår innan arbetet börjar.</p>
 </li>
 </ul>
+<div style="display:flex;flex-direction:column;gap:24px;border-top:1px solid #d0d0d0;padding-top:32px">
+<h3 style="margin:0;font-size:24px;line-height:32px;font-weight:700">Föreningar och företag som laddar med NEWEL</h3>
+<div style="display:flex;flex-wrap:wrap;gap:24px">
+<figure style="margin:0;flex:1 1 320px;background:var(--white);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
+<div role="img" aria-label="Bildplatshållare: laddanläggning hos kund" style="aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--light-grey);border:1px dashed var(--newel-grey);color:var(--newel-grey);font-size:14px;line-height:20px;text-align:center;padding:16px">
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--newel-grey)" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M3 18l6-5 4 3 3-2 5 4"></path></svg>
+<span>[BILD: laddanläggning hos kund]</span>
 </div>
-</section>
-
-<section id="steg" style="background:var(--white);color:var(--newel-black);font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px;padding:64px 0;overflow:hidden">
-<div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:32px">
-<h2 style="margin:0 0 0 calc(50% - 50vw);align-self:flex-start;display:inline-block;padding:8px 24px 8px calc(50vw - 50%);background:var(--light-grey);font-size:28px;line-height:36px;font-weight:700;color:var(--newel-black)">Från offertförfrågan till installation i fem steg</h2>
-<p style="margin:0;max-width:720px">Så här går det till när ni installerar laddbox eller laddstolpar tillsammans med NEWEL.</p>
-<ol style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:32px">
-<li style="flex:1 1 200px;border-top:4px solid var(--light-grey);padding-top:16px;display:flex;flex-direction:column;gap:8px">
-<span aria-hidden="true" style="font-size:48px;line-height:56px;font-weight:700;color:var(--newel-orange)">1</span>
-<h3 style="margin:0;font-size:20px;line-height:28px;font-weight:700">Offertförfrågan</h3>
-<p style="margin:0">Ni berättar om anläggningen och hur många laddpunkter ni vill ha.</p>
-</li>
-<li style="flex:1 1 200px;border-top:4px solid var(--light-grey);padding-top:16px;display:flex;flex-direction:column;gap:8px">
-<span aria-hidden="true" style="font-size:48px;line-height:56px;font-weight:700;color:var(--newel-black)">2</span>
-<h3 style="margin:0;font-size:20px;line-height:28px;font-weight:700">Genomgång</h3>
-<p style="margin:0">Vi går igenom elanläggning, parkering och era önskemål.</p>
-</li>
-<li style="flex:1 1 200px;border-top:4px solid var(--light-grey);padding-top:16px;display:flex;flex-direction:column;gap:8px">
-<span aria-hidden="true" style="font-size:48px;line-height:56px;font-weight:700;color:var(--newel-black)">3</span>
-<h3 style="margin:0;font-size:20px;line-height:28px;font-weight:700">Offert</h3>
-<p style="margin:0">Ni får en tydlig offert att ta med till styrelsen eller ledningen.</p>
-</li>
-<li style="flex:1 1 200px;border-top:4px solid var(--light-grey);padding-top:16px;display:flex;flex-direction:column;gap:8px">
-<span aria-hidden="true" style="font-size:48px;line-height:56px;font-weight:700;color:var(--newel-black)">4</span>
-<h3 style="margin:0;font-size:20px;line-height:28px;font-weight:700">Installation</h3>
-<p style="margin:0">Våra installatörer monterar laddbox eller laddstolpar hos er.</p>
-</li>
-<li style="flex:1 1 200px;border-top:4px solid var(--light-grey);padding-top:16px;display:flex;flex-direction:column;gap:8px">
-<span aria-hidden="true" style="font-size:48px;line-height:56px;font-weight:700;color:var(--newel-black)">5</span>
-<h3 style="margin:0;font-size:20px;line-height:28px;font-weight:700">Uppstart och support</h3>
-<p style="margin:0">Laddningen tas i drift, IMD kopplas in vid behov och ni har support att vända er till.</p>
-</li>
-</ol>
+<figcaption style="padding:24px;display:flex;flex-direction:column;gap:8px">
+<blockquote style="margin:0">“[KUNDCITAT: en eller två meningar från styrelsen, förvaltaren eller VD]”</blockquote>
+<span style="font-weight:700">[BRF-NAMN]</span>
+<span style="font-size:14px;line-height:20px;color:var(--newel-grey)">[ORT] · [ANTAL] laddpunkter</span>
+</figcaption>
+</figure>
+<figure style="margin:0;flex:1 1 320px;background:var(--white);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
+<div role="img" aria-label="Bildplatshållare: laddanläggning hos kund" style="aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--light-grey);border:1px dashed var(--newel-grey);color:var(--newel-grey);font-size:14px;line-height:20px;text-align:center;padding:16px">
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--newel-grey)" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M3 18l6-5 4 3 3-2 5 4"></path></svg>
+<span>[BILD: laddanläggning hos kund]</span>
+</div>
+<figcaption style="padding:24px;display:flex;flex-direction:column;gap:8px">
+<blockquote style="margin:0">“[KUNDCITAT: en eller två meningar från styrelsen, förvaltaren eller VD]”</blockquote>
+<span style="font-weight:700">[SAMFÄLLIGHETENS NAMN]</span>
+<span style="font-size:14px;line-height:20px;color:var(--newel-grey)">[ORT] · [ANTAL] laddpunkter</span>
+</figcaption>
+</figure>
+<figure style="margin:0;flex:1 1 320px;background:var(--white);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
+<div role="img" aria-label="Bildplatshållare: laddanläggning hos kund" style="aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--light-grey);border:1px dashed var(--newel-grey);color:var(--newel-grey);font-size:14px;line-height:20px;text-align:center;padding:16px">
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--newel-grey)" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M3 18l6-5 4 3 3-2 5 4"></path></svg>
+<span>[BILD: laddanläggning hos kund]</span>
+</div>
+<figcaption style="padding:24px;display:flex;flex-direction:column;gap:8px">
+<blockquote style="margin:0">“[KUNDCITAT: en eller två meningar från styrelsen, förvaltaren eller VD]”</blockquote>
+<span style="font-weight:700">[FÖRETAGSNAMN]</span>
+<span style="font-size:14px;line-height:20px;color:var(--newel-grey)">[ORT] · [ANTAL] laddpunkter</span>
+</figcaption>
+</figure>
+</div>
 <div>
-<a class="btn btn-primary" href="offert.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:var(--accent-fill);color:var(--ink-strong);font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">Begär offert</a>
+<a class="btn btn-secondary" href="referenser.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:transparent;color:var(--newel-black);border:2px solid var(--newel-grey);font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">Se alla kundcase</a>
+</div>
 </div>
 </div>
 </section>
 
-
-<section class="sec" id="partners" style="background:var(--light-grey)">
+<section class="sec" id="partners" style="background:var(--white)">
 <div class="wrap stack">
 <h2 class="h2p">Partners och medlemskap</h2>
 <div class="grid3">
@@ -348,10 +365,6 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 <a href="https://www.installatorsforetagen.se" target="_blank" rel="noopener"><img src="https://newel.se/wp-content/uploads/logo-installatorsforetagen-320x100-gra.png" alt="Installatörsföretagen"></a>
 </div>
 </div>
-<div class="pcard">
-<h3 class="h3">Bidrag</h3>
-<p>[AKTUELL INFORMATION OM BIDRAG FÖR LADDINFRASTRUKTUR: VEM SOM KAN SÖKA, HUR MYCKET OCH HUR NEWEL HJÄLPER TILL]</p>
-</div>
 </div>
 <div class="partner-band">
 <div class="partner-intro">
@@ -359,59 +372,14 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 <p>Fyll i tre fält, så hör vi av oss.</p>
 </div>
 <form class="partner-form" action="#">
-<div><label class="lbl" for="pf-namn">Namn</label><input class="field" id="pf-namn" name="namn" type="text" autocomplete="name" required></div>
-<div><label class="lbl" for="pf-org">Företag</label><input class="field" id="pf-org" name="foretag" type="text" autocomplete="organization" required></div>
-<div><label class="lbl" for="pf-kontakt">Telefon eller e-post</label><input class="field" id="pf-kontakt" name="kontakt" type="text" required></div>
+<div><label class="lbl" for="pf-namn">Namn</label><input class="field" id="pf-namn" name="namn" type="text" autocomplete="name" required=""></div>
+<div><label class="lbl" for="pf-org">Företag</label><input class="field" id="pf-org" name="foretag" type="text" autocomplete="organization" required=""></div>
+<div><label class="lbl" for="pf-kontakt">Telefon eller e-post</label><input class="field" id="pf-kontakt" name="kontakt" type="text" required=""></div>
 <div class="span2"><button class="btn btn-primary" type="button" style="font-family:inherit;cursor:pointer">Bli partner</button></div>
 </form>
 </div>
 </div>
 </section>
-
-<section style="background:var(--white);color:var(--newel-black);font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px;padding:64px 0;overflow:hidden">
-<div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:32px">
-<h2 style="margin:0 0 0 calc(50% - 50vw);align-self:flex-start;display:inline-block;padding:8px 24px 8px calc(50vw - 50%);background:var(--light-grey);font-size:28px;line-height:36px;font-weight:700;color:var(--newel-black)">Föreningar och företag som laddar med NEWEL</h2>
-<div style="display:flex;flex-wrap:wrap;gap:24px">
-<figure style="margin:0;flex:1 1 320px;background:var(--light-grey);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
-<div role="img" aria-label="Bildplatshållare: laddanläggning hos kund" style="aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--white);border:1px dashed var(--newel-grey);color:var(--newel-grey);font-size:14px;line-height:20px;text-align:center;padding:16px">
-<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--newel-grey)" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><circle cx="9" cy="10" r="1.5"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
-<span>[BILD: laddanläggning hos kund]</span>
-</div>
-<figcaption style="padding:24px;display:flex;flex-direction:column;gap:8px">
-<blockquote style="margin:0">“[KUNDCITAT: en eller två meningar från styrelsen, förvaltaren eller VD]”</blockquote>
-<span style="font-weight:700">[BRF-NAMN]</span>
-<span style="font-size:14px;line-height:20px;color:var(--newel-grey)">[ORT] · [ANTAL] laddpunkter</span>
-</figcaption>
-</figure>
-<figure style="margin:0;flex:1 1 320px;background:var(--light-grey);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
-<div role="img" aria-label="Bildplatshållare: laddanläggning hos kund" style="aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--white);border:1px dashed var(--newel-grey);color:var(--newel-grey);font-size:14px;line-height:20px;text-align:center;padding:16px">
-<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--newel-grey)" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><circle cx="9" cy="10" r="1.5"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
-<span>[BILD: laddanläggning hos kund]</span>
-</div>
-<figcaption style="padding:24px;display:flex;flex-direction:column;gap:8px">
-<blockquote style="margin:0">“[KUNDCITAT: en eller två meningar från styrelsen, förvaltaren eller VD]”</blockquote>
-<span style="font-weight:700">[SAMFÄLLIGHETENS NAMN]</span>
-<span style="font-size:14px;line-height:20px;color:var(--newel-grey)">[ORT] · [ANTAL] laddpunkter</span>
-</figcaption>
-</figure>
-<figure style="margin:0;flex:1 1 320px;background:var(--light-grey);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
-<div role="img" aria-label="Bildplatshållare: laddanläggning hos kund" style="aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--white);border:1px dashed var(--newel-grey);color:var(--newel-grey);font-size:14px;line-height:20px;text-align:center;padding:16px">
-<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--newel-grey)" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><circle cx="9" cy="10" r="1.5"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
-<span>[BILD: laddanläggning hos kund]</span>
-</div>
-<figcaption style="padding:24px;display:flex;flex-direction:column;gap:8px">
-<blockquote style="margin:0">“[KUNDCITAT: en eller två meningar från styrelsen, förvaltaren eller VD]”</blockquote>
-<span style="font-weight:700">[FÖRETAGSNAMN]</span>
-<span style="font-size:14px;line-height:20px;color:var(--newel-grey)">[ORT] · [ANTAL] laddpunkter</span>
-</figcaption>
-</figure>
-</div>
-<div>
-<a class="btn btn-secondary" href="referenser.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:transparent;color:var(--newel-black);border:2px solid var(--newel-grey);font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">Se alla kundcase</a>
-</div>
-</div>
-</section>
-
 
 <section class="sec" id="offert" style="background:var(--light-grey)">
 <div class="wrap offert">
@@ -419,21 +387,37 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 <h2 class="h2p">Begär offert</h2>
 <p class="lead">Lämna ett nummer eller en e-post, så ringer vi upp och tar detaljerna i samtalet.</p>
 <p>Fel på en befintlig anläggning? <a href="serviceanmalan.html" style="font-weight:700">Gör en felanmälan</a></p>
+<div style="margin-top:16px;display:flex;flex-direction:column;gap:12px">
+<h3 class="h3" style="font-size:24px;line-height:32px">Bidrag för laddning</h3>
+<p>[AKTUELL INFORMATION OM BIDRAG FÖR LADDINFRASTRUKTUR]</p>
+<div class="card" style="background:var(--white);padding:16px 20px;display:flex;flex-direction:column;gap:4px">
+<h4 style="margin:0;font-size:18px;line-height:24px;font-weight:700">Vem kan söka</h4>
+<p style="margin:0">[VEM SOM KAN SÖKA]</p>
+</div>
+<div class="card" style="background:var(--white);padding:16px 20px;display:flex;flex-direction:column;gap:4px">
+<h4 style="margin:0;font-size:18px;line-height:24px;font-weight:700">Hur mycket</h4>
+<p style="margin:0">[HUR MYCKET SOM KAN BEVILJAS]</p>
+</div>
+<div class="card" style="background:var(--white);padding:16px 20px;display:flex;flex-direction:column;gap:4px">
+<h4 style="margin:0;font-size:18px;line-height:24px;font-weight:700">Så hjälper NEWEL till</h4>
+<p style="margin:0">[HUR NEWEL HJÄLPER TILL MED ANSÖKAN]</p>
+</div>
+</div>
 </div>
 <form class="card offert-form" action="#">
 <fieldset>
 <legend class="lbl">Jag är</legend>
 <div class="opts">
-<label class="opt"><input type="radio" name="kundtyp" value="Privatperson" required><span>Privatperson</span></label>
+<label class="opt"><input type="radio" name="kundtyp" value="Privatperson" required=""><span>Privatperson</span></label>
 <label class="opt"><input type="radio" name="kundtyp" value="BRF / Samfällighet"><span>BRF / Samfällighet</span></label>
 <label class="opt"><input type="radio" name="kundtyp" value="Fastighetsbolag"><span>Fastighetsbolag</span></label>
 <label class="opt"><input type="radio" name="kundtyp" value="Företag"><span>Företag</span></label>
 </div>
 </fieldset>
-<div><label class="lbl" for="of-namn">Namn</label><input class="field" id="of-namn" name="namn" type="text" autocomplete="name" required></div>
-<div><label class="lbl" for="of-kontakt">Telefon eller e-post</label><input class="field" id="of-kontakt" name="kontakt" type="text" required></div>
+<div><label class="lbl" for="of-namn">Namn</label><input class="field" id="of-namn" name="namn" type="text" autocomplete="name" required=""></div>
+<div><label class="lbl" for="of-kontakt">Telefon eller e-post</label><input class="field" id="of-kontakt" name="kontakt" type="text" required=""></div>
 <div><label class="lbl" for="of-msg">Meddelande <span style="font-weight:400;color:var(--newel-grey)">(valfritt)</span></label><textarea class="field" id="of-msg" name="meddelande" rows="3"></textarea></div>
-<div class="consent"><input id="of-gdpr" name="samtycke" type="checkbox" required><label for="of-gdpr" class="cap">Jag godkänner att NEWEL behandlar mina uppgifter enligt <a href="integritetspolicy.html">integritetspolicyn</a>.</label></div>
+<div class="consent"><input id="of-gdpr" name="samtycke" type="checkbox" required=""><label for="of-gdpr" class="cap">Jag godkänner att NEWEL behandlar mina uppgifter enligt <a href="integritetspolicy.html">integritetspolicyn</a>.</label></div>
 <div><button class="btn btn-primary" type="button" style="font-family:inherit;cursor:pointer">Skicka offertförfrågan</button></div>
 </form>
 </div>
@@ -445,7 +429,7 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 <div style="display:flex;flex-wrap:wrap;gap:24px">
 <article style="flex:1 1 320px;background:var(--white);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
 <div class="ph" role="img" aria-label="Bildplatshållare: nyhetsbild" style="aspect-ratio:16/9">
-<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--newel-grey)" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><circle cx="9" cy="10" r="1.5"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--newel-grey)" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M3 18l6-5 4 3 3-2 5 4"></path></svg>
 <span>[BILD: nyhet, 16:9]</span>
 </div>
 <div style="padding:24px;display:flex;flex-direction:column;gap:8px">
@@ -457,7 +441,7 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 </article>
 <article style="flex:1 1 320px;background:var(--white);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
 <div class="ph" role="img" aria-label="Bildplatshållare: nyhetsbild" style="aspect-ratio:16/9">
-<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--newel-grey)" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><circle cx="9" cy="10" r="1.5"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--newel-grey)" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M3 18l6-5 4 3 3-2 5 4"></path></svg>
 <span>[BILD: nyhet, 16:9]</span>
 </div>
 <div style="padding:24px;display:flex;flex-direction:column;gap:8px">
@@ -469,7 +453,7 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 </article>
 <article style="flex:1 1 320px;background:var(--white);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
 <div class="ph" role="img" aria-label="Bildplatshållare: nyhetsbild" style="aspect-ratio:16/9">
-<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--newel-grey)" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"/><circle cx="9" cy="10" r="1.5"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--newel-grey)" stroke-width="1.5" stroke-linecap="square"><rect x="3" y="4" width="18" height="16"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M3 18l6-5 4 3 3-2 5 4"></path></svg>
 <span>[BILD: nyhet, 16:9]</span>
 </div>
 <div style="padding:24px;display:flex;flex-direction:column;gap:8px">
