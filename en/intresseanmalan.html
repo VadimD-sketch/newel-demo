@@ -129,55 +129,30 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 
 <section class="sec" style="background:var(--white);padding-top:32px">
 <div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start">
-<form class="card" action="#" style="flex:2 1 600px;padding:32px;display:flex;flex-direction:column;gap:40px">
-<fieldset class="fs">
-<legend>What are you interested in?</legend>
+<form class="card" action="#" style="flex:2 1 600px;padding:32px;display:flex;flex-direction:column;gap:24px">
+<fieldset class="fs" style="gap:0">
+<legend style="font-size:16px;line-height:24px;margin-bottom:8px">What are you interested in?</legend>
 <label class="opt"><input type="checkbox" name="tjanst" value="laddbox"> Wallbox or charging post</label>
 <label class="opt"><input type="checkbox" name="tjanst" value="imd"> IMD – Individual Metering and Billing</label>
 <label class="opt"><input type="checkbox" name="tjanst" value="support"> Support agreement for EV charging</label>
 <label class="opt"><input type="checkbox" name="tjanst" value="annat"> Other</label>
 </fieldset>
-<fieldset class="fs">
-<legend>About you</legend>
 <div>
-<label class="lbl" for="ia-typ">Customer type</label>
-<select class="field" id="ia-typ" name="kundtyp">
-<option>Housing co-operative (BRF)</option>
-<option>Homeowner association</option>
-<option>Property companies</option>
-<option>Businesses</option>
-</select>
+<label class="lbl" for="ia-namn">Name <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
+<input class="field" id="ia-namn" name="namn" type="text" autocomplete="name" required>
 </div>
 <div>
-<label class="lbl" for="ia-org">Association or company</label>
-<input class="field" id="ia-org" name="organisation" type="text" autocomplete="organization">
+<label class="lbl" for="ia-kontakt">Phone or email <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
+<input class="field" id="ia-kontakt" name="kontakt" type="text" autocomplete="email" required>
 </div>
 <div>
-<label class="lbl" for="ia-namn">Contact person</label>
-<input class="field" id="ia-namn" name="namn" type="text" autocomplete="name">
-</div>
-<div style="display:flex;flex-wrap:wrap;gap:24px">
-<div style="flex:1 1 220px">
-<label class="lbl" for="ia-epost">Email</label>
-<input class="field" id="ia-epost" name="epost" type="email" autocomplete="email">
-</div>
-<div style="flex:1 1 220px">
-<label class="lbl" for="ia-tel">Phone</label>
-<input class="field" id="ia-tel" name="telefon" type="tel" autocomplete="tel">
-</div>
-</div>
-</fieldset>
-<fieldset class="fs">
-<legend>Comment</legend>
-<div>
-<label class="lbl" for="ia-kommentar">Briefly describe your needs</label>
-<textarea class="field" id="ia-kommentar" name="kommentar" rows="5" style="min-height:140px"></textarea>
+<label class="lbl" for="ia-kommentar">Comment <span style="font-weight:400;color:var(--newel-grey)">(optional)</span></label>
+<textarea class="field" id="ia-kommentar" name="kommentar" rows="3" style="min-height:96px"></textarea>
 </div>
 <div style="display:flex;gap:12px;align-items:flex-start">
-<input id="ia-gdpr" name="samtycke" type="checkbox" style="width:24px;height:24px;margin:0;flex:none;accent-color:var(--newel-black)">
-<label for="ia-gdpr" class="cap" style="color:var(--newel-black)">I accept that NEWEL processes my data in accordance with the <a href="#" style="color:var(--newel-black);text-decoration:underline">privacy policy</a> form.</label>
+<input id="ia-gdpr" name="samtycke" type="checkbox" style="width:24px;height:24px;margin:0;flex:none;accent-color:var(--newel-black)" required>
+<label for="ia-gdpr" class="cap" style="color:var(--newel-black)">I accept that NEWEL processes my data in accordance with the <a href="integritetspolicy.html" style="color:var(--newel-black);text-decoration:underline">privacy policy</a>.</label>
 </div>
-</fieldset>
 <div><button class="btn btn-primary" type="button" style="font-family:inherit;cursor:pointer">Send expression of interest</button></div>
 </form>
 <aside style="flex:1 1 320px;display:flex;flex-direction:column;gap:24px">
@@ -232,6 +207,7 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 <span style="font-weight:700">About us</span>
 <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
 <li><a href="omnewel.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">About NEWEL</a></li>
+<li><a href="omnewel.html#partners" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Partners</a></li>
 <li><a href="referenser.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Customer cases</a></li>
 <li><a href="nyheter.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">News</a></li>
 </ul>

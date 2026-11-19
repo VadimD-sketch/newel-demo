@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Hur blev installationen? – NEWEL</title>
+<meta name="description" content="Lämna ett omdöme om din installation från NEWEL.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+<style>
+body{margin:0;font-family:Roboto,system-ui,"Segoe UI",Arial,sans-serif;font-size:16px;line-height:26px;color:var(--newel-black);background:var(--white)}
+*{box-sizing:border-box}
+h1,h2,h3,p{margin:0}
+a{color:var(--newel-black)}
+a:hover{text-decoration:underline !important}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.sec{padding:64px 0;overflow:hidden}
+.h1{font-size:48px;line-height:56px;font-weight:700;color:var(--newel-black)}
+.sub{font-size:28px;line-height:36px;font-weight:700;color:var(--newel-grey)}
+.h2p{font-size:28px;line-height:36px;font-weight:700;color:var(--newel-black)}
+.h3{font-size:20px;line-height:28px;font-weight:700;color:var(--newel-black)}
+.cap{font-size:14px;line-height:20px;color:var(--newel-grey)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:4px;font-size:16px;line-height:24px;font-weight:700;text-decoration:none;border:2px solid transparent}
+.btn-primary{background:var(--accent-fill);color:var(--ink-strong);border-color:var(--accent-fill)}
+.btn-primary:hover{background:var(--newel-black) !important;color:var(--accent-fill) !important;border-color:var(--newel-black) !important;text-decoration:none !important}
+.btn-primary:active{background:var(--orange-700) !important;color:var(--white) !important;border-color:var(--orange-700) !important}
+.btn-primary:focus-visible{outline:2px solid var(--ink-strong);outline-offset:2px}
+.btn-primary:disabled,.btn-primary[aria-disabled="true"]{background:var(--orange-100) !important;color:var(--orange-300) !important;border-color:var(--orange-100) !important;cursor:not-allowed}
+.btn-secondary{background:transparent;color:var(--newel-black);border-color:var(--newel-grey)}
+.btn-secondary:hover{background:var(--newel-black) !important;color:var(--white) !important;border-color:var(--newel-black) !important;text-decoration:none !important}
+.card{background:var(--light-grey);border-radius:8px;padding:24px}
+.field{display:block;width:100%;min-height:48px;padding:10px 12px;border:1px solid var(--newel-grey);border-radius:4px;background:var(--white);color:var(--newel-black);font-family:inherit;font-size:16px;line-height:24px}
+select.field{-webkit-appearance:none;appearance:none;padding-right:44px;cursor:pointer;background-color:var(--white);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='10' viewBox='0 0 16 10' fill='none' stroke='%23262625' stroke-width='2' stroke-linecap='square'%3E%3Cpath d='M2 2l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;background-size:16px 10px}
+.lbl{display:block;font-weight:700;margin-bottom:8px}
+.fs{border:0;margin:0;padding:0;min-width:0;display:flex;flex-direction:column;gap:24px}
+.fs legend{padding:0;margin-bottom:24px;font-size:20px;line-height:28px;font-weight:700}
+.opt{display:flex;gap:12px;align-items:center;min-height:44px}
+.opt input{width:24px;height:24px;margin:0;flex:none;accent-color:var(--newel-black)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--newel-black);outline-offset:2px}
+@media (max-width:640px){
+.h1{font-size:36px;line-height:44px}
+.sec{padding:48px 0}
+}
+/*dd*/
+header nav .dd{position:relative}
+header nav .dd-btn{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:10px 8px 7px;margin:0;border:0;border-bottom:3px solid transparent;border-radius:0;background:transparent;color:var(--newel-black);font-family:inherit;font-size:16px;line-height:24px;font-weight:400;cursor:pointer}
+header nav .dd-btn:hover{font-weight:700}
+header nav .dd-btn[data-current="page"]{border-bottom:3px solid var(--newel-orange) !important;font-weight:700}
+header nav .dd.open>.dd-btn[data-current="page"],html:not(.dd-js) header nav .dd:hover>.dd-btn[data-current="page"],html:not(.dd-js) header nav .dd:focus-within>.dd-btn[data-current="page"]{border-bottom-color:transparent !important}
+header nav .dd-btn svg{flex:none;transition:transform .15s}
+header nav .dd-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+header nav .dd-lbl{display:inline-flex;flex-direction:column;align-items:center}
+header nav .dd-lbl::after,header nav .dd-panel a::after{content:attr(data-text);display:block;height:0;overflow:hidden;visibility:hidden;font-weight:700;pointer-events:none}
+header nav .dd-panel{display:none;position:absolute;left:0;top:100%;z-index:60;min-width:260px;margin:0;padding:8px 0;list-style:none;background:var(--white);border:1px solid var(--newel-grey);border-radius:4px}
+header nav .dd:last-child>.dd-panel{left:auto;right:0}
+header nav .dd.open>.dd-panel,html:not(.dd-js) header nav .dd:hover>.dd-panel,html:not(.dd-js) header nav .dd:focus-within>.dd-panel{display:block !important}
+header nav .dd-panel a{display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;font-weight:400;text-decoration:none !important;border:0 !important}
+header nav .dd-panel a:hover{font-weight:700 !important}
+header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--light-grey)}
+/*end-dd*/
+.dark :focus-visible{outline-color:var(--white) !important}
+</style>
+<link rel="stylesheet" href="assets/site.css?v=3">
+<style>:root{--white:#ffffff;--light-grey:#eeeeee;--newel-grey:#676867;--newel-black:#262625;--ink-strong:#1a1a1a;--accent-fill:#f15b22;--newel-orange:#f15b28;--orange-50:#fff4ee;--orange-100:#ffe7db;--orange-200:#ffcfb8;--orange-300:#ffb08e;--orange-400:#ff8557;--orange-600:#d0481f;--orange-700:#ab381b;--orange-800:#862b18;--orange-900:#662215;--orange-950:#411008}</style>
+<style>
+.star{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;padding:0;border:0;background:transparent;cursor:pointer;border-radius:4px}
+.radio{display:flex;gap:12px;align-items:center;min-height:48px;padding:0 16px;border:1px solid var(--newel-grey);border-radius:4px;background:var(--white);cursor:pointer}
+.radio input{width:22px;height:22px;margin:0;flex:none;accent-color:var(--newel-black)}
+.rv-err{color:var(--orange-700);font-weight:700;margin:0}
+[hidden]{display:none !important}
+</style>
+</head>
+<body>
+<div style="min-height:100vh;background:var(--light-grey)">
+<header style="background:var(--white);border-bottom:1px solid var(--light-grey);padding:16px 24px">
+<div style="max-width:560px;margin:0 auto"><img src="assets/logo-color.svg" alt="NEWEL" style="height:32px;width:auto;display:block"></div>
+</header>
+<main style="padding:32px 16px 48px">
+<div style="max-width:560px;margin:0 auto">
+<form id="rv-form" action="#" novalidate style="background:var(--white);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:8px">
+<h1 style="font-size:28px;line-height:36px;font-weight:700">Hur blev installationen?</h1>
+<p>Tack för att du valde NEWEL. Det tar under en minut att svara.</p>
+<p class="cap">Installerad av [MONTÖR] · [DATUM]</p>
+</div>
+<fieldset class="fs" style="gap:8px">
+<legend style="font-size:16px;line-height:24px;margin-bottom:8px">Ditt betyg <span aria-hidden="true" style="color:var(--orange-700)">*</span></legend>
+<div style="display:flex;gap:4px;margin-left:-8px"><button type="button" class="star" data-n="1" aria-pressed="false" aria-label="1 av 5 stjärnor"><svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#676867" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9z"/></svg></button><button type="button" class="star" data-n="2" aria-pressed="false" aria-label="2 av 5 stjärnor"><svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#676867" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9z"/></svg></button><button type="button" class="star" data-n="3" aria-pressed="false" aria-label="3 av 5 stjärnor"><svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#676867" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9z"/></svg></button><button type="button" class="star" data-n="4" aria-pressed="false" aria-label="4 av 5 stjärnor"><svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#676867" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9z"/></svg></button><button type="button" class="star" data-n="5" aria-pressed="false" aria-label="5 av 5 stjärnor"><svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#676867" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9z"/></svg></button></div>
+<p class="cap" id="rv-rating-text" aria-live="polite" style="color:var(--newel-black);min-height:20px"></p>
+</fieldset>
+<div>
+<label class="lbl" for="om-text">Berätta kort om din upplevelse <span style="font-weight:400;color:var(--newel-grey)">(valfritt)</span></label>
+<textarea class="field" id="om-text" name="omdome" rows="4" style="min-height:120px" aria-describedby="om-text-h"></textarea>
+<p class="cap" id="om-text-h" style="margin-top:8px">T.ex. hur installationen gick och hur det fungerar att ladda.</p>
+</div>
+<div>
+<label class="lbl" for="om-namn">Ditt namn <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
+<input class="field" id="om-namn" name="namn" type="text" autocomplete="name" required>
+</div>
+<div>
+<label class="lbl" for="om-ort">Ort eller förening <span style="font-weight:400;color:var(--newel-grey)">(valfritt)</span></label>
+<input class="field" id="om-ort" name="ort" type="text" autocomplete="address-level2">
+</div>
+<fieldset class="fs" style="gap:8px">
+<legend style="font-size:16px;line-height:24px;margin-bottom:8px">Får vi publicera ditt omdöme på newel.se? <span aria-hidden="true" style="color:var(--orange-700)">*</span></legend>
+<label class="radio"><input type="radio" name="publicera" value="namn" required> Ja, med mitt namn</label>
+<label class="radio"><input type="radio" name="publicera" value="anonymt"> Ja, men utan mitt namn</label>
+<label class="radio"><input type="radio" name="publicera" value="nej"> Nej, bara till NEWEL</label>
+<p class="cap" style="margin-top:4px">Vi behandlar dina uppgifter enligt vår <a href="integritetspolicy.html" style="color:var(--newel-black);text-decoration:underline">integritetspolicy</a>.</p>
+</fieldset>
+<div style="display:flex;flex-direction:column;gap:8px">
+<p class="rv-err" id="rv-err" role="alert"></p>
+<button class="btn btn-primary" id="rv-send" type="button" style="font-family:inherit;cursor:pointer;width:100%">Skicka omdöme</button>
+<p class="cap">Fält markerade med * är obligatoriska.</p>
+</div>
+</form>
+<section id="rv-thanks" hidden style="background:var(--white);border-radius:8px;padding:32px 24px;display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+<div style="width:56px;height:56px;border-radius:50%;background:var(--accent-fill);display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--ink-strong)" stroke-width="2.2" stroke-linecap="square" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></div>
+<h1 tabindex="-1" style="font-size:28px;line-height:36px;font-weight:700">Tack för ditt omdöme!</h1>
+<p>Det hjälper oss att bli bättre och hjälper andra att välja rätt laddlösning.</p>
+<p class="cap" style="color:var(--newel-black)">Behöver du hjälp med din laddare? <a href="serviceanmalan.html" style="font-weight:700">Gör en felanmälan</a></p>
+<button class="btn btn-secondary" id="rv-back" type="button" style="font-family:inherit;cursor:pointer">Tillbaka till formuläret</button>
+</section>
+</div>
+</main>
+</div>
+<script>
+(function(){
+var W=['Dåligt', 'Mindre bra', 'Okej', 'Bra', 'Mycket bra'],T='Tryck på en stjärna',E={r:'Välj ett betyg.',n:'Fyll i ditt namn.',p:'Välj om vi får publicera ditt omdöme.'},rating=0;
+var form=document.getElementById('rv-form'),thanks=document.getElementById('rv-thanks'),txt=document.getElementById('rv-rating-text'),err=document.getElementById('rv-err');
+var stars=[].slice.call(document.querySelectorAll('.star'));
+function paint(){stars.forEach(function(b,i){var on=i<rating,s=b.querySelector('svg');b.setAttribute('aria-pressed',(i+1===rating)?'true':'false');s.setAttribute('fill',on?'#f15b22':'none');s.setAttribute('stroke',on?'#ab381b':'#676867');});
+txt.textContent=rating?rating+' / 5 – '+W[rating-1]:T;}
+stars.forEach(function(b){b.addEventListener('click',function(){rating=+b.getAttribute('data-n');err.textContent='';paint();});});
+document.getElementById('rv-send').addEventListener('click',function(){
+var name=document.getElementById('om-namn').value.trim(),pub=form.querySelector('input[name="publicera"]:checked'),msg='';
+if(!rating)msg=E.r;else if(!name)msg=E.n;else if(!pub)msg=E.p;
+if(msg){err.textContent=msg;return;}
+form.hidden=true;thanks.hidden=false;thanks.querySelector('h1').focus();});
+document.getElementById('rv-back').addEventListener('click',function(){form.reset();rating=0;paint();err.textContent='';thanks.hidden=true;form.hidden=false;});
+paint();
+})();
+</script>
+</body>
+</html>

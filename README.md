@@ -11,6 +11,14 @@ felanmälan, kontakt, kundcase och nyheter.
 - Medlems- och partnerloggor hämtas direkt från newel.se. Kopiera dem till `assets/` före lansering.
 - Alla sidor har `noindex` så att demon inte hamnar i Google. Ta bort raden `<meta name="robots" ...>` vid lansering.
 
+## Senaste ändringar (19 nov 2026)
+
+- Ny hero-bild (montör som monterar laddbox), kvinnor på bilderna för Privatperson och BRF samt ny Partners-sektion på startsidan utan separat Zpark-block.
+- Om NEWEL: intro, *Varför välja NEWEL?* (4 punkter med ikoner) och *Partners* (Zpark först, medlemskap, bidrag och partnerformulär). Texterna är lorem ipsum tills riktigt innehåll finns.
+- Förenklade formulär (offert, intresseanmälan, kontakt): namn, telefon eller e-post och ett meddelande. Felanmälan är oförändrad.
+- Nytt omdömesformulär för slutkunder: `omdome.html` (EN: `en/omdome.html`) och utskriftsbart QR-kort `omdome-kort.html`. QR-koden pekar på föreslagna adresserna `newel.se/omdome` och `newel.se/en/review`.
+- Länk till Partners i sidfoten på alla sidor.
+
 ## Publicera på GitHub Pages
 
 1. Skapa ett repository och ladda upp alla filer i mappen (även `assets/` och `.nojekyll`).

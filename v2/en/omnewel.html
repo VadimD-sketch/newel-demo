@@ -59,6 +59,7 @@ header nav .dd-panel a{display:flex;flex-direction:column;justify-content:center
 header nav .dd-panel a:hover{font-weight:700 !important}
 header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--light-grey)}
 /*end-dd*/
+.dark :focus-visible{outline-color:var(--white) !important}
 </style>
 <link rel="stylesheet" href="../../assets/site.css?v=3">
 <link rel="stylesheet" href="../../assets/site-en.css?v=3">
@@ -124,15 +125,108 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 <div class="wrap" style="display:flex;flex-direction:column;gap:24px">
 <nav aria-label="Breadcrumb" class="cap"><a href="index.html" style="color:var(--newel-grey)">Home</a> / <span style="color:var(--newel-black)">About NEWEL</span></nav>
 <h1 class="h1">About NEWEL</h1>
-<p class="sub">Who we are and what we stand for.</p>
+<p class="sub">Who we are, what sets us apart and who we work with.</p>
 </div>
 </section>
 <section class="sec" style="background:var(--white);padding-top:32px">
-<div class="wrap" style="display:flex;flex-direction:column;gap:24px;max-width:800px">
-<p>[TEXT FROM NEWEL: about the company – history, who we are, values and contacts]</p>
-<div><a class="btn btn-primary" href="offert.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:var(--accent-fill);color:var(--ink-strong);font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">Request a quote</a></div>
+<div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px;align-items:center">
+<div style="flex:1 1 420px;display:flex;flex-direction:column;gap:16px">
+<h2 class="h2p">Lorem ipsum dolor sit amet</h2>
+<p style="font-size:18px;line-height:28px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+<div><a class="btn btn-primary" href="offert.html">Request a quote</a></div>
+</div>
+<div role="img" aria-label="Image placeholder: photo from the Mats photo shoot" style="display:flex;align-items:center;justify-content:center;text-align:center;background:var(--light-grey);border:1px dashed var(--newel-grey);color:var(--newel-grey);font-size:14px;line-height:20px;padding:8px;flex:1 1 420px;aspect-ratio:4/3;padding:16px">[PHOTO: the NEWEL team or an installer at work, from the Mats photo shoot]</div>
 </div>
 </section>
+
+<section class="sec" style="background:var(--white);padding-top:0">
+<div class="wrap" style="display:flex;flex-direction:column;gap:32px">
+<h2 class="h2p">Why choose NEWEL?</h2>
+<div style="display:flex;flex-wrap:wrap;gap:32px">
+<div style="flex:1 1 240px;display:flex;flex-direction:column;gap:12px">
+<div style="width:56px;height:56px;background:var(--accent-fill);border-radius:4px;display:flex;align-items:center;justify-content:center"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--ink-strong)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
+<h3 class="h3">Lorem ipsum dolor</h3>
+<p style="color:var(--newel-grey)">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+<div style="flex:1 1 240px;display:flex;flex-direction:column;gap:12px">
+<div style="width:56px;height:56px;background:var(--accent-fill);border-radius:4px;display:flex;align-items:center;justify-content:center"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--ink-strong)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/></svg></div>
+<h3 class="h3">Sit amet consectetur</h3>
+<p style="color:var(--newel-grey)">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+<div style="flex:1 1 240px;display:flex;flex-direction:column;gap:12px">
+<div style="width:56px;height:56px;background:var(--accent-fill);border-radius:4px;display:flex;align-items:center;justify-content:center"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--ink-strong)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div>
+<h3 class="h3">Adipiscing elit sed</h3>
+<p style="color:var(--newel-grey)">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+<div style="flex:1 1 240px;display:flex;flex-direction:column;gap:12px">
+<div style="width:56px;height:56px;background:var(--accent-fill);border-radius:4px;display:flex;align-items:center;justify-content:center"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--ink-strong)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg></div>
+<h3 class="h3">Do eiusmod tempor</h3>
+<p style="color:var(--newel-grey)">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="partners" style="background:var(--light-grey)">
+<div class="wrap" style="display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:8px">
+<h2 class="h2p">Partners</h2>
+<p style="color:var(--newel-grey);font-size:18px;line-height:28px">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:24px">
+<article style="flex:1 1 240px;background:var(--white);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px;border-top:4px solid var(--newel-orange)">
+<div role="img" aria-label="Image placeholder: logo for Zpark" style="display:flex;align-items:center;justify-content:center;text-align:center;background:var(--light-grey);border:1px dashed var(--newel-grey);color:var(--newel-grey);font-size:14px;line-height:20px;padding:8px;align-self:flex-start;min-width:120px;height:56px;padding:8px 16px">Zpark logo</div>
+<h3 class="h3">Zpark</h3>
+<p style="font-weight:700">Charging with Zpark</p>
+<p style="color:var(--newel-grey)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</article>
+<article style="flex:1 1 240px;background:var(--white);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px">
+<div role="img" aria-label="Image placeholder: logo for Ahlsell" style="display:flex;align-items:center;justify-content:center;text-align:center;background:var(--light-grey);border:1px dashed var(--newel-grey);color:var(--newel-grey);font-size:14px;line-height:20px;padding:8px;align-self:flex-start;min-width:120px;height:56px;padding:8px 16px">Ahlsell logo</div>
+<h3 class="h3">Ahlsell</h3>
+<p style="color:var(--newel-grey)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</article>
+<article style="flex:1 1 240px;background:var(--white);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px">
+<div role="img" aria-label="Image placeholder: logo for SEOM" style="display:flex;align-items:center;justify-content:center;text-align:center;background:var(--light-grey);border:1px dashed var(--newel-grey);color:var(--newel-grey);font-size:14px;line-height:20px;padding:8px;align-self:flex-start;min-width:120px;height:56px;padding:8px 16px">SEOM logo</div>
+<h3 class="h3">SEOM</h3>
+<p style="color:var(--newel-grey)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</article>
+<article style="flex:1 1 240px;background:var(--white);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px">
+<div role="img" aria-label="Image placeholder: logo for Electricity" style="display:flex;align-items:center;justify-content:center;text-align:center;background:var(--light-grey);border:1px dashed var(--newel-grey);color:var(--newel-grey);font-size:14px;line-height:20px;padding:8px;align-self:flex-start;min-width:120px;height:56px;padding:8px 16px">Electricity logo</div>
+<h3 class="h3">Electricity</h3>
+<p style="color:var(--newel-grey)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</article>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:24px">
+<div style="flex:2 1 480px;background:var(--white);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px">
+<h3 class="h3">Member of</h3>
+<div style="display:flex;flex-wrap:wrap;gap:12px">
+<div role="img" aria-label="Image placeholder: logo for Elsäkerhetsverket" style="display:flex;align-items:center;justify-content:center;text-align:center;background:var(--light-grey);border:1px dashed var(--newel-grey);color:var(--newel-grey);font-size:14px;line-height:20px;padding:8px;align-self:flex-start;min-width:120px;height:56px;padding:8px 16px">Elsäkerhetsverket logo</div>
+<div role="img" aria-label="Image placeholder: logo for Svensk Solenergi" style="display:flex;align-items:center;justify-content:center;text-align:center;background:var(--light-grey);border:1px dashed var(--newel-grey);color:var(--newel-grey);font-size:14px;line-height:20px;padding:8px;align-self:flex-start;min-width:120px;height:56px;padding:8px 16px">Svensk Solenergi logo</div>
+<div role="img" aria-label="Image placeholder: logo for Installatörsföretagen" style="display:flex;align-items:center;justify-content:center;text-align:center;background:var(--light-grey);border:1px dashed var(--newel-grey);color:var(--newel-grey);font-size:14px;line-height:20px;padding:8px;align-self:flex-start;min-width:120px;height:56px;padding:8px 16px">Installatörsföretagen logo</div>
+</div>
+<p style="color:var(--newel-grey)">NEWEL is a member of Elsäkerhetsverket, Svensk Solenergi and Installatörsföretagen.</p>
+</div>
+<div style="flex:1 1 300px;background:var(--white);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px">
+<h3 class="h3">Grants</h3>
+<p>[CURRENT INFORMATION ON GRANTS FOR CHARGING INFRASTRUCTURE: WHO CAN APPLY, HOW MUCH AND HOW NEWEL HELPS]</p>
+<a href="#" style="font-weight:700;margin-top:auto;padding:8px 0">Read more about grants →</a>
+</div>
+</div>
+<div class="dark" style="background:var(--newel-black);color:var(--white);border-radius:8px;padding:32px;display:flex;flex-wrap:wrap;gap:32px">
+<div style="flex:1 1 280px;display:flex;flex-direction:column;gap:8px">
+<h3 class="h3" style="color:var(--white);font-size:24px;line-height:32px">Would you like to partner with us?</h3>
+<p style="color:var(--light-grey)">Fill in three fields and we’ll get in touch.</p>
+</div>
+<form action="#" style="flex:2 1 520px;display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end">
+<div style="flex:1 1 180px"><label class="lbl" for="pa-namn">Name</label><input class="field" id="pa-namn" name="namn" type="text" autocomplete="name"></div>
+<div style="flex:1 1 180px"><label class="lbl" for="pa-ftg">Company</label><input class="field" id="pa-ftg" name="foretag" type="text" autocomplete="organization"></div>
+<div style="flex:1 1 180px"><label class="lbl" for="pa-kontakt">Phone or email</label><input class="field" id="pa-kontakt" name="kontakt" type="text" autocomplete="email"></div>
+<button class="btn btn-primary" type="button" style="font-family:inherit;cursor:pointer">Become a partner</button>
+</form>
+</div>
+</div>
+</section>
+
 </main>
 
 <footer style="background:var(--newel-black);color:var(--white);font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px">
@@ -172,6 +266,7 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 <span style="font-weight:700">About us</span>
 <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
 <li><a href="omnewel.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">About NEWEL</a></li>
+<li><a href="omnewel.html#partners" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Partners</a></li>
 <li><a href="referenser.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Customer cases</a></li>
 <li><a href="nyheter.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">News</a></li>
 </ul>

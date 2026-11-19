@@ -134,87 +134,38 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 
 <section class="sec" style="background:var(--white);padding-top:32px;overflow:visible">
 <div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start">
-<form class="card" action="#" style="flex:2 1 600px;padding:32px;display:flex;flex-direction:column;gap:40px">
-<p class="cap" style="color:var(--newel-black)">Fields marked with <span style="color:var(--orange-700)">*</span> are required.</p>
-<fieldset class="fs">
-<legend>About you</legend>
+<form class="card" action="#" style="flex:2 1 600px;padding:32px;display:flex;flex-direction:column;gap:24px">
 <div>
-<label class="lbl" for="of-typ">Customer type <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
+<label class="lbl" for="of-typ">I am a <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
 <select class="field" id="of-typ" name="kundtyp" required>
-<option value="" selected disabled>Select customer type</option>
+<option value="" selected disabled>Select</option>
 <option>Housing co-operative (BRF)</option>
 <option>Homeowner association</option>
-<option>Property companies</option>
-<option>Businesses</option>
+<option>Property company</option>
+<option>Business</option>
 </select>
 </div>
-<div>
-<label class="lbl" for="of-org">Association or company <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
-<input class="field" id="of-org" name="organisation" type="text" autocomplete="organization" required>
-</div>
-<div>
-<label class="lbl" for="of-orgnr">Organisation number</label>
-<input class="field" id="of-orgnr" name="orgnr" type="text" inputmode="numeric" aria-describedby="of-orgnr-h">
-<p class="cap" id="of-orgnr-h" style="margin-top:8px">Format: 000000-0000</p>
-</div>
-</fieldset>
-<fieldset class="fs">
-<legend>Contact person</legend>
 <div>
 <label class="lbl" for="of-namn">Name <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
 <input class="field" id="of-namn" name="namn" type="text" autocomplete="name" required>
 </div>
-<div style="display:flex;flex-wrap:wrap;gap:24px">
-<div style="flex:1 1 220px">
-<label class="lbl" for="of-epost">Email <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
-<input class="field" id="of-epost" name="epost" type="email" autocomplete="email" required>
+<div>
+<label class="lbl" for="of-kontakt">Phone or email <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
+<input class="field" id="of-kontakt" name="kontakt" type="text" autocomplete="email" required>
 </div>
-<div style="flex:1 1 220px">
-<label class="lbl" for="of-tel">Phone <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
-<input class="field" id="of-tel" name="telefon" type="tel" autocomplete="tel" required>
-</div>
-</div>
-</fieldset>
-<fieldset class="fs">
-<legend>The installation</legend>
 <div>
 <label class="lbl" for="of-adress">Address where charging will be installed <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
 <input class="field" id="of-adress" name="adress" type="text" autocomplete="street-address" required>
 </div>
-<fieldset class="fs" style="gap:0">
-<legend style="font-size:16px;line-height:24px;margin-bottom:8px">Product <span aria-hidden="true" style="color:var(--orange-700)">*</span></legend>
-<label class="opt"><input type="radio" name="produkt" value="monteringsbox" required> Mounting box</label>
-<label class="opt"><input type="radio" name="produkt" value="monteringsstolpe"> Mounting post</label>
-<label class="opt"><input type="radio" name="produkt" value="vetej"> Don't know yet</label>
-<a href="laddbox.html" style="font-weight:700;padding:8px 0;margin-top:8px;align-self:flex-start">Unsure about the product? See the difference between a mounting box and a mounting post →</a>
-</fieldset>
-<div style="display:flex;flex-wrap:wrap;gap:24px">
-<div style="flex:1 1 220px">
-<label class="lbl" for="of-antal">Number of charge points</label>
-<input class="field" id="of-antal" name="antal" type="number" min="1" inputmode="numeric">
-</div>
-<div style="flex:1 1 220px">
-<label class="lbl" for="of-park">Parking</label>
-<select class="field" id="of-park" name="parkering">
-<option value="" selected>Select parking</option>
-<option>Garage</option>
-<option>Outdoors</option>
-<option>Both garage and outdoors</option>
-</select>
-</div>
-</div>
-</fieldset>
-<fieldset class="fs">
-<legend>Other</legend>
 <div>
-<label class="lbl" for="of-meddelande">Message</label>
-<textarea class="field" id="of-meddelande" name="meddelande" rows="5" style="min-height:140px"></textarea>
+<label class="lbl" for="of-meddelande">Message <span style="font-weight:400;color:var(--newel-grey)">(optional)</span></label>
+<textarea class="field" id="of-meddelande" name="meddelande" rows="3" style="min-height:96px" aria-describedby="of-meddelande-h"></textarea>
+<p class="cap" id="of-meddelande-h" style="margin-top:8px">E.g. number of charge points and whether it is a garage or outdoors.</p>
 </div>
 <div style="display:flex;gap:12px;align-items:flex-start">
 <input id="of-gdpr" name="samtycke" type="checkbox" style="width:24px;height:24px;margin:0;flex:none;accent-color:var(--newel-black)" required>
-<label for="of-gdpr" class="cap" style="color:var(--newel-black)">I accept that NEWEL processes my data in accordance with the <a href="integritetspolicy.html" target="_blank" rel="noopener" style="color:var(--newel-black);text-decoration:underline">privacy policy<span class="sr-only"> (opens in a new tab)</span></a> form. <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
+<label for="of-gdpr" class="cap" style="color:var(--newel-black)">I accept that NEWEL processes my data in accordance with the <a href="integritetspolicy.html" style="color:var(--newel-black);text-decoration:underline">privacy policy</a>.</label>
 </div>
-</fieldset>
 <div><button class="btn btn-primary" type="button" style="font-family:inherit;cursor:pointer">Send quote request</button></div>
 </form>
 <aside style="flex:1 1 320px;display:flex;flex-direction:column;gap:24px;position:sticky;top:24px">
@@ -269,6 +220,7 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 <span style="font-weight:700">About us</span>
 <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
 <li><a href="omnewel.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">About NEWEL</a></li>
+<li><a href="omnewel.html#partners" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Partners</a></li>
 <li><a href="referenser.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Customer cases</a></li>
 <li><a href="nyheter.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">News</a></li>
 </ul>

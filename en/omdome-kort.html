@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Review card – left with the customer</title>
+<meta name="description" content="Review card – left with the customer">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+<style>
+body{margin:0;font-family:Roboto,system-ui,"Segoe UI",Arial,sans-serif;font-size:16px;line-height:26px;color:var(--newel-black);background:var(--white)}
+*{box-sizing:border-box}
+h1,h2,h3,p{margin:0}
+a{color:var(--newel-black)}
+a:hover{text-decoration:underline !important}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.sec{padding:64px 0;overflow:hidden}
+.h1{font-size:48px;line-height:56px;font-weight:700;color:var(--newel-black)}
+.sub{font-size:28px;line-height:36px;font-weight:700;color:var(--newel-grey)}
+.h2p{font-size:28px;line-height:36px;font-weight:700;color:var(--newel-black)}
+.h3{font-size:20px;line-height:28px;font-weight:700;color:var(--newel-black)}
+.cap{font-size:14px;line-height:20px;color:var(--newel-grey)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:4px;font-size:16px;line-height:24px;font-weight:700;text-decoration:none;border:2px solid transparent}
+.btn-primary{background:var(--accent-fill);color:var(--ink-strong);border-color:var(--accent-fill)}
+.btn-primary:hover{background:var(--newel-black) !important;color:var(--accent-fill) !important;border-color:var(--newel-black) !important;text-decoration:none !important}
+.btn-primary:active{background:var(--orange-700) !important;color:var(--white) !important;border-color:var(--orange-700) !important}
+.btn-primary:focus-visible{outline:2px solid var(--ink-strong);outline-offset:2px}
+.btn-primary:disabled,.btn-primary[aria-disabled="true"]{background:var(--orange-100) !important;color:var(--orange-300) !important;border-color:var(--orange-100) !important;cursor:not-allowed}
+.btn-secondary{background:transparent;color:var(--newel-black);border-color:var(--newel-grey)}
+.btn-secondary:hover{background:var(--newel-black) !important;color:var(--white) !important;border-color:var(--newel-black) !important;text-decoration:none !important}
+.card{background:var(--light-grey);border-radius:8px;padding:24px}
+.field{display:block;width:100%;min-height:48px;padding:10px 12px;border:1px solid var(--newel-grey);border-radius:4px;background:var(--white);color:var(--newel-black);font-family:inherit;font-size:16px;line-height:24px}
+select.field{-webkit-appearance:none;appearance:none;padding-right:44px;cursor:pointer;background-color:var(--white);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='10' viewBox='0 0 16 10' fill='none' stroke='%23262625' stroke-width='2' stroke-linecap='square'%3E%3Cpath d='M2 2l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;background-size:16px 10px}
+.lbl{display:block;font-weight:700;margin-bottom:8px}
+.fs{border:0;margin:0;padding:0;min-width:0;display:flex;flex-direction:column;gap:24px}
+.fs legend{padding:0;margin-bottom:24px;font-size:20px;line-height:28px;font-weight:700}
+.opt{display:flex;gap:12px;align-items:center;min-height:44px}
+.opt input{width:24px;height:24px;margin:0;flex:none;accent-color:var(--newel-black)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--newel-black);outline-offset:2px}
+@media (max-width:640px){
+.h1{font-size:36px;line-height:44px}
+.sec{padding:48px 0}
+}
+/*dd*/
+header nav .dd{position:relative}
+header nav .dd-btn{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:10px 8px 7px;margin:0;border:0;border-bottom:3px solid transparent;border-radius:0;background:transparent;color:var(--newel-black);font-family:inherit;font-size:16px;line-height:24px;font-weight:400;cursor:pointer}
+header nav .dd-btn:hover{font-weight:700}
+header nav .dd-btn[data-current="page"]{border-bottom:3px solid var(--newel-orange) !important;font-weight:700}
+header nav .dd.open>.dd-btn[data-current="page"],html:not(.dd-js) header nav .dd:hover>.dd-btn[data-current="page"],html:not(.dd-js) header nav .dd:focus-within>.dd-btn[data-current="page"]{border-bottom-color:transparent !important}
+header nav .dd-btn svg{flex:none;transition:transform .15s}
+header nav .dd-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+header nav .dd-lbl{display:inline-flex;flex-direction:column;align-items:center}
+header nav .dd-lbl::after,header nav .dd-panel a::after{content:attr(data-text);display:block;height:0;overflow:hidden;visibility:hidden;font-weight:700;pointer-events:none}
+header nav .dd-panel{display:none;position:absolute;left:0;top:100%;z-index:60;min-width:260px;margin:0;padding:8px 0;list-style:none;background:var(--white);border:1px solid var(--newel-grey);border-radius:4px}
+header nav .dd:last-child>.dd-panel{left:auto;right:0}
+header nav .dd.open>.dd-panel,html:not(.dd-js) header nav .dd:hover>.dd-panel,html:not(.dd-js) header nav .dd:focus-within>.dd-panel{display:block !important}
+header nav .dd-panel a{display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:8px 20px;color:var(--newel-black);font-size:16px;line-height:24px;font-weight:400;text-decoration:none !important;border:0 !important}
+header nav .dd-panel a:hover{font-weight:700 !important}
+header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--light-grey)}
+/*end-dd*/
+.dark :focus-visible{outline-color:var(--white) !important}
+</style>
+<link rel="stylesheet" href="../assets/site.css?v=3">
+<link rel="stylesheet" href="../assets/site-en.css?v=3">
+<style>:root{--white:#ffffff;--light-grey:#eeeeee;--newel-grey:#676867;--newel-black:#262625;--ink-strong:#1a1a1a;--accent-fill:#f15b22;--newel-orange:#f15b28;--orange-50:#fff4ee;--orange-100:#ffe7db;--orange-200:#ffcfb8;--orange-300:#ffb08e;--orange-400:#ff8557;--orange-600:#d0481f;--orange-700:#ab381b;--orange-800:#862b18;--orange-900:#662215;--orange-950:#411008}</style>
+<style>
+.star{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;padding:0;border:0;background:transparent;cursor:pointer;border-radius:4px}
+.radio{display:flex;gap:12px;align-items:center;min-height:48px;padding:0 16px;border:1px solid var(--newel-grey);border-radius:4px;background:var(--white);cursor:pointer}
+.radio input{width:22px;height:22px;margin:0;flex:none;accent-color:var(--newel-black)}
+.rv-err{color:var(--orange-700);font-weight:700;margin:0}
+[hidden]{display:none !important}
+</style>
+</head>
+<body style="margin:0;background:var(--light-grey)">
+<main style="display:flex;justify-content:center;padding:24px">
+<div style="width:600px;max-width:100%;box-sizing:border-box;background:#ffffff;color:#262625;display:flex;flex-direction:column;min-height:840px">
+<div style="height:12px;background:#f15b22"></div>
+<div style="flex:1;padding:56px 56px 48px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px">
+<img src="../assets/logo-color.svg" alt="NEWEL" style="height:40px;width:auto">
+<h1 style="margin:16px 0 0;font-size:40px;line-height:48px;font-weight:700">How did the installation go?</h1>
+<p style="font-size:20px;line-height:30px;max-width:420px">Give us a rating and tell us briefly about your experience. It takes less than a minute.</p>
+<img src="../assets/omdome-qr-en.png" alt="QR code for the review form at newel.se/en/review" width="240" height="240" style="width:240px;height:240px;margin-top:8px;image-rendering:pixelated">
+<div style="display:flex;flex-direction:column;gap:4px"><p style="color:#676867">Scan the code or go to</p><p style="font-size:24px;line-height:32px;font-weight:700">newel.se/en/review</p></div>
+<div style="margin-top:auto;width:100%;border-top:1px solid #eeeeee;padding-top:20px;display:flex;justify-content:space-between;gap:16px;font-size:14px;line-height:20px;text-align:left"><span>Your installer: [NAME]</span><span>Charger not working? newel.se/en/fault-report</span></div>
+</div>
+</div>
+</main>
+</body>
+</html>

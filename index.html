@@ -186,7 +186,7 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 <a class="btn btn-secondary" href="serviceanmalan.html">Gör en felanmälan</a>
 </div>
 </div>
-<img class="hero-img" src="assets/hero.jpg" fetchpriority="high" alt="Installatör monterar en laddbox på en träfasad">
+<img class="hero-img" src="assets/hero-installer.jpg" fetchpriority="high" alt="Montör skruvar fast en laddbox på en husvägg">
 </div>
 </section>
 
@@ -198,7 +198,7 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 </div>
 <div class="grid4">
 <a class="aud" href="laddbox.html">
-<div class="ph aud-img" role="img" aria-label="Bildplatshållare: villa med laddbox"><span>[BILD: villa med laddbox]</span></div>
+<img class="aud-img" src="assets/villa-charging.jpg" alt="Kvinna som startar laddningen med mobilen vid en laddbox på husväggen">
 <div class="aud-body">
 <h3 class="h3">Privatperson / Villa</h3>
 <p>Laddbox hemma, installerad av behöriga elinstallatörer. [FLER TJÄNSTER FÖR PRIVATPERSONER?]</p>
@@ -206,7 +206,7 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 </div>
 </a>
 <a class="aud" href="brf.html">
-<img class="aud-img" src="assets/brf.jpg" alt="Elbil som laddas vid en laddstolpe på en parkering">
+<img class="aud-img" src="assets/woman-charging.jpg" alt="Kvinna som kopplar in laddkabeln vid en laddstolpe utanför ett bostadshus">
 <div class="aud-body">
 <h3 class="h3">BRF och samfälligheter</h3>
 <p>Laddbox och laddstolpar för föreningen, med IMD så att varje användare betalar för sin egen laddning.</p>
@@ -330,14 +330,6 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 <section class="sec" id="partners" style="background:var(--light-grey)">
 <div class="wrap stack">
 <h2 class="h2p">Partners och medlemskap</h2>
-<article class="zpark">
-<img src="assets/zpark.jpg" alt="Person ansluter en elbil till en laddstation med bostadshus i bakgrunden">
-<div class="zpark-body">
-<h3 class="h2p">Laddning med Zpark</h3>
-<p>Laddpunkterna från NEWEL följs upp i Zpark. [BESKRIV KORT VAD ZPARK GÖR OCH VARFÖR DET ÄR BRA FÖR KUNDEN]</p>
-<div><a class="btn btn-secondary" href="laddbox.html">Läs om laddlösningen</a></div>
-</div>
-</article>
 <div class="grid3">
 <div class="pcard">
 <h3 class="h3">Partner med</h3>
@@ -363,14 +355,13 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 <div class="partner-band">
 <div class="partner-intro">
 <h3 class="h3" style="color:var(--white)">Vill ni samarbeta med oss?</h3>
-<p>Berätta kort vilka ni är, så hör vi av oss.</p>
+<p>Fyll i tre fält, så hör vi av oss.</p>
 </div>
 <form class="partner-form" action="#">
+<div><label class="lbl" for="pf-namn">Namn</label><input class="field" id="pf-namn" name="namn" type="text" autocomplete="name" required></div>
 <div><label class="lbl" for="pf-org">Företag</label><input class="field" id="pf-org" name="foretag" type="text" autocomplete="organization" required></div>
-<div><label class="lbl" for="pf-namn">Kontaktperson</label><input class="field" id="pf-namn" name="kontaktperson" type="text" autocomplete="name" required></div>
 <div><label class="lbl" for="pf-kontakt">Telefon eller e-post</label><input class="field" id="pf-kontakt" name="kontakt" type="text" required></div>
-<div class="span2"><label class="lbl" for="pf-msg">Hur vill ni samarbeta?</label><textarea class="field" id="pf-msg" name="samarbete" rows="3"></textarea></div>
-<div class="span2"><button class="btn btn-primary" type="button" style="font-family:inherit;cursor:pointer">Skicka</button></div>
+<div class="span2"><button class="btn btn-primary" type="button" style="font-family:inherit;cursor:pointer">Bli partner</button></div>
 </form>
 </div>
 </div>
@@ -547,6 +538,7 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 <span style="font-weight:700">Om oss</span>
 <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
 <li><a href="omnewel.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Om NEWEL</a></li>
+<li><a href="omnewel.html#partners" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Partners</a></li>
 <li><a href="referenser.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Kundcase</a></li>
 <li><a href="nyheter.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Nyheter</a></li>
 </ul>

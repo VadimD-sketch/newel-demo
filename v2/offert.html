@@ -130,78 +130,44 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 
 <section class="sec" style="background:var(--white);padding-top:32px;overflow:visible">
 <div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start">
-<form class="card" action="#" style="flex:2 1 600px;padding:32px;display:flex;flex-direction:column;gap:40px">
-<p class="cap" style="color:var(--newel-black)">Fält markerade med <span style="color:var(--orange-700)">*</span> är obligatoriska.</p>
-<fieldset class="fs">
-<legend>Vad behöver ni?</legend>
+<form class="card" action="#" style="flex:2 1 600px;padding:32px;display:flex;flex-direction:column;gap:24px">
+<fieldset class="fs" style="gap:0">
+<legend style="font-size:16px;line-height:24px;margin-bottom:8px">Vad behöver ni?</legend>
 <label class="opt"><input type="checkbox" name="tjanst" value="laddbox"> Laddbox eller laddstolpe</label>
 <label class="opt"><input type="checkbox" name="tjanst" value="imd"> IMD – individuell mätning och debitering</label>
 <label class="opt"><input type="checkbox" name="tjanst" value="support"> Supportavtal för elbilsladdning</label>
 <label class="opt"><input type="checkbox" name="tjanst" value="annat"> Annat eller vet inte ännu</label>
-<a href="laddbox.html" style="font-weight:700;padding:8px 0;margin-top:8px;align-self:flex-start">Osäker på produkt? Se skillnaden mellan monteringsbox och monteringsstolpe →</a>
 </fieldset>
-<fieldset class="fs">
-<legend>Om er</legend>
 <div>
-<label class="lbl" for="of-typ">Typ av kund <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
-<select class="field" id="of-typ" name="typ" required>
-<option value="" selected disabled>Välj typ av kund</option>
-<option value="brf">Bostadsrättsförening</option>
-<option value="samfallighet">Samfällighet</option>
-<option value="fastighetsagare">Fastighetsbolag</option>
-<option value="foretag">Företag</option>
+<label class="lbl" for="of-typ">Jag är <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
+<select class="field" id="of-typ" name="kundtyp" required>
+<option value="" selected disabled>Välj</option>
+<option>Bostadsrättsförening</option>
+<option>Samfällighet</option>
+<option>Fastighetsbolag</option>
+<option>Företag</option>
 </select>
 </div>
 <div>
-<label class="lbl" for="of-org">Förening eller företag <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
-<input class="field" id="of-org" name="organisation" type="text" autocomplete="organization" required>
-</div>
-<div>
-<label class="lbl" for="of-namn">Kontaktperson <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
+<label class="lbl" for="of-namn">Namn <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
 <input class="field" id="of-namn" name="namn" type="text" autocomplete="name" required>
 </div>
-<div style="display:flex;flex-wrap:wrap;gap:24px">
-<div style="flex:1 1 220px">
-<label class="lbl" for="of-epost">E-post <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
-<input class="field" id="of-epost" name="epost" type="email" autocomplete="email" required>
-</div>
-<div style="flex:1 1 220px">
-<label class="lbl" for="of-tel">Telefon <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
-<input class="field" id="of-tel" name="telefon" type="tel" autocomplete="tel" required>
-</div>
-</div>
-</fieldset>
-<details style="border:1px solid var(--newel-grey);border-radius:4px;background:var(--white);padding:0 24px">
-<summary style="cursor:pointer;min-height:56px;display:flex;align-items:center;font-weight:700">Berätta mer om anläggningen (valfritt)</summary>
-<div style="display:flex;flex-direction:column;gap:24px;padding:8px 0 24px">
 <div>
-<label class="lbl" for="of-adress">Adress där laddning ska installeras</label>
-<input class="field" id="of-adress" name="adress" type="text" autocomplete="street-address">
-</div>
-<div style="display:flex;flex-wrap:wrap;gap:24px">
-<div style="flex:1 1 220px">
-<label class="lbl" for="of-antal">Antal laddpunkter</label>
-<input class="field" id="of-antal" name="antal" type="number" min="1" inputmode="numeric">
-</div>
-<div style="flex:1 1 220px">
-<label class="lbl" for="of-park">Parkering</label>
-<select class="field" id="of-park" name="parkering">
-<option value="" selected>Välj parkering</option>
-<option>Garage</option>
-<option>Utomhus</option>
-<option>Både garage och utomhus</option>
-</select>
-</div>
+<label class="lbl" for="of-kontakt">Telefon eller e-post <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
+<input class="field" id="of-kontakt" name="kontakt" type="text" autocomplete="email" required>
 </div>
 <div>
-<label class="lbl" for="of-meddelande">Meddelande</label>
-<textarea class="field" id="of-meddelande" name="meddelande" rows="4" style="min-height:120px"></textarea>
+<label class="lbl" for="of-adress">Adress där laddningen ska installeras <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
+<input class="field" id="of-adress" name="adress" type="text" autocomplete="street-address" required>
 </div>
+<div>
+<label class="lbl" for="of-meddelande">Meddelande <span style="font-weight:400;color:var(--newel-grey)">(valfritt)</span></label>
+<textarea class="field" id="of-meddelande" name="meddelande" rows="3" style="min-height:96px" aria-describedby="of-meddelande-h"></textarea>
+<p class="cap" id="of-meddelande-h" style="margin-top:8px">T.ex. antal laddplatser och om det gäller garage eller utomhus.</p>
 </div>
-</details>
 <div style="display:flex;gap:12px;align-items:flex-start">
 <input id="of-gdpr" name="samtycke" type="checkbox" style="width:24px;height:24px;margin:0;flex:none;accent-color:var(--newel-black)" required>
-<label for="of-gdpr" class="cap" style="color:var(--newel-black)">Jag godkänner att NEWEL behandlar mina uppgifter enligt <a href="integritetspolicy.html" target="_blank" rel="noopener" style="color:var(--newel-black);text-decoration:underline">integritetspolicyn<span class="sr-only"> (öppnas i ny flik)</span></a>. <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
+<label for="of-gdpr" class="cap" style="color:var(--newel-black)">Jag godkänner att NEWEL behandlar mina uppgifter enligt <a href="integritetspolicy.html" style="color:var(--newel-black);text-decoration:underline">integritetspolicyn</a>.</label>
 </div>
 <div><button class="btn btn-primary" type="button" style="font-family:inherit;cursor:pointer">Skicka offertförfrågan</button></div>
 </form>
@@ -257,6 +223,7 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 <span style="font-weight:700">Om oss</span>
 <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
 <li><a href="omnewel.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Om NEWEL</a></li>
+<li><a href="omnewel.html#partners" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Partners</a></li>
 <li><a href="referenser.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Kundcase</a></li>
 <li><a href="nyheter.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Nyheter</a></li>
 </ul>

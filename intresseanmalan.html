@@ -127,55 +127,30 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 
 <section class="sec" style="background:var(--white);padding-top:32px">
 <div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start">
-<form class="card" action="#" style="flex:2 1 600px;padding:32px;display:flex;flex-direction:column;gap:40px">
-<fieldset class="fs">
-<legend>Vad är ni intresserade av?</legend>
+<form class="card" action="#" style="flex:2 1 600px;padding:32px;display:flex;flex-direction:column;gap:24px">
+<fieldset class="fs" style="gap:0">
+<legend style="font-size:16px;line-height:24px;margin-bottom:8px">Vad är ni intresserade av?</legend>
 <label class="opt"><input type="checkbox" name="tjanst" value="laddbox"> Laddbox eller laddstolpe</label>
 <label class="opt"><input type="checkbox" name="tjanst" value="imd"> IMD – Individuell Mätning och Debitering</label>
 <label class="opt"><input type="checkbox" name="tjanst" value="support"> Supportavtal för elbilsladdning</label>
 <label class="opt"><input type="checkbox" name="tjanst" value="annat"> Annat</label>
 </fieldset>
-<fieldset class="fs">
-<legend>Om er</legend>
 <div>
-<label class="lbl" for="ia-typ">Typ av kund</label>
-<select class="field" id="ia-typ" name="kundtyp">
-<option>Bostadsrättsförening</option>
-<option>Samfällighet</option>
-<option>Fastighetsbolag</option>
-<option>Företag</option>
-</select>
+<label class="lbl" for="ia-namn">Namn <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
+<input class="field" id="ia-namn" name="namn" type="text" autocomplete="name" required>
 </div>
 <div>
-<label class="lbl" for="ia-org">Förening eller företag</label>
-<input class="field" id="ia-org" name="organisation" type="text" autocomplete="organization">
+<label class="lbl" for="ia-kontakt">Telefon eller e-post <span aria-hidden="true" style="color:var(--orange-700)">*</span></label>
+<input class="field" id="ia-kontakt" name="kontakt" type="text" autocomplete="email" required>
 </div>
 <div>
-<label class="lbl" for="ia-namn">Kontaktperson</label>
-<input class="field" id="ia-namn" name="namn" type="text" autocomplete="name">
-</div>
-<div style="display:flex;flex-wrap:wrap;gap:24px">
-<div style="flex:1 1 220px">
-<label class="lbl" for="ia-epost">E-post</label>
-<input class="field" id="ia-epost" name="epost" type="email" autocomplete="email">
-</div>
-<div style="flex:1 1 220px">
-<label class="lbl" for="ia-tel">Telefon</label>
-<input class="field" id="ia-tel" name="telefon" type="tel" autocomplete="tel">
-</div>
-</div>
-</fieldset>
-<fieldset class="fs">
-<legend>Kommentar</legend>
-<div>
-<label class="lbl" for="ia-kommentar">Berätta kort om era behov</label>
-<textarea class="field" id="ia-kommentar" name="kommentar" rows="5" style="min-height:140px"></textarea>
+<label class="lbl" for="ia-kommentar">Kommentar <span style="font-weight:400;color:var(--newel-grey)">(valfritt)</span></label>
+<textarea class="field" id="ia-kommentar" name="kommentar" rows="3" style="min-height:96px"></textarea>
 </div>
 <div style="display:flex;gap:12px;align-items:flex-start">
-<input id="ia-gdpr" name="samtycke" type="checkbox" style="width:24px;height:24px;margin:0;flex:none;accent-color:var(--newel-black)">
-<label for="ia-gdpr" class="cap" style="color:var(--newel-black)">Jag godkänner att NEWEL behandlar mina uppgifter enligt <a href="#" style="color:var(--newel-black);text-decoration:underline">integritetspolicyn</a>.</label>
+<input id="ia-gdpr" name="samtycke" type="checkbox" style="width:24px;height:24px;margin:0;flex:none;accent-color:var(--newel-black)" required>
+<label for="ia-gdpr" class="cap" style="color:var(--newel-black)">Jag godkänner att NEWEL behandlar mina uppgifter enligt <a href="integritetspolicy.html" style="color:var(--newel-black);text-decoration:underline">integritetspolicyn</a>.</label>
 </div>
-</fieldset>
 <div><button class="btn btn-primary" type="button" style="font-family:inherit;cursor:pointer">Skicka intresseanmälan</button></div>
 </form>
 <aside style="flex:1 1 320px;display:flex;flex-direction:column;gap:24px">
@@ -230,6 +205,7 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 <span style="font-weight:700">Om oss</span>
 <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
 <li><a href="omnewel.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Om NEWEL</a></li>
+<li><a href="omnewel.html#partners" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Partners</a></li>
 <li><a href="referenser.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Kundcase</a></li>
 <li><a href="nyheter.html" style="display:inline-block;padding:6px 0;color:var(--white);text-decoration:none">Nyheter</a></li>
 </ul>
