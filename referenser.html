@@ -203,21 +203,66 @@ header nav .dd-panel a[aria-current="page"]{font-weight:700;background:var(--lig
 </section>
 </main>
 
-<section style="background:var(--newel-orange);color:var(--ink-strong);font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px">
-<div style="max-width:1200px;margin:0 auto;padding:64px 24px;display:flex;flex-wrap:wrap;gap:32px;align-items:center;justify-content:space-between">
-<div style="flex:1 1 520px;display:flex;flex-direction:column;gap:16px">
-<h2 style="margin:0;font-size:36px;line-height:44px;font-weight:700;color:var(--newel-black)">Redo att installera laddning?</h2>
+<section id="steg" style="background:var(--light-grey);color:var(--newel-black);font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px;padding:48px 0 0;overflow:hidden">
+<div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 32px">
+<div style="display:flex;flex-direction:column;gap:12px;max-width:720px">
+<h2 style="margin:0;font-size:28px;line-height:36px;font-weight:700;color:var(--newel-black)">Från offertförfrågan till installation i fem steg</h2>
+<p style="margin:0">Så här går det till när ni installerar laddbox eller laddstolpar tillsammans med NEWEL.</p>
+</div>
+</div>
+<ol style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px 24px">
+<li style="display:flex;flex-direction:column;gap:6px;padding-top:14px;border-top:2px solid #d6d6d6">
+<div style="display:flex;align-items:center;gap:10px">
+<span aria-hidden="true" style="flex:none;width:32px;height:32px;box-sizing:border-box;border-radius:50%;background:#f15b22;color:#1a1a1a;border:2px solid #f15b22;display:flex;align-items:center;justify-content:center;font-size:15px;line-height:20px;font-weight:700">1</span>
+<h3 style="margin:0;font-size:18px;line-height:24px;font-weight:700">Offertförfrågan</h3>
+</div>
+<p style="margin:0;font-size:15px;line-height:22px">Ni berättar om anläggningen och hur många laddpunkter ni vill ha.</p>
+</li>
+<li style="display:flex;flex-direction:column;gap:6px;padding-top:14px;border-top:2px solid #d6d6d6">
+<div style="display:flex;align-items:center;gap:10px">
+<span aria-hidden="true" style="flex:none;width:32px;height:32px;box-sizing:border-box;border-radius:50%;background:#ffffff;color:#262625;border:2px solid #262625;display:flex;align-items:center;justify-content:center;font-size:15px;line-height:20px;font-weight:700">2</span>
+<h3 style="margin:0;font-size:18px;line-height:24px;font-weight:700">Genomgång</h3>
+</div>
+<p style="margin:0;font-size:15px;line-height:22px">Vi går igenom elanläggning, parkering och era önskemål.</p>
+</li>
+<li style="display:flex;flex-direction:column;gap:6px;padding-top:14px;border-top:2px solid #d6d6d6">
+<div style="display:flex;align-items:center;gap:10px">
+<span aria-hidden="true" style="flex:none;width:32px;height:32px;box-sizing:border-box;border-radius:50%;background:#ffffff;color:#262625;border:2px solid #262625;display:flex;align-items:center;justify-content:center;font-size:15px;line-height:20px;font-weight:700">3</span>
+<h3 style="margin:0;font-size:18px;line-height:24px;font-weight:700">Offert</h3>
+</div>
+<p style="margin:0;font-size:15px;line-height:22px">Ni får en tydlig offert att ta med till styrelsen eller ledningen.</p>
+</li>
+<li style="display:flex;flex-direction:column;gap:6px;padding-top:14px;border-top:2px solid #d6d6d6">
+<div style="display:flex;align-items:center;gap:10px">
+<span aria-hidden="true" style="flex:none;width:32px;height:32px;box-sizing:border-box;border-radius:50%;background:#ffffff;color:#262625;border:2px solid #262625;display:flex;align-items:center;justify-content:center;font-size:15px;line-height:20px;font-weight:700">4</span>
+<h3 style="margin:0;font-size:18px;line-height:24px;font-weight:700">Installation</h3>
+</div>
+<p style="margin:0;font-size:15px;line-height:22px">Våra installatörer monterar laddbox eller laddstolpar hos er.</p>
+</li>
+<li style="display:flex;flex-direction:column;gap:6px;padding-top:14px;border-top:2px solid #d6d6d6">
+<div style="display:flex;align-items:center;gap:10px">
+<span aria-hidden="true" style="flex:none;width:32px;height:32px;box-sizing:border-box;border-radius:50%;background:#ffffff;color:#262625;border:2px solid #262625;display:flex;align-items:center;justify-content:center;font-size:15px;line-height:20px;font-weight:700">5</span>
+<h3 style="margin:0;font-size:18px;line-height:24px;font-weight:700">Uppstart och support</h3>
+</div>
+<p style="margin:0;font-size:15px;line-height:22px">Laddningen tas i drift, IMD kopplas in vid behov och ni har support att vända er till.</p>
+</li>
+</ol>
+</div>
+<div style="background:var(--newel-orange);color:var(--newel-black);margin-top:40px">
+<div style="max-width:1200px;margin:0 auto;padding:40px 24px;display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between">
+<div style="flex:1 1 420px;display:flex;flex-direction:column;gap:8px">
+<h3 style="margin:0;font-size:28px;line-height:36px;font-weight:700;color:var(--newel-black)">Redo att installera laddning?</h3>
 <p style="margin:0;color:var(--newel-black)">Berätta om er förening, fastighet eller arbetsplats så återkommer vi med ett förslag. Svar inom [SVARSTID, t.ex. två arbetsdagar].</p>
 <p style="margin:0;font-weight:700;color:var(--newel-black)">Eller ring oss: 08-18 14 12</p>
 </div>
-<div style="display:flex;flex-wrap:wrap;gap:16px">
+<div style="display:flex;flex-wrap:wrap;gap:12px">
 <a class="btn btn-dark" href="offert.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:var(--newel-black);color:var(--white);border:2px solid var(--newel-black);font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">Begär offert</a>
 <a class="btn btn-outline-dark" href="kontakt.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:transparent;color:var(--newel-black);border:2px solid var(--newel-black);font-size:16px;line-height:24px;font-weight:700;border-radius:4px;text-decoration:none">Kontakta oss</a>
 </div>
 </div>
+</div>
 </section>
-
-
 <footer style="background:var(--newel-black);color:var(--white);font-family:Roboto,system-ui,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:26px">
 <div style="max-width:1200px;margin:0 auto;padding:64px 24px 32px;display:flex;flex-direction:column;gap:48px">
 <div style="display:flex;flex-wrap:wrap;gap:48px">
